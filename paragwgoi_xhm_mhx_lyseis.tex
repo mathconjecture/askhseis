@@ -219,9 +219,74 @@
 		$ και της παραγώγου του $ P'(x) $ τότε να δείξετε ότι το $p$ είναι διπλή
 		ρίζα του $ P(x) $ και αντίστροφα.
 
+		
+		\fbox{\bfseries Λύση}
+
+		Έστω $p$ ρίζα του $ P(x) $ και του $ P'(x) $. Άρα
+		\[
+			\left.
+				\begin{tabular}{l}
+			$P(x) = (x-p)f(x)$ \\
+			$P'(x) = (x-p)g(x)$
+				\end{tabular}
+			\right\}\Rightarrow 
+			\left.
+				\begin{tabular}{l}
+			$P'(x) = f(x) + (x-p)f'(x)$ \\
+			$P'(x) = (x-p)g(x)$
+				\end{tabular}
+			\right\}\Rightarrow
+			f(x) + (x-p)f'(x) = (x-p)g(x) 
+			\]
+			Άρα \inlineequation[eq:pol]{f(x) = (x-p)[g(x) - f'(x)]} 
+
+			Οπότε $ P(x) = (x-p)f(x) \overset{\eqref{eq:pol}}{=} (x-p)^{2}(g(x)
+			- f'(x)) $, από όπου προκύπτει το ζητούμενο.
+
+			Αντίστροφα, τώρα, έστω ότι το $p$ είναι διπλή ρίζα του $ P(x) $. Άρα 
+
+			$ P(x) = (x-p)^{2}\phi(x) $
+
+			Παραγωγίζοντας έχουμε
+
+			$ P'(x) = 2(x-p)\phi(x) + (x-p)^{2}\phi'(x) \Rightarrow P'(x) =
+			(x-p)[2\phi(x) + (x-p)\phi'(x)] \Rightarrow P'(p) = 0 $.
+
+
+
+
+
 	\item Να δείξετε ότι για το πολυώνυμο $n$ βαθμού $ P_{n}(x) =a_{n}x^{n} +
 		a_{n-1}x^{n-1} + \cdots + a_{1}x + a_{0} $, με  $ a_{n}\neq 0 $ ότι ισχύει $
 		P_{n}^{(n)}(x) = n! \cdot a_{n}$, για  $n\geq 1 $.
+
+
+
+		\fbox{\bfseries Λύση}
+
+
+		Με μαθηματική επαγωγή.
+
+		Για $ n=1 $ έχουμε: $ P_{1}(x) = a_{1}x + a_{0} \Rightarrow P_{1}'(x) =
+		a_{1} \Rightarrow P_{1}^{(1)}(x)
+		= a_{1} = 1!a_{1} $ 
+
+		Έστω ότι η πρόταση ισχύει για $ n = k  $, δηλαδή
+
+		\begin{equation}\label{eq:polyon}
+			P_{n}(x) = a_{n}x^{n} + a_{n-1}x^{n-1}+ \cdots +a_{1}x + a_{0}
+			\Rightarrow P_{n}^{(n)}(x) = n!\cdot a_{n}
+		\end{equation}
+
+		Θα δείξουμε ότι ισχύει για $ n = k+1 $.
+
+		Πράγματι
+
+		\begin{align*}
+			P_{n+1}^{(n+1)}(x) = [P_{n+1}'(x)]^{(n)} 
+			&= [(n+1)a_{n+1}x^{n} +	na_{n}x^{n-1} + \cdots + 2a_{2}x + a_{1}]^{(n)} \\
+			&\overset{\eqref{eq:polyon}}{=} n! (n+1) a_{n+1} = (n+1)!a_{n+1}
+		\end{align*}	
 \end{enumerate}
 
 \end{document}
