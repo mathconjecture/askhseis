@@ -137,7 +137,7 @@
 
 
 	\item Δίνεται η συνάρτηση $ f(x) \colon \mathbb{R} \to \mathbb{R} $ τέτοια
-		ώστε \inlineequation[eq:ineq]{x - x^{2} \leq f(x) \leq x + x^{3}}, 
+		ώστε \inlineequation[eq:ineq]{x - x^{2} \leq f(x) \leq x + x^{2}}, 
 		$ \forall x \in \mathbb{R} $. Να υπολογίσετε την $ f'(0) $.
 
 
@@ -256,9 +256,12 @@
 
 
 
-	\item Να δείξετε ότι για το πολυώνυμο $n$ βαθμού $ P_{n}(x) =a_{n}x^{n} +
+		\item Να δείξετε ότι για το πολυώνυμο $n$ βαθμού $ P_{n}(x) =a_{n}x^{n} +
 		a_{n-1}x^{n-1} + \cdots + a_{1}x + a_{0} $, με  $ a_{n}\neq 0 $ ότι ισχύει $
-		P_{n}^{(n)}(x) = n! \cdot a_{n}$, για  $n\geq 1 $.
+		P_{n}^{(n)}(x) = n! \cdot a_{n}$, για  $n\geq 1 $. Στη συνέχεια να
+		δείξετε ότι το πολυώνυμο $ P_{n}(x) $ μπορεί να γραφεί στη μορφή $ P_{n}(x) =
+		P(0) + \frac{P'(0)}{1!} x + \frac{P''(0)}{2!} x^{2} + \cdots +
+		\frac{P^{n}(0)}{n!} x^{n} $ 
 
 
 
@@ -274,8 +277,8 @@
 		Έστω ότι η πρόταση ισχύει για $ n = k  $, δηλαδή
 
 		\begin{equation}\label{eq:polyon}
-			P_{n}(x) = a_{n}x^{n} + a_{n-1}x^{n-1}+ \cdots +a_{1}x + a_{0}
-			\Rightarrow P_{n}^{(n)}(x) = n!\cdot a_{n}
+			P_{k}(x) = a_{k}x^{k} + a_{k-1}x^{k-1}+ \cdots +a_{1}x + a_{0}
+			\Rightarrow P_{k}^{(k)}(x) = k!\cdot a_{k}
 		\end{equation}
 
 		Θα δείξουμε ότι ισχύει για $ n = k+1 $.
@@ -283,10 +286,29 @@
 		Πράγματι
 
 		\begin{align*}
-			P_{n+1}^{(n+1)}(x) = [P_{n+1}'(x)]^{(n)} 
-			&= [(n+1)a_{n+1}x^{n} +	na_{n}x^{n-1} + \cdots + 2a_{2}x + a_{1}]^{(n)} \\
-			&\overset{\eqref{eq:polyon}}{=} n! (n+1) a_{n+1} = (n+1)!a_{n+1}
+			P_{k+1}^{(k+1)}(x) = [P_{k+1}'(x)]^{(k)} 
+			&= [(k+1)a_{k+1}x^{k} +	ka_{k}x^{k-1} + \cdots + 2a_{2}x + a_{1}]^{(k)} \\
+			&\overset{\eqref{eq:polyon}}{=} k! (k+1) a_{k+1} = (k+1)!a_{k+1}
 		\end{align*}	
+
+		Έχουμε δείξει ότι $ P_{n}^{(n)}(x) = n! a_{n} $
+
+		Για $ x = 0 $ έχουμε:
+
+		\begin{align*}
+			n &= 0 \Rightarrow P(0) = 0!a_{0} \Rightarrow a_{0} = P(0) \\
+			n &= 1 \Rightarrow P'(0) = 1!a_{1} \Rightarrow a_{1} = \frac{P'(0)}{1!} \\ 
+			n &= 2 \Rightarrow P''(0) = 2!a_{2} \Rightarrow a_{2} = \frac{P''(0)}{2!} \\
+			  &\vdots \\
+			n &= n \Rightarrow P^{n}(0) = n!a_{n} \Rightarrow a_{n} = \frac{P^{n}(0)}{n!} \\
+		\end{align*}	
+
+		Επομένως 
+
+		\[
+			P_{n}(x) = P(0) + \frac{P'(0)}{1!} x + \frac{P''(0)}{2!} x^{2} + \cdots
+			+ \frac{P^{n}(0)}{n!} x^{n}
+		\]
 \end{enumerate}
 
 \end{document}
