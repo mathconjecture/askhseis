@@ -1,0 +1,365 @@
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
+
+\usepackage{anyfontsize}
+\pagestyle{vangelis}
+\begin{document}
+
+\begin{center}
+    \minibox[frame]{\Large \bfseries Ασκήσεις στους Διανυσματικούς Χώρους}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+	\item Να εξετάσετε αν τα παρακάτω υποσύνολα είναι υπόχωροι του $\mathbb{R}^{3}$ 
+        \begin{enumerate}[(i)]
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x^{2} + y^{2} + z^{2} \leq 1  \} $ \hfill
+				Απ: όχι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = y = z \} $ \hfill Απ: ναι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x\geq 0 \} $ \hfill Απ:  όχι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = 3y \} $ \hfill Απ: ναι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x \leq y \leq q \} $ \hfill Απ: όχι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x + y + z = 0 \} $ \hfill Απ: ναι
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid y = x^{2} \} $ \hfill Απ: όχι 
+			\item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x = 2y = 3z \} $ \hfill Απ: ναι 
+		\end{enumerate}
+
+	\item Να εξετάσετε αν τα παρακάτω διανύσματα είναι γραμμικώς ανεξάρτητα.
+		\begin{enumerate}[(i)]
+			\item $ \mathbf{u} = (1,2) $, $ \mathbf{v} = (3,-5) $ \hfill Απ: ναι
+			\item $ \mathbf{u} = (1,2,-3) $ $ \mathbf{v} = (4,5,-6) $ \hfill Απ: ναι
+			\item $ \mathbf{u} = (1,1,0)$, $ \mathbf{v} = (1,3,2)$, $ \mathbf{w} = (4,9,5) $ \hfill Απ: όχι 
+			\item $ \mathbf{u} = (1,2,3)$, $ \mathbf{v} = (2,5,7)$, $ \mathbf{w} = (1,3,5) $ \hfill Απ: ναι 
+			\item $ \mathbf{u} = (1,2,-3,1) $, $ \mathbf{v} = (3,7,1,-2) $, $ \mathbf{w} =
+				(1,3,7,-4) $ \hfill Απ: όχι
+			\item $ \mathbf{u} = (1,3,1,-2) $, $ \mathbf{v} = (2,5,-1,3) $, $ \mathbf{w} =
+				(1,3,7,-2) $ \hfill Απ: ναι
+		\end{enumerate}
+
+	\item Να εξετάσετε αν τα διανύσματα $ \mathbf{u} = (1,1,1)$, $ \mathbf{v} = (1,2,3)$, $
+		\mathbf{w} = (1,5,3) $ είναι βάση του $\mathbb{R}^{3}$. 
+
+		\hfill Απ: ναι 
+
+	\item Να δείξετε ότι τα διανύσματα $ \mathbf{u}_{1} = (1,3,0,5) $, $ \mathbf{u}_{2} = (1,2,1,4)
+		$, $ \mathbf{u}_{3} = (1,1,2,3)$, $ \mathbf{u}_{4} = (1,1,2,3) $, $ \mathbf{u}_{5} =
+		(1,-3,6,-1) $ είναι γραμμικώς εξαρτημένα και να βρεθεί μια σχέση που τα συνδέει. 
+
+		\hfill Απ: $ \mathbf{u}_{1} - 2 \mathbf{u}_{2} + \mathbf{u}_{3} = 0 $ 
+
+	\item Αν $ \mathbf{u} $, $ \mathbf{v} $, $ \mathbf{w} $ είναι γραμμικώς ανεξάρτητα διανύσματα
+		τότε να δείξετε και ότι τα παρακάτω σύνολα διανυσμάτων είναι επίσης γραμμικώς ανεξάρτητα.
+		\begin{enumerate}[(i)]
+			\item $ S = \{ \mathbf{u} + \mathbf{v} - 2 \mathbf{w}, \mathbf{u} - \mathbf{v} -
+				\mathbf{w}, \mathbf{u} + \mathbf{w} \} $
+			\item $ S = \{ \mathbf{u} + \mathbf{v} - 3 \mathbf{w}, \mathbf{u} + 3 \mathbf{v} -
+				\mathbf{w}, \mathbf{v} + \mathbf{w}\}  $
+		\end{enumerate}
+
+
+	\item Να εκφράσετε το διάνυσμα $ \mathbf{b} = (1,-2,5) $ ως γραμμικό συνδυασμό των διανυσμάτων $
+		\mathbf{u} = (1,1,1)$, $ \mathbf{v} = (1,2,3)$, $ \mathbf{w} = (2,-1,1) $.
+
+		\hfill Απ: $ b = -6 \mathbf{u} + 3 \mathbf{v} +2 \mathbf{w} $ 	
+
+	\item Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (2,5,-3) $ γράφεται ως γραμμικός συνδυασμός των διανυσμάτων $ \mathbf{u} = (1,-3,2)$, $ \mathbf{v} = (2,4,1)$, $ \mathbf{w} = (1,-5,7) $.
+
+	\item Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (-3,0,12,15) $ γράφεται ως γραμμικός συνδυασμός
+		των διανυσμάτων $ \mathbf{u}_{1} = (1,2,-2,1) $, $ \mathbf{u}_{2} = (1,3,-1,4) $ και $
+		\mathbf{u}_{3} = (2,1,-7,-7) $. Αν ναι, τότε να βρεθεί ένας τέτοιος γραμμικός συνδυασμός.
+
+		\hfill Απ: $ \mathbf{b} = -9 \mathbf{u}_{1} + 6 \mathbf{u}_{2} $ 
+
+	\item Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,0) $, $ \mathbf{u}_{2} = (-1,1,2) $ και $
+		\mathbf{u}_{3} = (3,0,-4) $. Να βρείτε ποια συνθήκη πρέπει να ικανοποιούν τα $a$, $b$, $c$,
+		ώστε το διάνυσμα $ \mathbf{b} = (a,b,c) $ να ανήκει στον υπόχωρο $ \Span \{ \mathbf{u}_{1},
+		\mathbf{u}_{2}, \mathbf{u}_{3} \} $.
+
+		\hfill Απ: $ 4a -2b + 3c = 0 $ 
+
+
+	\item Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,-1,3)$, $\mathbf{u}_{2} = (2,4,1,-2)$, $ \mathbf{u} _{3} = (3,6,3,-7) $ και $ \mathbf{w}_{1} = (1,2,-4,11)$, $ \mathbf{w}_{2} = (2,4,-5,14) $. Αν $
+		U = \Span \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ και $ W = \Span \{
+		\mathbf{w}_{1}, \mathbf{w}_{2} \} $, τότε να δείξετε ότι $ U=W $.
+
+	\item Για τα παρακάτω διανύσματα να βρεθεί μια βάση και η διάσταση του χώρου που παράγουν.
+		\begin{enumerate}[(i)]
+			\item $ \mathbf{u}_{1} = (1,1,1,2,3) $, $ \mathbf{u}_{2} = (1,2,-1,-2,1) $, $ \mathbf{u}
+				_{3} = (3,5,-1,-2,5) $, $ \mathbf{u}_{4} = (1,2,1,-1,4) $
+
+				\hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, \mathbf{u}_{4} \} $ 
+			\item $ \mathbf{u}_{1} = (1,-2,1,3,-1) $, $ \mathbf{u}_{2} = (-2,4,-2,-6,2) $, $
+				\mathbf{u}_{3} = (1,-3,1,2,1) $, $ \mathbf{u}_{4} = (3,-7,3,8,-1) $
+
+				\hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ 
+
+			\item $ \mathbf{u}_{1} = (1,0,1,0,1) $, $ \mathbf{u}_{2} = (1,1,2,1,0) $, $ \mathbf{u}
+				_{3} = (1,2,3,1,1,) $, $ \mathbf{u}_{4} = (1,2,1,1,1) $
+
+				\hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, \mathbf{u}_{4} \} $ 
+			\item $ \mathbf{u}_{1} = (1,0,1,1,1) $, $ \mathbf{u}_{2} = (2,1,2,0,1) $, $ \mathbf{u}
+				_{3} = (1,1,2,3,4) $, $ \mathbf{u}_{4} = (4,2,5,4,6) $
+
+				\hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ 
+		\end{enumerate}
+
+	\item Θεωρήστε τους υποχώρους $ U = \{ (x,y,z,w) \in \mathbb{R}^{3} \mid y - 2z + w = 0 \} $ και
+    $ W = \{ (x,y,z,w) \in \mathbb{R}^{3} \mid x = w, y = 2z \} $ του $\mathbb{R}^{4}$. Να
+		βρείτε μια βάση και τη διάσταση των υποχώρων:
+		\begin{enumerate}[(i)]
+            \item $ U $ \hfill Απ: $ B_{U} = \{ (1,0,0,0), (0,2,1,0), (0,-1,0,1) \} $ 
+            \item $ W $ \hfill Απ: $ B_{W} = \{ (0,2,1,0), (1,0,0,1) \} $ 
+            \item $ U \cap W $ \hfill Απ: $ B_{U\cap W} = \{ (0,2,1,0) \} $ 
+		\end{enumerate}	
+
+	% \item Να βρείτε ένα ομογενές σύστημα του οποίου ο χώρος λύσεων να παράγεται από τα διανύσματα:
+	% 	\begin{enumerate}[(i)]
+	% 		\item (1,-2,0,3,-1), (2,-3,2,5,-3), (1,-2,1,2,-2) \hfill Απ: $ \begin{cases}
+	% 				5 x_{1} + x_{2} - x_{3} - x_{4} = 0 \\
+	% 				x_{1} + x_{2} - x_{3} - x_{5} = 0
+	% 			\end{cases} $ 
+	% 		\item (1,1,2,1,1), (1,2,1,4,3), (3,5,4,9,7) \hfill Απ: $ \begin{cases}
+	% 				2 x_{1} - x_{3} = 0 \\
+	% 				2 x_{1} - 3 x_{2} + x_{4} = 0 \\
+	% 				x_{1} - 2 x_{2} + x_{5} = 0
+	% 			\end{cases} $ 
+	% 	\end{enumerate}
+
+	\item Έστω 
+        \begin{enumerate*}[itemjoin=\hspace{1cm},label=(\alph*)]
+		\item $ A = 
+			\begin{pmatrix*}[r]
+				0 & 0 & 3 & 1 & 4 \\
+				1 & 3 & 1 & 2 & 1 \\
+				3 & 9 & 4 & 5 & 2 \\
+				4 & 12 & 8 & 8 &7
+			\end{pmatrix*} $
+		\item $ B = 
+			\begin{pmatrix*}[r]
+				1 & 2 & 1 & 0 & 1 \\
+				1 & 2 & 2 & 1 & 3 \\
+				3 & 6 &	5 & 2 & 7 \\
+				2 & 4 & 1 & -1 & 0 
+			\end{pmatrix*} $
+		\end{enumerate*}
+
+		Για κάθε πίνακα να βρείτε
+		\begin{enumerate}[(i)]
+			\item τον αντίστοιχο ανηγμένο κλιμακωτό πίνακα. 
+			\item Βάση και διάσταση του χώρου στηλών.
+			\item Βάση και διάσταση του χώρου γραμμών.
+			\item Βάση και διάσταση του Μηδενόχωρου.
+			\item Βάση και διάσταση του αριστερού Μηδενόχωρου.
+		\end{enumerate}
+
+		\hfill Απ: 
+        \begin{enumerate*}[itemjoin=\hspace{1cm},label=(\alph*)]
+		\item $ A \sim 
+			\begin{pmatrix*}[r]
+				1 & 3 & 0 & 0 & -\sfrac{13}{4} \\
+				0 & 0 & 1 & 0 & \sfrac{3}{4} \\
+				0 & 0 & 0 & 1 & \sfrac{7}{4} \\
+				0 & 0 & 0 & 0 & 0 
+			\end{pmatrix*} $
+		\item $ B \sim 
+			\begin{pmatrix*}[r]
+				1 & 2 & 0 & -1 & -1 \\
+				0 & 0 & 1 & 1 & 2 \\
+				0 & 0 & 0 & 0 & 0 \\
+				0 & 0 & 0 & 0 & 0 
+			\end{pmatrix*} $
+		\end{enumerate*}
+
+	\item Έστω 
+		\begin{enumerate*}[itemjoin=\hspace{1cm},label=(\alph*)]
+            \item 	$ A =  \begin{pmatrix*}[r]
+				1 & 2 & 1 & 3 & 1 & 6 \\
+				2 & 4 & 3 & 8 & 3 & 9 \\
+				1 & 2 & 2 & 5 & 3 & 11 \\
+				4 & 8 & 6 & 16 & 7 & 26
+			\end{pmatrix*}$
+		\item $ B = \begin{pmatrix}
+				1 & 2 & 2 & 1 & 2 & 1 \\
+				2 & 4 & 5 & 4 & 5 & 5 \\
+				1 & 2 & 3 & 4 & 4 & 6 \\
+				3 & 6 & 7 & 7 & 9 & 10
+			\end{pmatrix}$
+		\end{enumerate*}
+
+		Για κάθε πίνακα να βρείτε
+		\begin{enumerate}[(i)]
+			\item τον αντίστοιχο ανηγμένο κλιμακωτό πίνακα. 
+			\item Βάση και διάσταση του χώρου στηλών.
+			\item Βάση και διάσταση του χώρου γραμμών.
+			\item Βάση και διάσταση του Μηδενόχωρου.
+			\item Βάση και διάσταση του αριστερού Μηδενόχωρου.
+		\end{enumerate}	
+
+		\hfill Απ:  
+		\begin{enumerate*}[itemjoin=\hspace{1cm},label=(\alph*)]
+            \item $ A \sim \begin{pmatrix*}[r]
+				1 & 2 & 0 & 1 & 0 & 9 \\
+				0 & 0 & 1 & 2 & 0 & -11 \\
+				0 & 0 & 0 & 0 & 1 & 8 \\
+				0 & 0 & 0 & 0 & 0 & 0 
+			\end{pmatrix*} $
+		\item $ B \sim \begin{pmatrix*}[r]
+				1 & 2 & 0 & 0 & 3 & 1 \\
+				0 & 0 & 1 & 0 & -1 & -1 \\
+				0 & 0 & 0 & 1 & 1 & 2 \\
+				0 & 0 & 0 & 0 & 0 & 0 
+			\end{pmatrix*}$
+		\end{enumerate*}
+
+	\item Να βρείτε την πλήρη λύση των παρακάτω συστημάτων με τη μέθοδο της απαλοιφής Gauss.
+		\begin{enumerate}[(i)]
+			\item $ 
+				\begin{pmatrix*}[r]
+					1 & 2 & 1 & 0 \\
+					2 & 4 & 4 & 8 \\
+					4 & 8 & 6 & 8 
+				\end{pmatrix*}
+				\cdot 
+				\begin{pmatrix*}[r]
+					x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+				\end{pmatrix*}
+				= 
+				\begin{pmatrix*}[r]
+					4 \\ 2 \\ 10
+				\end{pmatrix*} $ \hfill Απ: $ X = x_{2} 
+				\begin{pmatrix*}[r]
+					-2 \\ 1 \\ 0 \\ 0
+				\end{pmatrix*}
+				+ x_{4} 
+				\begin{pmatrix*}[r]
+					4 \\ 0 \\ -4 \\ 1
+				\end{pmatrix*}
+				+ 
+				\begin{pmatrix*}[r]
+					7 \\ 0 \\ -3 \\ 0
+				\end{pmatrix*} $ 
+
+			\item $ 
+				\begin{pmatrix*}[r]
+					2 & 4 & 6 & 4 \\
+					2 & 5 & 7 & 6 \\
+					2 & 3 & 5 & 2 
+				\end{pmatrix*}
+				\cdot
+				\begin{pmatrix*}[r]
+					x_{1} \\ x_{2} \\ x_{3} \\ x_{4}
+				\end{pmatrix*} 
+				=
+				\begin{pmatrix*}[r]
+					4 \\ 3 \\ 5 
+				\end{pmatrix*}
+				$ \hfill Απ: $ X = x_{3} 
+				\begin{pmatrix*}[r]
+					-1 \\ -1 \\ 1 \\ 0 
+				\end{pmatrix*}
+				+ x_{4} 
+				\begin{pmatrix*}[r]
+					2 \\ -2 \\ 0 \\ 1
+				\end{pmatrix*}
+				+ 
+				\begin{pmatrix*}[r]
+					4 \\ -1 \\ 0 \\ 0
+				\end{pmatrix*} $ 
+			\item $ 
+				\begin{pmatrix*}[r]
+					1 & 3 & 1 & 2 \\
+					2 & 6 & 4 & 8 \\
+					0 & 0 & 2 & 4 
+				\end{pmatrix*}
+				\cdot 
+				\begin{pmatrix*}[r]
+					x \\ y \\ z \\ w
+				\end{pmatrix*}
+				= 
+				\begin{pmatrix*}[r]
+					1 \\ 3 \\ 1
+				\end{pmatrix*}
+				$ \hfill Απ: $ X = 
+					y
+					\begin{pmatrix*}[r]
+						-3 \\ 1 \\ 0 \\ 0
+					\end{pmatrix*}
+					+ w
+					\begin{pmatrix*}[r]
+						0 \\ 0 \\ -2 \\ 1
+					\end{pmatrix*}
+					+ 
+					\begin{pmatrix*}[r]
+						\sfrac{1}{2} \\ 0 \\ \sfrac{1}{2} \\ 0
+					\end{pmatrix*} $
+		\end{enumerate}	
+
+	\item Να βρείτε μια βάση και τη διάσταση του Μηδενόχωρου για τους παρακάτω πίνακες  
+		\begin{enumerate}[(i)]
+			\item $
+				\begin{pmatrix*}[r]
+					1 & 1 & 5 & 1 & 4 \\
+					2 & -1 & 1 & 2 & 2 \\
+					3 & 0 & 6 & 0 & -3 
+				\end{pmatrix*}$
+
+		\hfill Απ: $ B = \{ (-2,-3,1,0,0), (1,-2,0,-3,1) \} $ 
+
+    \item $ 
+		\begin{pmatrix*}[r]
+			0 & 0 & 1 & 2 \\
+			0 & 0 & 1 & 2 \\
+			1 & 1 & 1 & 0
+		\end{pmatrix*} $ 
+
+		\hfill Απ: $ B = \{ (-1,1,0,0), (2,0,-2,1) \} $ 
+		\end{enumerate}
+
+	\item Έστω $ W $ ο υπόχωρος του $\mathbb{R}^{4}$ που παράγεται από τα διανύσματα $ \mathbf{u}
+		_{1} = (1,-2,5,-3), \mathbf{u}_{2} = (2,3,1,-4) $, $ \mathbf{u}_{3} = (3,8,-3,-5) $.
+		\begin{enumerate}[(i)]
+			\item Να βρείτε μια βάση και τη διάσταση του $ W $.
+			\item Να επεκτείνετε τη βάση του $ W $ σε μια βάση του $ \mathbb{R}^{4} $.
+		\end{enumerate}
+
+		\hfill Απ:  \begin{tabular}{l}
+			$B = \{ (1,-2,5,-3), (0,7,-9,2) \}$ \\
+			$ B = \{ (1,-2,5,-3), (0,7,-9,2), (0,0,1,0), (0,0,0,1) \} $
+		\end{tabular} 
+
+	\item Να βρείτε τον αντίστροφο του πίνακα $ A = 
+		\begin{pmatrix*}[r]
+			1 & 0 & 2 \\
+			2 & -1 & 3 \\
+			4 & 1 & 8
+		\end{pmatrix*}$ με τη μέθοδο της απαλοιφής Gauss.
+
+		\hfill Απ: $ A^{-1} = 
+		\begin{pmatrix*}[r]
+			-11 & 2 & 2 \\
+			-4 & 0 & 1 \\
+			6 & -1 & -1
+		\end{pmatrix*} $ 
+
+	\item Να βρείτε τον αντίστροφο του πίνακα $ A = 
+		\begin{pmatrix*}[r]
+			1 & 0 & 0 \\
+			-2 & 1 & 0 \\
+			-1 & -1 & 1
+		\end{pmatrix*}$ με τη μέθοδο της απαλοιφής Gauss.
+
+		\hfill Απ: $ A^{-1} = 
+		\begin{pmatrix*}[r]
+			1 & 0 & 0 \\
+			2 & 1 & 0 \\
+			1 & 1 & 1
+		\end{pmatrix*}$
+
+
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,69 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+
+\everymath{\displaystyle}
+
+\thispagestyle{empty}
+
+
+\begin{document}
+
+\begin{center}
+    \fbox{\large\bfseries Ασκήσεις στη σύνθεση συναρτήσεων }
+\end{center}
+
+\vspace{\baselineskip}
+
+
+\begin{enumerate}
+    \item Έστω $ f(x) = 2x-3 $, $ g(x) = x^{2}+4 $ και $ h(x) = x-1 $. 
+        Να υπολογίσετε τις 
+        \begin{enumerate}[i)]
+            \item $ f \circ g $ και $ g \circ f $
+            \item $ f \circ f $ και $ g \circ g $
+            \item $ h \circ h \circ h $
+        \end{enumerate}
+
+        \hfill Απ:  \begin{tabular}{l}
+            $ f \circ g = 2x^{2}+5 $, $ g \circ f = (2x-3)^{2}+4 $ \\
+            $ f \circ f = 4x-9 $, $ g \circ g = x^{2}+8 $ \\
+            $ h \circ h \circ h = x-3 $
+        \end{tabular}
+
+    \item Έστω $ f(x) = x^{2}+1 $, με $ x>0 $ και $ g(x) = -x+3 $, με $ x>3 $. 
+        Να υπολογίσετε τις συναρτήσεις $ f \circ g $ και $ g \circ f $.
+
+        \hfill Απ: \begin{tabular}{l}
+            $ f \circ g : $ δεν ορίζεται \\
+            $ D_{g \circ f}=(\sqrt{2}, +\infty) $, $ g \circ f = -x^{2}+2 $
+        \end{tabular}
+
+    \item Έστω $ f(x) = \sqrt{x+1} $ και $ g(x) = \ln{(x-1)} $. Να υπολογίσετε 
+        τις συναρτήσεις $ f \circ g $ και $ g \circ f $.
+
+        \hfill Απ:  \begin{tabular}{l}
+            $ D_{f \circ g}=[1,+\infty) $, $ f \circ g = \sqrt{\ln{x}} $ \\
+            $ D_{g \circ f}=(-1,+\infty) $, $ g \circ f = \ln{\sqrt{x+1}} -1$
+        \end{tabular}
+
+    \item Έστω $ f(x) = \sqrt{x-2} $ και $ g(x) = \frac{1}{x-1} $. Να υπολογίσετε 
+        τηυ συνάρτηση $ g \circ f $.
+
+        \hfill Απ:  \begin{tabular}{l}
+            $ D_{g \circ f}= [2,3) \cup (3,+\infty) $, 
+            $ g \circ f = \frac{1}{\sqrt{x-2} -1} $
+        \end{tabular}
+\end{enumerate}
+
+
+
+
+
+
+
+
+\end{document}
+
+
+

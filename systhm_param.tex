@@ -1,13 +1,15 @@
-\input{$HOME/Desktop/preamble/preamble.tex}
-\input{$HOME/Desktop/preamble/definitions.tex}
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
 
 \usepackage{systeme}
+
+\pagestyle{vangelis}
 
 \setlength{\itemsep}{\baselineskip}
 \begin{document}
 
 \begin{center}
-	\fbox{\Large\bfseries Ασκήσεις στα παραμετρικά  συστήματα}
+    \minibox[frame]{\large \bfseries Ασκήσεις στα παραμετρικά  συστήματα}
 \end{center}
 
 \vspace{\baselineskip}
@@ -32,7 +34,7 @@
 \item $ \sysdelim.\} \systeme{
 x + y + z = 0, 
 x + \lambda y + \lambda z = -3, 
-2x + y + \mu z = a + 1
+2x + y + \mu z = \lambda + 1
 } $ \hfill Απ: \begin{tabular}{l}
 	$ \lambda \neq 1 $, $ \mu \neq 1 $ μοναδική λύση \\
 	$ \lambda \neq  1 $, $ \mu = 1 $ άπειρες λύσεις \\
@@ -74,6 +76,23 @@ x - y + \lambda z = \lambda - 1
 	$ \lambda = -1 $ άπειρες λύσεις \\
 	$ \lambda = 0 $ αδύνατο
 \end{tabular} 
+
+\item $ \sysdelim.\} \systeme[xy]{
+x + 2y = 1,
+2x+(1 \- \lambda)y = -1, 
+(1 \- \lambda)x + 3y = 2
+} $ \hfill Απ: \begin{tabular}{l}
+	$ \lambda = 0, 2, $ μοναδική λύση \\
+	$ \lambda \neq 0, 2, $ αδύνατο \\
+	$ \lambda = 1$ άπειρες λύσεις \\
+\end{tabular} 
+
+\item $ \sysdelim.\} \systeme[xyzw]{
+    x + y + z + \lambda w = 1,
+    x + \mu y + z + w = - \mu, 
+    x + y + z + w = 1
+}$ \hfill Απ:   
+  
 
 	\end{enumerate}
 

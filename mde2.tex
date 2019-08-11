@@ -1,0 +1,234 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+\usepackage{qtree}
+%\usepackage{booktabs}
+\usepackage{xcolor}
+
+%\renewcommand{\baselinestretch}{1.2}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+	\fbox{\Large\bfseries \minibox[c]{Ασκήσεις ΜΔΕ 2ης τάξης \\ Μονοδιάστατα προβλήματα (ομογενή)}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\section{Εξίσωση Κύματος}%
+
+
+
+\begin{enumerate}
+
+	\item Να λυθεί η κυματική εξίσωση $ u_{xx}-u_{tt} = 0 $, $ 0<x<1 $, $ t>0 $ με Συνοριακές
+		συνθήκες $ u(0,t)=u(1,t)=0 $, $ t>0 $ (\textbf{άκρα σταθερά}) για τις παρακάτω Αρχικές συνθήκες: 
+		\begin{enumerate}[(i)]
+			\item $ u(x,0) = \sin{\pi x} + 2 \sin{(3 \pi x)},\quad  u_t(x,0) = 0 $
+
+				\hfill Απ: $ u(x,t) = \sin{(\pi x)} \cos{(\pi t)} + 2 \sin{(3\pi x)} \cos{(3\pi t)} $
+		\item $ u(x,0) = 0,\quad  u_t(x,0) = \sin{(2\pi x)} $
+
+			\hfill Απ: $ u(x,t) = \frac{\sin{3\pi x} \sin{3\pi t}}{ 3\pi } $
+
+		\item $ u(x,0) = \sin{x}, \quad u_t(x,0) = \sin{x} $
+
+			\hfill Απ: $ u(x,t) = \left(\cos{(ct)} + \frac{\sin (ct) }{ c }\right) \sin{x}  $ 
+
+		\item $ u(x,0) = -1,\quad u_t(x,0) = 3 \sin{\pi x} $
+
+			\hfill Απ: $ u(x,t) = \frac{ 3 }{ \pi } \sin{(\pi x)} \sin{(\pi t)} +
+			\sum_{n=1}^{\infty} [(-1)^{n}-1] \frac{ 2 }{ n\pi } \sin{(n\pi x)} \cos{(n\pi t)}$ 
+
+\end{enumerate}
+
+\item Να λυθεί η κυματική εξίσωση $ u_{xx} - \frac{1}{ c^{2} } u_{tt} = 0 $, $ 0<x<1 $, $ t>0
+	$ με Συνοριακές συνθήκες $ u(0,t) = u(1,t) = 0 $, $ t>0 $ (\textbf{άκρα σταθερά)} για τις παρακάτω Αρχικές συνθήκες:
+
+	\begin{enumerate}[(i)]
+		\item $ u(x,0) = x(1-x), \quad u_t(x,0) = 9$ 
+
+
+			\hfill Απ: $ u(x,t) = \sum_{n=1}^{\infty} \frac{ 4 }{ (n\pi)^{3} } [1-(-1)^{n}]
+			\cos{(n\pi c t)} + \frac{ 18 }{ (n\pi)^{2} } [1-(-1)^{n}] \sin{(n\pi c t)} \cos{(n\pi c
+			x)} $
+			 
+		\item $ u(x,0) = x(1-x), \quad u_t(x,0) = 0 $ 
+
+			\hfill Απ: $ u(x,t) = \sum_{n=1}^{\infty} \frac{ 4 }{ (n\pi)^{3} } \sin{(1-(-1)^{n})}
+			\cos{(n\pi c t)} \sin{(n\pi x)}  $
+
+		\end{enumerate}
+
+
+\item Να λυθεί η κυματική εξίσωση $ u_{xx} - \frac{1}{ a^{2} } u_{tt} = 0 $, $ 0<x<L $, $ t>0
+	$ με Συνοριακές συνθήκες $ u(0,t) = u(L,t) = 0 $, $ t>0 $ (\textbf{άκρα σταθερά)} για τις παρακάτω Αρχικές συνθήκες:
+
+	\begin{enumerate}[(i)]
+		\item $ u(x,0) = 0, \quad u_t(x,0) = \sin{\left(\frac{ 3\pi x }{ L }\right)} $ 
+
+			\hfill Απ: $ u(x,t) = \left(\frac{ L }{ 3\pi c }\right) \sin{\left(\frac{ 3\pi x  }{ L
+		}\right)} \sin{\left(\frac{3 \pi c t}{L}\right)} $
+			
+	\end{enumerate}
+
+
+
+
+\item Να λυθεί η κυματική εξίσωση $ u_{xx} - u_{tt} = 0 $ με Συνοριακές συνθήκες
+	$ u_x(0,t) = u_x(1,t) = 0 $, $ t>0 $ (\textbf{άκρα ελεύθερα)} για τις παρακάτω Αρχικές συνθήκες:
+
+	\begin{enumerate}[(i)]
+			\item $ u(x,0) = 0,\quad  u_t(x,0) = \begin{cases} 1 &, \frac{1}{ 4 } \leq x \leq \frac{
+		3 }{ 4 }  \\ 0 &, \text{διαφορετικά}
+		\end{cases}$	
+
+		\hfill Απ: $ u(x,t) = \frac{ t }{ 2 } + \frac{ 4 }{ \pi^{2} } \sum_{n=1}^{\infty} \frac{
+			(-1)^{n} }{ n^{2} } \sin{\left(\frac{ n\pi }{ 2 }\right)} \sin{(n\pi t)} \cos{(n\pi x)} $ 
+	\end{enumerate}
+\end{enumerate}
+
+
+\section{Εξίσωση Διάχυσης}
+
+
+\begin{enumerate}
+
+	\item Να λυθεί η εξίσωση διάχυσης $ u_{xx} - u_t = 0 $, $ u=u(x,t) $, με συνοριακές συνθήκες $
+		u(0,t) = u(1,t) = 0 $, ({\bfseries Μηδενική θερμοκρασία στα άκρα}) $ t>0 $ για τις παρακάτω αρχικές συνθήκες:
+
+		\begin{enumerate}[(i)]
+			\item $u(x,0) = 1$
+
+				\hfill Απ: $ u(x,t) = \frac{ 4 }{ \pi } \sum_{n=0}^{\infty} \sin{((2n+1)\pi x)}
+				e^{-(2n+1)^{2}\pi^{2}t} $
+
+			\item $ u(x,0) = x $
+
+				\hfill Απ: $ u(x,t) = \frac{1}{ 2 } - \frac{ 4 }{ \pi^{2} } \sum_{n=0}^{\infty}
+				\frac{1}{ (2n+1)^{2} } \cos{((2n+1)\pi x)}e^{-(2n+1)^{2}\pi^{2}t } $
+
+			\item $ u(x,0) = \sin{3\pi x} $
+
+				\hfill Απ: $ u(x,t) = e^{-9\pi^{2}t} \sin{3\pi x}  $
+
+			\item $ u(x,0) = \sin{(2\pi x)} + \frac{ \sin{(4\pi x)}  }{ 3 } + \frac{ \sin{6\pi x}
+				 }{ 5 } $
+
+				 \hfill Απ: $ u(x,t) = e^{-4\pi^{2}t} \sin{2\pi x} + \frac{1}{ 16 }
+				 e^{-16\pi^{2}t}\sin (4\pi x) + \frac{1}{ 5 } e^{-36\pi^{2}t} $
+				 
+			 \item $ u(x,0) = x-x^{2} $ 
+
+				 \hfill Απ: $ u(x,t) = \frac{ 8 }{ \pi^{3} } \sum_{n=0}^{\infty} \frac{
+				 e^{-(2n+1)^{2}\pi^{2}t} \sin{((2n+1)}\pi x) }{ (2n+1)^{3} }  $
+
+		\item $ u(x,0) = e^{x} $
+
+			\hfill Απ: $ u(x,t) = 2 \sum_{n=0}^{\infty} \frac{ \pi(2n-1)-4e(-1)^{n}
+			}{(2n-1)^{2}\pi^{2} +4  } \sin{\left(\frac{ (2n-1)\pi x }{ 2 }\right)}
+				e^{-\frac{(2n-1)^{2}\pi^{2}}{4}t}  $
+
+			\item $ u(x,0) = \sin{2\pi x} - 3 \sin{6\pi x} $
+
+				\hfill Απ: $ u(x,t) = \sin{(2\pi x)} e^{-4\pi^{2}t} - 3 \sin{(6\pi x)}
+				e^{-36\pi^{2}t }  $
+
+			\item $ u(x,0) = \begin{cases}
+					x &, 0<x\leq \frac{ 1 }{ 2 } \\
+					0 &, \frac{1}{ 2 } <x<1
+			\end{cases}$ 
+			
+			\hfill Απ: $ u(x,t) = \sum_{n=1}^{\infty}[1-3(-1)^{n}] \frac{ 2 }{ n\pi } \sin{(n\pi x)}
+			e^{-n^{2} \pi ^{2} t} $
+			 
+		\item $ u(x,0) = 2x+1 $
+
+			\hfill Απ: $ u(x,t) = \sum_{n=1}^{\infty} (\frac{ 2 }{ (n\pi)^{2}} \sin{(\frac{ n\pi }{
+			2 } - \frac{1}{ n\pi } cos(\frac{ n\pi }{ 2 }))} \sin{( n\pi x )} e^{-n^{2}\pi^{2}t}) $
+
+		\item Μια ράβδος μήκους $L=1$ τοποθετείται σε ένα δοχείο με βρασμένο νερό. Στη χρονική
+			στιγμή $ t=0 $ βγαίνει από το νερό και τα άκρα της τοποθετούνται σ᾽ ένα μέσο με σταθερή
+			θερμοκρασία $ 0^{\circ}  $. Θεωρώντας ότι η σταθερά $ k=1 $, να βρεθεί η κατανομή
+			της θερμοκρασίας $ u(x,t) $, για $ t>0 $.
+
+			\hfill Απ: $ u(x,t) = \frac{ 400 }{ \pi } \sum_{n=1}^{\infty} \sin{((2n+1) \pi
+			x}e^{-(2n+1)^{2}\pi t} ) $
+
+		\end{enumerate}
+
+	\item Να λυθεί η εξίσωση διάχυσης $ u_{xx} - u_t = 0 $, $ u=u(x,t) $, με συνοριακές συνθήκες $
+		u_x(0,t) = u_x(1,t) = 0 $ ({\bfseries άκρα μονωμένα})
+
+		\begin{enumerate}[(i)]
+			\item $u(x,0) = x^{2}$ 
+
+				\hfill Απ: $ u(x,t) = \frac{1}{ 3 } + \sum_{n=1}^{\infty} (-1)^{n} \frac{ 4 }{
+				(n\pi)^{2}} \cos{(n\pi x)} e^{-n^{2}\pi^{2}t} $
+
+			\item $ u(x,0) = 3 - 2 \cos{(n\pi x)}  $
+
+				\hfill Απ: $ u(x,t) = 3 - 2 \cos{(n\pi x)} e^{-16\pi^{2}t} $
+
+			\item $ u(x,0) = \begin{cases} 0 &, 0<x\leq \frac{ 1 }{ 2 } \\ 2x &, \frac{1}{ 2 }
+					<x <1 
+		\end{cases}$
+
+					\hfill Απ: $ u(x,t) = \frac{ 3 }{ 4 } + \sum_{n=1}^{\infty}\left(- \frac{ 2 }{
+						n\pi } \sin{\left(\frac{ n\pi }{ 2 }\right)}+ \frac{ 4 }{ n^{2} \pi ^{2} }\left[(-1)^{n}-
+					\cos{\left(\frac{ n\pi }{ 2 }\right)}\right]\right)  $
+
+\end{enumerate}
+
+
+	\item Να λυθεί η εξίσωση διάχυσης $ u_{xx} - u_t = 0 $, $ u=u(x,t) $, με \textbf{μικτές} συνοριακές συνθήκες $ u(0,t) = u_x(1,t) = 0 $ 
+
+		\begin{enumerate}[(i)]
+			\item $ u(x,0) = -2 $
+
+				\hfill Απ: $ u(x,t) = -\sum_{n=1}^{\infty} \frac{ 2 }{ (2n-1)\pi } \sin{\left(\frac{
+				(2n-1) \pi x }{ 2 }\right)} e^{\frac{-(2n-1)^{2}\pi^{2}}{4}t} $
+
+	\item Να λυθεί η εξίσωση διάχυσης $ u_{xx} - u_t = 0 $, $ u=u(x,t) $, με \textbf{μικτές}
+		συνοριακές συνθήκες $ u_x(0,t) = u(1,t) = 0 $ 
+
+			\item $ u(x,0) = x $
+
+				\hfill Απ: $ \sum_{n=1}^{\infty} (\frac{ 4 }{ (2n-1) \pi } - \frac{ 8 }{ (2n-1)^{2}
+				\pi ^{2}}) \cos{(\frac{ (2n-1) \pi x }{ 2 })} e^{- \frac{ (2n-1)^{2} \pi ^2 }{ 4 } t} $
+
+
+		\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\section{Εξίσωση \textlatin{Laplace}}
+
+\begin{enumerate}
+
+	\item Τρεις πλευρές μιας τετραγωνικής πλάκας βρίσκονται σε θερμοκρασία $ 0^{\circ} $, ενώ η
+		τέταρτη πλευρά (επάνω), έχει θερμοκρασία $ 30^{\circ} $. Να βρεθεί η κατανομή της
+		θερμοκρασίας $ u(x,y) $ στο εσωτερικό της πλάκας. 
+
+		\hfill Απ: $u(x,y) = \frac{2\cdot 30}{\pi} \sum_{n=1}^{\infty} \frac{ 1 - \cos{(n\pi)} }{ n 
+		\sinh{(n\pi)}}	\sin{(n\pi x)}\sinh{(n\pi y)} $
+
+\item Να λυθεί η εξίσωση \textlatin{Laplace} $ u_{xx} + u_{yy} = 0 $, $u=u(x,y)$, $ 0<x<1 $, $ 0<y<1
+	$, με συνοριακές συνθήκες $ u(0,y) = 0, u(x,0) = 0, u(1,y) = 0 $ και $ u(x,1) = x $. 
+
+
+\hfill Απ: $ u(x,y) = - \frac{ 2 }{ \pi } \sum_{n=1}^{\infty}  \frac{ (-1)^{n} }{ n
+		\sinh{(n\pi)} } \sin{(n\pi x)} \sinh{(n\pi y)}  $
+
+\item Να λυθεί η εξίσωση \textlatin{Laplace} $ u_{xx} + u_{yy} = 0 $, $u=u(x,y)$, $ 0<x<1 $, $ 0<y<1
+	$, με συνοριακές συνθήκες $ u(x,0) = x(x-1)  u(x,1) = 0, u(0,y) = 0 $ και $ u(1,y) = 0 $. 
+	
+	\hfill Απ: $ u(x,y) = - 8 \sum_{n=1,3,5\ldots}^{\infty}  \frac{ 1} { (n\pi)^{3} \sinh{(n\pi)}
+	} \sin{(n\pi x)} \sinh{(n \pi (1-y))} $
+\end{enumerate}
+
+\end{document}

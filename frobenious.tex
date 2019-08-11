@@ -1,0 +1,77 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+
+\usepackage{microtype} 
+\thispagestyle{empty}
+
+
+\begin{document}
+\begin{center}
+	\fbox{\Large\bfseries  Ασκήσεις στη μέθοδο Σειρών - \textlatin{Frobenious}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+	\item  Να λυθούν οι παρακάτω σδε 2ης τάξης, με τη μέθοδο των σειρών, σε περιοχή του
+		\textbf{ομαλού} σημείου $ x_{0} $. 
+
+		\begin{enumerate}[i)]
+			\item $ y'' - xy' + 2y = 0, \quad  x_{0} = 0 $ \hfill Απ: $ \scriptstyle{ y(x) =
+				a_{0} \left(1 - x^{2}\right)} + a_{1} \left(x - \frac{1}{6}x^{3} - \frac{1}{120}x^{5} - \cdots \right) $ 
+
+			\item $ y'' + x^{2}y' - 4xy = 0, \quad x_{0} = 0 $ \hfill Απ: $ \scriptstyle {y(x)
+					= a_{0}\left(1 + \frac{2}{3} x^{3} + \frac{1}{20} x^{6} - \frac{1}{320} x^{9} +
+				\cdots\right) + a_{1}\left(x + \frac{1}{4} x^{4}\right)} $  
+
+			\item $ y'' - xy' + y = 0, \quad x_{0} = 0 $ \hfill Απ: $ \scriptstyle{ y(x) =
+				a_{0}\left(1 - \frac{1}{2} x^{2} - \frac{1}{24} x^{4} - \frac{1}{240} x^{6} - \cdots\right)} + a_{1} x $ 
+
+			\item $ (1+x^{2})y'' + 2xy' - 2y = 0, \quad x_{0} = 0  $ \hfill Απ:
+				$ \scriptstyle{ y(x) = a_{0}\left(1 + x^{2} - \frac{1}{3} x^{4} + \frac{1}{5} x^{6} - \cdots\right) + a_{1} x }$  
+
+			\item \label{eq:5} $ (2-x)y'' + y = 0, \quad x_{0} = 1$ \hfill Απ: $ \scriptstyle{ Y(t) = a_{0}\left(1 - \frac{1}{2} t^{2} - \frac{1}{6} t^{4} - \frac{1}{24} t^{6} +
+				\cdots\right) + a_{1}\left(t - \frac{1}{6}t^{3} - \frac{1}{12}t^{5} + \cdots \right)}$ 
+		\end{enumerate}
+
+	\item Να λυθούν οι παρακάτω σδε 2ης τάξης, με τη μέθοδο των σειρών (\textlatin{Frobenious}),
+		σε περιοχή του \textbf{κανονικού ιδιάζοντος} σημείου $ x_{0} $.
+
+		\begin{enumerate}[i)]
+			\item $ 8x^{2}y'' + 10xy' + (x-1)y = 0, \quad x_{0} = 0 $ \hfill Απ: \begin{tabular}{l}
+					$ \scriptstyle{y_{1}(x) = x^{\frac{1}{4}}\left(1 - \frac{1}{14}x + \frac{1}{616}x^{2} - \frac{1}{55440}^{3} + \cdots\right)}$ \\
+					$ \scriptstyle{y_{2}(x) = x^{- \frac{1}{2}} \left(1 - \frac{1}{2} x + \frac{1}{40} x^{2} - \frac{1}{2160} x^{3} + \cdots\right)} $	
+				\end{tabular}   
+
+			\item $ 2xy'' - y' +x^{2}y = 0, \quad x_{0} = 0$ \hfill Απ: \begin{tabular}{l}
+					$\scriptstyle{ y_{1}(x) = x^{\frac{3}{2}}\left(1 - \frac{1}{27}x^{3} +
+					\frac{1}{2430}x^{6} + \cdots\right)}$  \\
+					$\scriptstyle{ y_{2}(x) = \left(1 - \frac{1}{9} x^{3} + \frac{1}{486} x^{6} +
+					\cdots\right)} $
+				\end{tabular}
+
+			\item $ x(x+2)y'' + 2(x+1)y' - 2y = 0, \quad x_{0} = 0$ \hfill Απ: \begin{tabular}{l}
+					$ \scriptstyle{ y_{1}(x) = 1 + x} $ \\
+					$ \scriptstyle{ y_{2}(x) = (1+x) \ln{x} - \frac{5}{2} x - \frac{3}{8} x^{2}} + \cdots $
+				\end{tabular}  
+
+			\item $ x^{2}y'' - xy' + y = 0, \quad x_{0} = 0 $ \hfill Απ: \begin{tabular}{l}
+					$\scriptstyle{ y_{1}(x) = x }$ \\
+					$\scriptstyle{ y_{2}(x) = x \ln{x}} $
+				\end{tabular} 
+
+		\end{enumerate}
+\end{enumerate}
+
+\vspace{\baselineskip}
+
+
+\textbf{Υπόδειξη:} 
+	Για το ερώτημα \ref{eq:5}, να θέσετε $ t = x - 1 \Rightarrow x = t+1 $. Άρα $ y(x) =
+		y(t+1) = Y(t) $. Με αντικατάσταση στην εξίσωση προκύπτει:
+		$ (1-t)Y''(t) + Y(t) = 0 \Rightarrow Y''(t) + \frac{1}{1-t} Y(t) = 0, \quad t_{0} = 0 $, την
+		οποία και λύνουμε. Τέλος, στη λύση $ Y(t) $ που θα βρούμε, αντικαθιστούμε όπου $t=x-1 $  και βρίσκουμε την  $ y(x) $.
+
+\end{document}
+
