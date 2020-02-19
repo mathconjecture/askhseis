@@ -1,5 +1,5 @@
-\input{$HOME/Desktop/preamble/preamble.tex}
-\input{$HOME/Desktop/preamble/definitions.tex}
+\input{preamble/preamble.tex}
+\input{preamble/definitions.tex}
 
 
 \everymath{\displaystyle}
@@ -44,13 +44,16 @@
 
 	  \hfill Απ: $ f(0,0,0) = 0 $
 
-  \item Να επεκταθεί κατάλληλα η συνάρτηση $ \frac{ 1 - \sqrt{ x^{2}+y^{2}+z^{2} } }{
+  \item Να επεκταθεί κατάλληλα η συνάρτηση $ f(x,y,z) = \frac{ 1 - \sqrt{ x^{2}+y^{2}+z^{2} } }{
 	  x^{2}+y^{2}+z^{2}} $ στο σημείο $ (0,0,0) $ ώστε να είναι συνεχής στο σημείο αυτό.
 
 		  \hfill Απ: $ f(0,0,0)= \frac{ 1 }{ 2 } $
 
   \item Να εξεταστούν πλήρως ως προς τη συνέχεια οι συνάρτησεις:
 	  \begin{enumerate}[i)]
+          \item $ f(x,y) = \begin{cases} \frac{y^{2}}{x^{2}+y^{2}}, & (x,y) \neq (0,0) \\ 0, & (x,y)
+              = (0,0)\end{cases} $
+              \hfill Απ: όχι συνεχής στο $ (0,0) $ 
 		  \item   \(
 			  f(x,y) = \begin{cases}
 				  \sqrt{x^{2}+y^{2}}\ln(x^{2}+y^{2}) &, (x,y)\neq (0,0) \\
@@ -59,8 +62,8 @@
       \) \hfill Απ: συνεχής
       \item   \(
         f(x,y)=\begin{cases}
-          e^{-\frac{x^{2}}{y}} &, (x,y)\in\mathbb{R}^{2}-\{(x,y)\mid y=0\} \\
-          0 &, (x,0)
+          e^{-\frac{x^{2}}{y}}, & y \neq 0 \\
+          0, & y=0 
       \end{cases}
         \) \hfill Απ: οχι συνεχής για $y=0$
         \item   \(
@@ -70,6 +73,11 @@
         \end{cases}
           \) \hfill Απ: συνεχής
   \end{enumerate}
+  \item Να δείξετε ότι η συνάρτηση 
+      \[
+          f(x,y) = \begin{cases} \frac{1- \cos{\sqrt{xy}}}{y}, & y \neq 0 \\ \frac{x}{2}, & y = 0  \end{cases}  
+       \] 
+       είναι συνεχής σε κάθε σημείο του άξονα $ y $.
 \end{enumerate}
 
 \end{document}
