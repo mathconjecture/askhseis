@@ -18,13 +18,13 @@
   \begin{enumerate}[i)]
 	  \item $ \lim_{(x,y)\to (0,0)} xy\sin{\frac{ 1 }{ y }} $ \hfill Απ: $ 0 $
   \item $ \lim_{(x,y)\to (0,0)} \sqrt{ x^{2} + y^{2} } \cos{\frac{ 1 }{ \sqrt{ xy } }} $ \hfill Απ: $ 0 $
-	  \item $ \lim_{(x,y)\to (0,0)} (x^{2} + y^{2}) \sin{\frac{ 1 }{ x^{2} + y^{2} }} $ \hfill Απ: $ 0 $ 
-	  \item $ \lim_{(x,y)\to (0,0)} \frac{ (1+y^{2})\cdot \sin{x} }{ x } $ \hfill Απ: $ 1 $
+      \item $ \lim_{(x,y)\to (0,0)} \frac{ (1+y^{2})\cdot \sin{x} }{ x } $ \hfill Απ: $ 1 $
     \item $\lim\limits_{(x,y)\to (0,0)}\frac{\sin(xy)}{x}$ \hfill Απ: $0$
 	\item $ \lim_{(x,y)\to (0,0)} \frac{ \sin{x} \cdot \sin{y} }{ \sin{xy} } $ \hfill Απ: $ 1 $
+	  \item $ \lim_{(x,y)\to (0,0)} (x^{2} + y^{2}) \sin{\frac{ 1 }{ x^{2} + y^{2} }} $ \hfill Απ: $ 0 $ 
 	\item $ \lim_{(x,y)\to (0,0)} \frac{ \sqrt{ x^{2}+y^{2}+4 } - 2 }{ x^{2}+y^{2} } $ \hfill Απ: $
 		\frac{ 1 }{ 4 } $
-\item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}y^{3} }{x^{2}+y^{4}}    $ \hfill Απ: $0 $ 
+\item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}y^{3} }{x^{2}+y^{2}}    $ \hfill Απ: $0 $ 
 \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{3}+y^{3} }{ x^{2}+y^{2} } $ \hfill Απ: $ 0 $
 \item $ \lim_{(x,y)\to (0,0)} (1+xy)^{\frac{ 1 }{ x^{2}+y^{2} }} $ \hfill Απ: δεν υπάρχει
 		  \end{enumerate}
@@ -32,12 +32,13 @@
   \item Να δείξετε ότι τα παρακάτω όρια δεν υπάρχουν
 
 	  \begin{enumerate}[i)]
-		  \item $ \lim_{(x,y)\to (0,0)} \frac{ xy^{3} + 2y^{4} }{ x^{4}+y^{4}}  $
-		  \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}-y^{2}+x^{3}+y^{3} }{ x^{2}+y^{2} } $ 
-		  \item $\lim\limits_{(x,y)\to (0,0)}\frac{x^{2}y^{2}}{x^{2}y^{2}+(x-y)^{2}}$ 
 		  \item $ \lim_{(x,y)\to (0,0)} \frac{ x + y }{ x - 2y } $ 
+		  \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}-y^{2}+x^{3}+y^{3} }{ x^{2}+y^{2} } $ 
+          \item $ \lim\limits_{(x,y)\to (0, 0)} \frac{y}{x^{2}+y^{2}} $  
+          \item $ \lim\limits_{(x,y)\to (0, 0)} \frac{xy^{3}}{x^{2}+y^{6}} $
+		  \item $ \lim_{(x,y)\to (0,0)} \frac{ xy^{3} + 2y^{4} }{ x^{4}+y^{4}}  $
+		  \item $\lim\limits_{(x,y)\to (0,0)}\frac{x^{2}y^{2}}{x^{2}y^{2}+(x-y)^{2}}$ 
 		  \item $ \lim_{(x,y)\to (0,0)} \frac{ \ln{( 1+xy )} }{ x^{2}+y^{2} }  $
-		  \item $ \lim_{(x,y)\to (0,0)} \frac{ x^{2}-y^{2} }{ x^{2}+y^{2} } $ 
 	  \end{enumerate}
 
   \item Δίνεται η συνάρτηση $f(x,y)=\frac{x^{2}y^{2}}{x^{2}y^{2}+(x+4y)^{2}}$, για κάθε $(x,y)\in \mathbb{R}-\{0,0\}$. Να επεκταθεί κατάλληλα ώστε να είναι συνεχής στο $(0,0)$.
@@ -68,11 +69,12 @@
         \) \hfill Απ: οχι συνεχής για $y=0$
         \item   \(
           f(x,y)=\begin{cases}
-            y^{2}x\sin \frac{1}{x^{2}+y^{2}} &, (x,y)\neq (0,0)\\
+            y^{2}x\cos \frac{1}{x^{2}+y^{2}} &, (x,y)\neq (0,0)\\
             0 &, (x,y)=(0,0)
         \end{cases}
           \) \hfill Απ: συνεχής
   \end{enumerate}
+
   \item Να δείξετε ότι η συνάρτηση 
       \[
           f(x,y) = \begin{cases} \frac{1- \cos{\sqrt{xy}}}{y}, & y \neq 0 \\ \frac{x}{2}, & y = 0  \end{cases}  
