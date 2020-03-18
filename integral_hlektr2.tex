@@ -1,0 +1,63 @@
+\input{$HOME/Desktop/preamble/preamble.tex}
+\input{$HOME/Desktop/preamble/definitions.tex}
+
+\everymath{\displaystyle}
+\thispagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+	\fbox{\large\bfseries Ολοκληρώματα}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+	\item Να υπολογιστούν τα παρακάτω ολοκληρώματα (Άρρητες).
+		
+		\begin{enumerate}
+			\item $ \int \frac{1}{1 + \sqrt{x+1}} \,{dx} $ \hfill Απ: $
+				2\left(\sqrt{x+1} - \ln{\abs{\sqrt{x+1} + 1}}\right) $
+		\item $ \int \sqrt[3]{\frac{x-1}{x}} \cdot \frac{1}{x(x-1)} \,{dx} $
+				\hfill Απ: $ 3 \sqrt[3]{\frac{x-1}{x}} $
+			\item $ \int \frac{1}{\sqrt{2x-1} - \sqrt[4]{2x-1}} \,{dx} $ \hfill
+				Απ:	$ \left(\sqrt[4]{2x-1} + 1\right)^{2} + 2 \ln{\left(\sqrt[4]{2x-1} - 1\right)} $
+			\item $ \int \frac{1}{x \sqrt{x^{2}+x+1}} \,{dx} $ \hfill Απ: $
+				\ln{\abs{\frac{x - \sqrt{x^{2}+x+1} +1}{x - \sqrt{x^{2}+x+1} -1}}} $
+			\item $ \int \frac{x + \sqrt{x-1}}{\sqrt{x+1}} \,{dx} $ \hfill Απ: $
+				\frac{x \sqrt{x-1}}{\sqrt{x+1}} + \frac{2}{3} x \sqrt{x+1} +
+		\frac{\sqrt{x-1}}{\sqrt{x+1}} - \frac{4}{3} \sqrt{x+1}  $
+		\end{enumerate}
+
+	\item Να υπολογιστούν τα παρακάτω ολοκληρώματα (Διωνυμικά).
+
+		\begin{enumerate}[i)]
+			\item $ \int \frac{\sqrt[3]{1+\sqrt[4]{x}}}{\sqrt{x}} \,{dx} $
+				\hfill Απ: $ \frac{12}{7} \left(1+x^{\frac{1}{4}}\right)^{\frac{7}{3}} -
+				3\left(1+x^{\frac{1}{4}}\right)^{\frac{4}{3}}$
+			\item $ \int \frac{\sqrt{1+\sqrt[3]{x}}}{\sqrt[3]{x^{2}}} \,{dx} $
+				\hfill Απ: $ 2\left(1+x^{\frac{1}{3}}\right)^{\frac{3}{2}} $
+			\item $ \int \sqrt{x} \left(1+\sqrt[3]{x}\right)^{4} \,{dx} $ \hfill Απ: $
+				6\left(\frac{x^{\frac{9}{6}}}{9} + 4 \frac{x^{\frac{11}{6}}}{11} + 6
+				\frac{x^{\frac{13}{6}}}{13} + 4 \frac{x^{\frac{15}{6}}}{15} +
+			\frac{x^{\frac{17}{6}}}{17}\right)$
+		\end{enumerate}
+	\item Να υπολογιστούν τα παρακάτω ολοκληρώματα (Τριγωνομετρικά).
+	\begin{enumerate}[i)]
+		\item  $\int\sin^3x\cos^2xdx$\hfill Απ: $-\frac{\cos^3x}{3}+\frac{\cos^5x}{5}+c$
+		\item $ \int \sin{(4x)} \sin{(5x)} \,{dx} $ \hfill Απ: $ \frac{1}{2}
+			\sin{x} - \frac{1}{18} \sin{(9x)}$
+		\item $ \int \frac{\sin^{4}x}{\cos{x}} \,{dx} $ \hfill Απ: $
+			\frac{1}{2}\ln{\abs{\frac{\sin{x} +1}{\sin{x} -1}}} -\frac{1}{3} \sin^{3}{x}
+			- \sin{x}$
+		\item  $\int\sin^4x\cos^2xdx$\hfill Απ: $\frac{1}{16}x-\frac{1}{64}\sin 4x-\frac{1}{48}\sin^32x+c$
+		\item  $\int\frac{\cos^2x}{\sin^6x}dx$\hfill Απ: $-\frac{1}{5\tan^5x}-\frac{1}{\tan^3x}+c$
+		\item  $\int\frac{1}{\sin x}dx$\hfill Απ:
+			$\ln\left|\tan\frac{x}{2}\right|+c$
+		\item  $\int\frac{1}{\cos x}dx$\hfill Απ:
+			$\ln\left|\frac{\tan\frac{x}{2}+1}{\tan\frac{x}{2}-1}\right|+c$
+		\item  $\int\frac{\cos x}{1+\cos x}dx$\hfill Απ: $x-\tan\frac{x}{2}+c$
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
