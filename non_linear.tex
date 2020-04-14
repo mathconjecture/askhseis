@@ -1,0 +1,123 @@
+\input{preamble/preamble_ask.tex}
+\input{preamble/definitions.tex}
+
+
+\thispagestyle{empty}
+
+
+\begin{document}
+
+\begin{center}
+    \minibox[frame]{\bfseries \large Μη Γραμμικά Συστήματα}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+    \item Να υπολογιστούν και να χαρακτηριστούν τα κρίσιμα σημεία των παρακάτων 
+        μη-γραμμικών συστημάτων.
+
+        \begin{enumerate}[i)]
+            \setlength\itemsep{2\baselineskip}
+        \item $ 
+            \left.
+                \begin{matrix*}[l]
+                    x' = (2+x)(y-x) \\
+                    y' = (4-x)(y+x) 
+                \end{matrix*}
+            \right\}$ \hfill Απ:  
+            \begin{tabular}{ll}
+                $ (0,0) $ & σάγμα, ασταθές \\
+                $ (4,4) $ & εστία ,ασυμπτ. ευσταθής \\
+                $ (-2,2) $ & κόμβος, ασταθής
+            \end{tabular} 
+
+        \item $ 
+            \left.
+                \begin{matrix*}[l]
+                    x' = 1-y \\
+                    y' = x^{2} - y^{2}
+                \end{matrix*}
+            \right\}$ \hfill Απ:  
+            \begin{tabular}{ll}
+                $ (-1,1) $ & σάγμα, ασταθές  \\
+                $ (1,1) $ & εστία, ασυμπτ. ευσταθής
+            \end{tabular}  
+
+        \item $ 
+            \left.
+                \begin{matrix*}[l]
+                    x' = - (x-y)(1-x-y) \\
+                    y' = x(2+y)
+                \end{matrix*}
+            \right\} $ \hfill Απ: \begin{tabular}{ll}
+                $ (0,0) $ & σάγμα, ασταθές \\
+                $ (-2,2) $ & κόμβος, ασυμπτ. ευσταθής \\
+                $ (0,1) $ & εστία, ασυμπτ. ευσταθής \\
+                $ (3 -2) $ & κόμβος, ασταθής
+            \end{tabular} 
+
+        \item $ 
+            \left.
+                \begin{matrix}
+                    x' = x-y^{2} \\
+                    y' = y-x^{2}
+                \end{matrix}
+            \right\}$ \hfill Απ: \begin{tabular}{ll}
+                $ (0,0) $ & άστρο, ασταθές \\
+                $ (1,1) $ & σάγμα, ασταθές
+            \end{tabular}
+
+        \item $ 
+            \left.
+                \begin{matrix}
+                    x' = 1-xy \\
+                    y' = x-y^{3}
+                \end{matrix}
+            \right\}$ \hfill Απ: \begin{tabular}{ll}
+                $ (1,1) $ & εκφ. κόμβος, ασταθής \\
+                $ (-1,-1) $ & σάγμα, ασταθές
+            \end{tabular} 
+
+        \item $ 
+            \left.
+                \begin{matrix*}[l]
+                    x' = (1+x) \sin{y} \\
+                    y' = 1-x - \cos{y}
+                \end{matrix*}
+            \right\}$ \hfill Απ: \begin{tabular}{ll}
+                $ (0,2k \pi) $ & κέντρο, ευσταθές \\
+                $ (2, (2k+1) \pi) $ & σάγμα, ασταθές
+            \end{tabular} 
+
+        \end{enumerate}
+
+    \item Έστω τα μη-γραμμικά συστήματα 
+        \begin{align}
+            \left.
+                \begin{matrix*}[l]\label{sys1}
+                    x' = y+x(x^{2}+y^{2}) \\
+                    y' = -x+y(x^{2}+y^{2})
+                \end{matrix*}
+            \right\} 
+            \intertext{και} 
+            \left.
+                \begin{matrix*}[l]\label{sys2}
+                    x' = y-x(x^{2}+y^{2}) \\
+                    y' = -x - y(x^{2}+y^{2})
+                \end{matrix*}
+            \right\} 
+        \end{align} 
+        \begin{enumerate}[i)]
+            \item Να δείξετε ότι το $ (0,0) $ είναι κρίσιμο σημείο και για τα δύο 
+                συστήματα, καθώς και ότι είναι κέντρο αντίστοιχα.
+            \item Για το σύστημα~\eqref{sys2}, να δείξετε ότι $ r' < 0 $ και ότι 
+                $ r \to 0 $ καθώς $ t \to \infty $, άρα το $ (0,0) $ είναι 
+                ασυμπτωτικά ευσταθές.
+            \item Για το σύστημα~\eqref{sys1}, να δείξετε ότι η λύση του αντίστοιχου 
+                ΠΑΤ, για την $r$, με $ r(0)=r_{0} $, είναι μη-φραγμένο, καθώς 
+                $ t \to 1/2 {r_{0}}^{2} $, άρα το $ (0,0) $ είναι ασταθές.
+        \end{enumerate}  
+\end{enumerate}
+
+\end{document}
