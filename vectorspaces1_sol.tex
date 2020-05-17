@@ -1,0 +1,617 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\zexternaldocument*{vectorspaces1}
+
+\pagestyle{vangelis}
+
+
+\begin{document}
+
+
+\chapter*{Υποδείξεις}
+
+\section*{Γραμμική Ανεξαρτησία}
+
+\begin{dfn}
+  Τα διανύσματα $ \mathbf{u_{1}}, \mathbf{u_{2}, \ldots, \mathbf{u_{n}}} $ 
+  θα είναι \textcolor{Col1}{γραμμικώς ανεξάρτητα} αν το ομογενές σύστημα
+  \[
+    \lambda _{1} \mathbf{u_{1}}+ \lambda _{2} \mathbf{u_{2}} + \cdots + \lambda _{n} 
+    \mathbf{u_{n}} = \mathbf{0}
+  \] 
+  έχει μοναδική λύση $ \lambda _{1} = \lambda _{2} = \cdots = \lambda _{n} = 0 $, τη  
+  μηδενική, \textbf{αλλιώς} λέγονται \textcolor{Col1}{γραμμικώς εξαρτημένα} (και κατά 
+  συνέπεια το ομογενές σύστημα θα έχει άπειρες λύσεις. \textbf{Θυμάμαι:} ένα ομογενές 
+  σύστημα δεν είναι ποτέ αδύνατο. Έχει πάντα λύση. Είτε μοναδική, τη μηδενική, 
+  είτε άπειρες)
+\end{dfn}
+
+\subsection*{Άσκηση~\ref{ask:lineks}}
+Τα διανύσματα $ \mathbf{u} = (1,3,1,2), \mathbf{v} = (2,5,-1,3) $ και $ \mathbf{w} = 
+(1,3,7,-2) $ θα είναι \textbf{γραμμικώς ανεξάρτητα}, αν και μόνον αν 
+το (\textbf{ομογενές σύστημα}) 
+\[
+  \lambda _{1} \mathbf{u} + \lambda _{2} \mathbf{v} + \lambda _{3} \mathbf{w} =
+  \mathbf{0} \Leftrightarrow \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & 2 & 1 \\
+    3 & 5 & 3 \\
+    1 & -1 & 7 \\
+    \undermat{A}{2 & 3 & -2}
+  \end{pmatrix*} 
+  \cdot 
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \end{pmatrix*} 
+  = 
+  \begin{pmatrix*}[r] 0 \\ 0 \\ 0 \\ 0 \end{pmatrix*} 
+\] 
+έχει \textcolor{Col1}{μοναδική λύση} την $ \lambda _{1} = \lambda _{2} = 
+\lambda _{3} = 0 $ (τη μηδενική). 
+
+Δηλαδή, ισοδύναμα αν $ \color{Col1}{rank(A) = 3} $ όσα και τα διανύσματα 
+τα οποία εξετάζω (γιατί, \textbf{θυμάμαι ότι ένα σύστημα $ A_{m \times n} \cdot X = b $ 
+  έχει μοναδική λύση αν και μόνον αν $ \rank(A) = \rank(E) = n $, όπου $n$ είναι το 
+πλήθος των αγνώστων})
+
+Άρα αρκεί να βρω το $ \rank(A) $ ή το $ \rank(A^{T}) $ (γιατί \textbf{θυμάμαι} ότι 
+$ \rank(A) = \rank(A^{T})) $ 
+
+Οπότε βάζω τα διανύσματα σε έναν πίνακα $A$ ως γραμμές (ή ως στήλες) και βρίσκω το 
+$ \rank(A) $
+\[
+  A = 
+  \begin{pmatrix*}[r]
+    1 & 3 & 1 &-2 \\
+    2 & 5 & -1 & 3 \\
+    1 & 3 & 7 &  -2
+  \end{pmatrix*} \sim \cdots \sim 
+  \begin{pmatrix*}[c]
+    \Circle{1} & 0 & 0 & 19 \\
+    0 & \Circle{1} & 0 & -7 \\
+    0 & 0 & \Circle{1} & 0
+  \end{pmatrix*}
+\] 
+Άρα $ \rank(A) = 3 $, όσα και τα διανύσματα, επομένως γραμμικώς ανεξάρτητα.
+
+\begin{concl}
+  Για να εξετάσω αν $\textcolor{Col1}{n}$ το πλήθος διανύσματα είναι γραμμικώς 
+  ανεξάρτητα, τότε ξεκινάω με τον ορισμό, γράφω το σύστημα με μορφή 
+  πινάκων και στη συνέχεια:
+  \begin{myitemize}
+    \item Αν $A_{n \times n}$ τετραγωνικός, δηλαδή αν τα διανύσματα σχηματίζουν 
+      ορίζουσα, τότε: 
+      \begin{enumerate}[i)]
+        \item Αν $ \abs{A} \neq 0 $ τότε τα διανύσματα είναι γραμμικώς ανεξάρτητα.
+        \item Αν $ \abs{A} = 0 $ τότε τα διανύσματα είναι γραμμικώς εξαρτημένα.
+      \end{enumerate}
+    \item Αν $A_{m\times n}$ μη-τετραγωνικός, δηλαδή τα διανύσματα δεν σχηματίζουν
+      ορίζουσα, τότε:
+      \begin{enumerate}[i)]
+        \item Αν $ \rank(A) = n $ όσα και τα διανύσματα, τότε είναι γραμμικώς ανεξάρτητα.
+        \item Αν $ \rank(A) < n $, τότε τα διανύσματα είναι γραμμικώς εξαρτημένα.
+      \end{enumerate}
+  \end{myitemize}
+\end{concl}
+
+\subsection*{Άσκηση~\ref{ask:baseeks}}
+
+Ξέρω ότι $ \dim(\mathbb{R}^{3}) = 3 $, οπότε κάθε βάση του $ \mathbb{R}^{3} $ θα έχει 
+3 διανύσματα. Οπότε τα διανύσματα $ \mathbf{u}, \mathbf{v} $ και $ \mathbf{w} $ θα 
+είναι βάση του $ \mathbb{R}^{3} $ αν και μόνον αν είναι γραμμικώς ανεξάρτητα. Οπότε
+\[
+  \lambda _{1} \mathbf{u} + \lambda _{2} \mathbf{v} + \lambda _{3} \mathbf{w} = 
+  \mathbf{0}
+  \Leftrightarrow \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & 1 & 1 \\
+    1 & 2 & 5 \\
+    \undermat{A}{1 & 3 & 3}
+  \end{pmatrix*} \cdot 
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \end{pmatrix*} = 
+  \begin{pmatrix*}[r] 0 \\ 0 \\ 0 \end{pmatrix*}
+\] 
+Οπότε 
+\[
+  \abs{A} = 
+  \begin{vmatrix*}[r]
+    1 & 1 & 1 \\
+    1 & 2 & 5 \\
+    1 & 3 & 5
+  \end{vmatrix*} = \cdots
+\]
+
+\subsection*{Άσκηση~\ref{ask:synd}} 
+
+Αφού τα διανύσματα είναι γραμμικώς εξαρτημένα, τότε το σύστημα
+\[
+  \lambda _{1} \mathbf{u_{1}}+ \lambda _{2} \mathbf{u}_{2} + \lambda _{3} \mathbf{u_{3}}+
+  \lambda _{4} \mathbf{u_{4}} + \lambda _{5} \mathbf{u_{5}} = \mathbf{0} 
+  \Leftrightarrow \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & 1 & 1 & 1 & 1  \\
+    3 & 2 & 1 & 1 & -3 \\
+    0 & 1 & 2 & 2 & 6  \\
+    5 & 4 & 3 & 3 & -1
+  \end{pmatrix*} \cdot 
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \\ \lambda _{4} \\
+  \lambda _{5} \end{pmatrix*} = 
+  \begin{pmatrix*}[r] 0 \\ 0 \\ 0 \\ 0 \end{pmatrix*}
+\] 
+θα έχει \textbf{άπειρες λύσεις}. Τις βρίσκω με Gauss:
+\[
+  \begin{pmatrix*}[r]
+    1 & 1 & 1 & 1 & 1  \\
+    3 & 2 & 1 & 1 & -3 \\
+    0 & 1 & 2 & 2 & 6 \\
+    5 & 4 & 3 & 3 & -1
+  \end{pmatrix*} \sim \cdots \sim
+  \begin{pmatrix*}
+    \Circle{1} & 0 & -1 & -1 & -5 \\
+    0 & \Circle{1} & \phantom{-}2 & \phantom{-}2 & \phantom{-}6 \\
+    0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 \\
+    0 & 0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 
+  \end{pmatrix*} \Leftrightarrow 
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \\ \lambda _{4} \\
+  \lambda _{5}  \end{pmatrix*} = \lambda _{3} 
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 1 \\ 0 \\ 0  \end{pmatrix*} + \lambda _{4} 
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 0 \\ 1 \\ 0  \end{pmatrix*} + \lambda _{5} 
+  \begin{pmatrix*}[r] 5 \\ -6 \\ 0 \\ 0 \\ 1  \end{pmatrix*}
+\] 
+
+
+
+\textbf{Θυμάμαι} ότι αν τα διανύσματα είναι γραμμικώς εξαρτημένα, τότε κάποιο ή 
+κάποια από αυτά θα είναι γραμμικός συνδυασμός των υπολοίπων, οπότε αυτή τη σχέση 
+πρέπει να βρω, τον γραμμικό συνδυασμό που τα συνδέει. Δηλαδή, \textbf{μία} από τις 
+άπειρες λύσεις του συστήματος. Οπότε, επιλέγω \textbf{τυχαία} μια τιμή για τα 
+$ \lambda _{3}, \lambda _{4}, \lambda _{5} $, (τις ελεύθερες μεταβλητές) έστω: 
+\[
+  \lambda _{3} = 1 \quad \text{και} \quad \lambda _{4} = \lambda _{5} = 0 
+\] 
+Άρα 
+\[
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \\ \lambda _{4} \\
+  \lambda _{5}  \end{pmatrix*} = 1
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 1 \\ 0 \\ 0  \end{pmatrix*} + 0
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 0 \\ 1 \\ 0  \end{pmatrix*} + 0
+  \begin{pmatrix*}[r] 5 \\ -6 \\ 0 \\ 0 \\ 1  \end{pmatrix*} \Leftrightarrow 
+  \begin{pmatrix*}[r] \lambda _{1} \\ \lambda _{2} \\ \lambda _{3} \\ \lambda _{4} \\
+  \lambda _{5}  \end{pmatrix*} = 
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 1 \\ 0 \\ 0  \end{pmatrix*} \Leftrightarrow 
+  \left.
+    \begin{matrix*}[l]
+      \lambda _{1} = \phantom{-} 1 \\
+      \lambda _{2} = -2 \\
+      \lambda _{3} = \phantom{-}1 \\
+      \lambda _{4} = \phantom{-}0 \\
+      \lambda _{5} = \phantom{-}0 
+    \end{matrix*} 
+  \right\} 
+\] 
+Άρα από τη σχέση
+\[
+  \lambda _{1} \mathbf{u_{1}}+ \lambda _{2} \mathbf{u}_{2} + \lambda _{3} \mathbf{u_{3}}+
+  \lambda _{4} \mathbf{u_{4}} + \lambda _{5} \mathbf{u_{5}} = \mathbf{0} 
+\]
+παίρνουμε για τις παραπάνω τιμές των $ \lambda _{1}, \lambda _{2}, \lambda _{3}, \lambda
+_{4}, \lambda _{5} $ ότι
+\[
+  1 \mathbf{u_{1}} -2 \mathbf{u}_{2} + 1\mathbf{u_{3}}+
+  0 \mathbf{u_{4}} + 0 \mathbf{u_{5}} = \mathbf{0} \Leftrightarrow 
+  \boxed{\mathbf{u_{1}} - 2\mathbf{u_{2}} + \mathbf{u_{3}} = \mathbf{0}}
+\]
+
+\pagebreak
+
+\section*{Γραμμικοί Συνδυασμοί}
+
+\subsection*{Άσκηση~\ref{ask:eksart}}
+Το διάνυσμα $ \mathbf{b} $ θα είναι γραμμικός συνδυασμός των $ \mathbf{u}, \mathbf{v}, 
+\mathbf{w}$, αν υπάρχουν $ x_{1}, x_{2}, x_{3} \in \mathbb{R} $ τέτοιοι ώστε 
+\[ 
+  \mathbf{b} = x_{1} \mathbf{u} + x_{2} \mathbf{v} + x_{3} \mathbf{w} \Leftrightarrow 
+  \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & 1 & 2 \\
+    1 & 2 & -1 \\
+    1 & 3 & 1
+  \end{pmatrix*} \cdot 
+  \begin{pmatrix*}[r]  x_{1} \\ x_{2} \\ x_{3} \end{pmatrix*} = 
+  \begin{pmatrix*}[r] 1 \\ -2 \\ 5 \end{pmatrix*}
+\]
+δηλαδή ισοδύναμα, αν το σύστημα έχει λύση. Επειδή θέλει να εκφράσουμε το $ \mathbf{b} $
+ως γραμμικό συνδυασμό των $ \mathbf{u}, \mathbf{v}, \mathbf{w} $, λύνουμε το σύστημα.
+\[
+  \begin{pmatrix*}[r]
+    1 & 1 & 2 & \vrule &  1 \\
+    1 & 2 & -1 & \vrule & -2 \\
+    1 & 3 & 1 & \vrule & 5
+  \end{pmatrix*} \sim \cdots \sim 
+  \begin{pmatrix*}[c]
+    \Circle{1} & 0 & 0 & \vrule & -6 \\
+    0 & \Circle{1} & 0 & \vrule & \phantom{-}3 \\
+    0 & 0 & \Circle{1} & \vrule & \phantom{-}2
+  \end{pmatrix*} \Leftrightarrow 
+  \left.
+    \begin{matrix*}[l]
+      x_{1}= -6 \\
+      x_{2} = \phantom{-}3 \\
+      x_{3} = \phantom{-}2
+    \end{matrix*} 
+  \right\} 
+\] 
+Άρα, έχουμε 
+\[
+  \boxed{\mathbf{b} = -6 \mathbf{u} + 3 \mathbf{v}+ 2 \mathbf{w}}
+\]  
+
+\subsection*{Άσκηση~\ref{ask:eksart2}}
+
+Το διάνυσμα $ \mathbf{b} $ θα είναι γραμμικός συνδυασμός των $ \mathbf{u}, \mathbf{v}, 
+\mathbf{w}$, αν υπάρχουν $ x_{1}, x_{2}, x_{3} \in \mathbb{R} $ τέτοιοι ώστε 
+\[ 
+  \mathbf{b} = x_{1} \mathbf{u} + x_{2} \mathbf{v} + x_{3} \mathbf{w} \Leftrightarrow 
+  \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & 2 & 1 \\
+    -3 & 4 & -5 \\
+    2 & 1 & 7
+  \end{pmatrix*} \cdot 
+  \begin{pmatrix*}[r]  x_{1} \\ x_{2} \\ x_{3} \end{pmatrix*} = 
+  \begin{pmatrix*}[r] 2 \\ 5 \\ -3 \end{pmatrix*}
+\]
+δηλαδή ισοδύναμα, αν το σύστημα έχει λύση. Επειδή θέλει απλώς να εξετάσουμε αν 
+το $ \mathbf{b} $ γράφεται ως γραμμικός συνδυασμός των 
+$ \mathbf{u}, \mathbf{v}, \mathbf{w} $, δεν χρειάζεται να λύσουμε το σύστημα απλώς να 
+το \textcolor{Col1}{διερευνήσουμε}. Άρα
+\[
+  \begin{pmatrix*}[r]
+    1 & 2 & 1 & \vrule & 2 \\
+    -3 & 4 & -5 & \vrule & 5 \\
+    2 & 1 & 7 & \vrule & -3
+  \end{pmatrix*}
+  \sim \cdots \sim 
+  \begin{pmatrix*}[c]
+    \Circle{1} & 0 & 7/5 & \vrule & -1/5 \\
+    0 & \Circle{1} & -1/5 & \vrule & \phantom{-}11/10 \\
+    \undermat{\text{κλιμακωτός}}{0 & 0 & \Circle{22/5} & \vrule & \phantom{-}37/10}
+  \end{pmatrix*} 
+\] 
+
+\vspace{\baselineskip}
+
+Έχουμε 
+\[
+  \rank(A) = \rank(E) = 3 \quad \text{(όσοι οι άγνωστοι)}
+\] 
+οπότε από το θεώρημα Gauss το σύστημα έχει μοναδική λύση. Επομένως το $ \mathbf{b} $ 
+γράφεται ως γραμμικός συνδυασμός των $ \mathbf{u}, \mathbf{v}, \mathbf{w} $. 
+
+\section*{Παραγόμενοι Υπόχωροι, Βάσεις, Διάσταση}
+
+Έστω $ S = \{ \mathbf{u_{1}}, \mathbf{u_{2}}, \ldots, \mathbf{u_{n}} \} $ 
+υποσύνολο ενός $ \mathbb{K}- $χώρου. Τότε το σύνολο \textcolor{Col1}{όλων} 
+των γραμμικών συνδυασμών των στοιχείων του $S$, συμβολίζεται με $ < S >  $ και 
+είναι ο \textcolor{Col1}{μικρότερος} υπόχωρος που παράγεται από τα στοιχεία του $S$. 
+Δηλαδή 
+\[
+  < S > = \{ \lambda _{1} \mathbf{u_{1}} + \lambda _{2} \mathbf{u_{2}} + \cdots + 
+  \lambda _{n} \mathbf{u_{n}} \; : \; \lambda _{i} \in \mathbb{K} \}   
+\] 
+
+\begin{myitemize}[leftmargin=*]
+  \item Ισχύει ότι $ \mathbf{b} \in < S > $, αν το $ \mathbf{b} $ είναι 
+    γραμμικός συνδυασμός των στοιχείων του $S$, δηλαδή αν υπάρχουν 
+    $ \lambda _{1}, \ldots, \lambda _{n} \in \mathbb{K} $, τέτοιοι ώστε 
+    \[ 
+      \mathbf{b} = \lambda _{1} \mathbf{u_{1}} + \cdots, 
+      \lambda _{n} \mathbf{u_{n}} 
+    \]
+  \item Ισχύει ότι ένα σύνολο $ S = \{ \mathbf{u_{1}}, \mathbf{u_{2}}, 
+    \ldots, \mathbf{u_{n}} \} $ \textcolor{Col1}{παράγει} έναν διανυσματικό χώρο $V$, 
+    αν \textcolor{Col1}{κάθε} στοιχείο του $V$ γράφεται ως γραμμικός συνδυασμός 
+    των στοιχείων του $S$. 
+\end{myitemize}
+
+
+\subsection*{Άσκηση~\ref{ask:eksart3}} 
+Το διάνυσμα $ \mathbf{b} $ θα ανήκει στο χώρο που παράγουν τα $ \mathbf{u_{1}},
+\mathbf{u_{2}}, \mathbf{u_{3}} $, δηλαδή $ \mathbf{b} \in < \mathbf{u_{1}},
+\mathbf{u_{2}}, \mathbf{u_{3}}> $, αν το $ \mathbf{b} $ γράφεται ως γραμμικός 
+συνδυασμός των $ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}} $, δηλαδή ισοδύναμα, 
+αν υπάρχουν $ x_{1}, x_{2}, x_{3} \in 
+\mathbb{R} $ τέτοιοι ώστε 
+\[
+  \mathbf{b} = x_{1} \mathbf{u_{1}} + x_{2} \mathbf{u_{2}} + x_{3} \mathbf{u_{3}} 
+  \Leftrightarrow \cdots \Leftrightarrow 
+  \begin{pmatrix*}[r]
+    1 & -1 & 3 \\
+    2 & 1 & 0 \\
+    0 & 2 & -4
+  \end{pmatrix*} \cdot 
+  \begin{pmatrix*}[r] x_{1} \\ x_{2} \\ x_{3} \end{pmatrix*} = 
+  \begin{pmatrix*}[r] a \\ b \\ c \end{pmatrix*}
+\] 
+δηλαδή ισοδύναμα, αν το σύστημα έχει λύση. Δηλαδή, αρκεί να βρούμε ποιες συνθήκες 
+απαιτούνται ώστε το σύστημα να έχει λύση. Έχουμε
+\[
+  \begin{pmatrix*}[r]
+    1 & -1 & 3 & \vrule & a \\
+    2 & 1 & 0 & \vrule & b \\
+    0 & 2 & -4 & \vrule & c
+  \end{pmatrix*}
+  \sim 
+  \begin{pmatrix*}[r]
+    1 & -1 & 3 & \vrule & a \\
+    0 & 3 & -6 & \vrule & b-2a \\
+    0 & 2 & -4 & \vrule & c
+  \end{pmatrix*} \sim 
+  \begin{pmatrix*}[c]
+    \Circle{1} & -1 & \phantom{-}3 & \vrule & a \\
+    0 & \Circle{1} & -2 & \vrule & \frac{b-2a}{3} \\
+    0 & 0 & \phantom{-}0 & \vrule & c -2\frac{b-2a}{3}  
+  \end{pmatrix*}
+\]
+Παρατηρούμε ότι προκειμένου να έχει λύση το σύστημα, θα πρέπει, σύμφωνα με το θεώρημα 
+Gauss να ισχύει:
+\[
+  \textcolor{Col1}{\rank(A) = \rank(E)} \Leftrightarrow c - 2 \frac{b-2a}{3} = 0 \Leftrightarrow 
+  \frac{3c-2b+4a}{3} = 0 \Leftrightarrow \boxed{4a -2b +3c = 0}
+\] 
+
+\subsection*{Άσκηση~\ref{ask:parag}} 
+
+\begin{description}
+  \item[1ος τρόπος] 
+    Σύμφωνα με τον ορισμό, τα $ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}} $ θα 
+    παράγουν τον $ \mathbb{R}^{3} $ αν και μόνον αν \textcolor{Col1}{κάθε} στοιχείο του 
+    $ \mathbb{R}^{3} $ είναι γραμμικός συδνυασμός τους.
+
+    Δηλαδή αν για κάθε $ \mathbf{x} = (x,y,z) \in \mathbb{R}^{3} $  υπάρχουν 
+    $ x_{1}, x_{2}, x_{3} \in \mathbb{R} $, τέτοιοι ώστε
+    \[
+      \mathbf{x} = x_{1} \mathbf{u_{1}}+ x_{2} \mathbf{u_{2}}+ x_{3} \mathbf{u_{3}}
+      \Leftrightarrow \ldots \Leftrightarrow 
+      \begin{pmatrix*}[r]
+        1 & 1 & 1 \\
+        1 & 0 & -2 \\
+        3 & 2 & 0
+      \end{pmatrix*} \cdot 
+      \begin{pmatrix*}[r] x_{1} \\ x_{2} \\ x_{3} \end{pmatrix*} = 
+      \begin{pmatrix*}[r] x \\ y \\ z \end{pmatrix*}
+    \] 
+    δηλαδή, ισοδύναμα, αν το σύστημα έχει λύση για \textcolor{Col1}{κάθε} 
+    $x,y,z \in \mathbb{R}$. Έχουμε
+    \[
+      \begin{pmatrix*}[r]
+        1 & 1 & 1 & \vrule & x \\
+        1 & 0 & -2 & \vrule & y \\
+        3 & 2 & 0 & \vrule & z
+      \end{pmatrix*} \sim \cdots \sim 
+      \begin{pmatrix*}[r]
+        1 & 0 & -2 & \vrule & x \\
+        0 & 1 & 3 & \vrule & x - y \\
+        0 & 0 & 0 & \vrule & z - 2x -y 
+      \end{pmatrix*}
+    \] 
+    Παρατηρούμε ότι το σύστημα θα έχει λύση, αν
+    \[
+      \rank(A) = \rank(E) \Leftrightarrow z-2x-y=0
+    \] 
+    Άρα, αν $ z-2x-y \neq 0 $ τότε το σύστημα είναι αδύνατο. Κατά συνέπεια, δεν ισχύει 
+    ότι καθε $ (x,y,z) \in \mathbb{R}^{3} $ είναι συνδυασμός των $ \mathbf{u_{1}},
+    \mathbf{u_{2}}, \mathbf{u_{3}} $ και επομένως τα $ \mathbf{u_{1}}, \mathbf{u_{2}},
+    \mathbf{u_{3}} $ δεν παράγουν τον $ \mathbb{R}^{3} $.
+
+  \item[2ος τρόπος] 
+    Επειδή $ \dim(\mathbb{R}^{3}) = 3 $, έχουμε ότι 3 οποιαδήποτε διανύσματα του $
+    \mathbb{R}^{3} $, που είναι γραμμικώς ανεξάρτητα, θα είναι βάση του, και επομενως
+    θα τον παράγουν. Άρα, ελέγχουμε αν τα 
+    $ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}} $ είναι γραμμικώς ανεξάρτητα.
+    \[
+      \begin{vmatrix*}[r]
+        1 & 1 & 1 \\
+        1 & 0 & -2 \\
+        3 & 2 & 0 
+      \end{vmatrix*} = \cdots = 0
+    \] 
+    Άρα τα διανύσματα $ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}}$ είναι 
+    γραμμικώς ανεξάρτητα και επομένως δεν παράγουν τον $ \mathbb{R}^{3}$.
+\end{description}
+
+
+
+\subsection*{Άσκηση~\ref{ask:isoi}}
+
+Για να δείξουμε ότι οι υπόχωροι που παράγονται από δύο διαφορετικά σύνολα διανυσμάτων
+είναι ίσοι, ακολουθούμε τα παρακάτω βήματα:
+\begin{myitemize}
+  \item Βάζουμε τα διανύσματα του 1ου συνόλου ως \textcolor{Col1}{γραμμές} σε έναν 
+    πίνακα $A$.
+  \item Ομοίως, βάζουμε τα διανύσματα του 2ου συνόλου ως \textcolor{Col1}{γραμμές} 
+    σε έναν πίνακα $Β$.
+  \item Βρίσκουμε τους αντίστοιχους \textcolor{Col1}{ανηγμένους κλιμακωτούς} πίνακες 
+    των πινάκων $A$ και $B$.
+  \item Δείχνουμε ότι οι \textbf{βάσεις} που προκύπτουν από τις ανεξάρτητες γραμμές του 
+    \textcolor{Col1}{ανηγμένου κλιμακωτού}, πίνακα, για τον χώρο γραμμών των 2 πινάκων, 
+    είναι \textcolor{Col1}{ίδιες}.
+\end{myitemize}
+
+\subsection*{Άσκηση~\ref{ask:parag2}}
+
+Ζητάμε τον υπόχωρο $ U = < \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}},
+\mathbf{u_{4}} >  $. Οπότε, βάζουμε τα διανύσματα σε έναν πίνακα, ως γραμμές 
+(ή ως στήλες, θέλω ο πίνακας που θα προκύψει να έχει όσο το δυνατόν λιγότερες γραμμές) 
+και βρίσκουμε το χώρο γραμμών (ή στηλών αντίστοιχα) αυτού του πίνακα. 
+\[
+  A = \begin{pmatrix*}[r]
+    1 & 1 & 1 & 2 & 3 \\
+    1 & 2 & -1 & -2 & 1 \\
+    3 & 5 & -1 & -2 & 5 \\
+    1 & 2 & 1 & -1 & 4
+  \end{pmatrix*} \sim \cdots \sim
+  \begin{pmatrix*}[c]
+    \Circle{1} & 0 & 0 & 9/2 & 1/2 \\
+    0 & \Circle{1} & 0 & -3 & 1 \\
+    0 & 0 & \Circle{1} & 1/2 & 3/2 \\
+    0 & 0 & 0 & 0 & 0 \\
+  \end{pmatrix*}
+\] 
+Άρα, ο χώρος γραμμών του $A$, και κατά συνέπεια, ο 
+$ U = < \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}}, \mathbf{u_{4}}, 
+\mathbf{u_{5}} >  $ θα είναι ο χώρος που παράγουν οι ανεξάρτητες γραμμές του $A$, 
+δηλαδή εκείνες οι γραμμές του $A$, οι οποίες έχουν οδηγό στον αντίστοιχο κλιμακωτό (ή
+ανηγμένο κλιμακωτό). Δηλαδή
+\[
+  R(A) = U = < \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}} > = 
+  < (1,1,1,2,3), (1,2,-1,-2,1),(3,5,-1,-2,5) >  
+\] 
+Μια βάση για τον $ R(A) = U $ θα είναι η 
+\[
+  B = \{ \mathbf{u_{1}}, \mathbf{u_{2}}, \mathbf{u_{3}} \} = 
+  \{  (1,1,1,2,3), (1,2,-1,-2,1),(3,5,-1,-2,5)  \} \Rightarrow 
+  \dim(U) = 3
+\]
+Μια \textbf{2η βάση} για το χώρο γραμμών ενός πίνακα, δίνεται από τις
+\textcolor{Col1}{ίδιες} τις γραμμές του αντίστοιχου κλιμακωτού 
+(ή του ανηγμένου κλιμακωτού) οι οποίες έχουν οδηγό.  Έτσι το σύνολο 
+\[
+  B = \{ (1,0,0,9/2,1/2), (0,1,0,-3,1), (0,0,1,1/2,3/2)\}  
+\] 
+είναι μια ακόμη βάση του $U$.
+
+\section*{Χώρος Γραμμών, Χώρος Στηλών, Μηδενόχωρος}
+
+\subsection*{Άσκηση~\ref{ask:mhden}}
+
+Για να βρούμε τον χώρο Γραμμών, τον χώρο Στηλών και τον Μηδενόχωρο ενός πίνακα, 
+χρειαζόμαστε τον αντίστοιχο κλιμακωτό ή (ανηγμένο κλιμακωτό) πίνακα.
+\[
+  \begin{pmatrix*}[r]
+    1 & 2 & 2 & 1 & 2 & 1 \\
+    2 & 4 & 5 & 4 & 5 & 5 \\
+    1 & 2 & 3 & 4 & 4 & 6 \\
+    3 & 6 & 7 & 7 & 9 & 10 
+  \end{pmatrix*} \sim \cdots \sim 
+  \begin{pmatrix*}[c]
+    \Circle{1} & 2 & 0 & 0 & \phantom{-}3 & \phantom{-}1 \\
+    0 & 0 & \Circle{1} & 0 & -1 & -1 \\
+    0 & 0 & 0 & \Circle{1} & \phantom{-}1 & \phantom{-}2 \\
+    0 & 0 & 0 & 0 & \phantom{-}0 & \phantom{-}0 
+  \end{pmatrix*}
+\]
+Οπότε, για τον $ m \times n $ πίνακα $A$, έχουμε:
+\begin{myitemize}[leftmargin=*]
+  \item \textcolor{Col1}{Χώρος Στηλών} του Α είναι ο χώρος που παράγεται 
+    από τις \textbf{γραμμικώς ανεξάρτητες} \textcolor{Col1}{στήλες} του $A$. 
+    Αυτές θα είναι η 1η η 3η και η 4η στήλη \textcolor{Col1}{του Α} 
+    (αυτές, για τις οποίες οι αντίστοιχες στήλες του ανηγμένου κλιμακωτού έχουν οδηγό).
+    Επομένως 
+    \[
+      C(A) = \left< 
+      \begin{pmatrix*}[r] 1 \\ 2 \\ 1 \\ 3 \end{pmatrix*} , 
+      \begin{pmatrix*}[r] 2 \\ 5 \\ 3 \\ 7 \end{pmatrix*} , 
+      \begin{pmatrix*}[r] 1 \\ 4 \\ 4 \\ 7 \end{pmatrix*} \right> \Rightarrow 
+      B_{C(A)} = \left\{  
+        \begin{pmatrix*}[r] 1 \\ 2 \\ 1 \\ 3 \end{pmatrix*} , 
+        \begin{pmatrix*}[r] 2 \\ 5 \\ 3 \\ 7 \end{pmatrix*} , 
+      \begin{pmatrix*}[r] 1 \\ 4 \\ 4 \\ 7 \end{pmatrix*} \right\} \Rightarrow 
+      \dim(C(A)) = 3
+    \] 
+    Θυμάμαι ότι $ \textcolor{Col1}{C(A) \leq \mathbb{R}^{m}} $, αν 
+    $ A_{m\times n} $. Άρα $ C(A) \leq \mathbb{R}^{4} $
+  \item \textcolor{Col1}{Χώρος Γραμμών} του Α είναι ο χώρος που παράγεται 
+    από τις \textbf{γραμμικώς ανεξάρτητες} \textcolor{Col1}{γραμμές} του $A$. 
+    Αυτές θα είναι η 1η η 2η και η 3η γραμμή \textcolor{Col1}{του Α} 
+    (αυτές, για τις οποίες οι αντίστοιχες γραμμές του ανηγμένου κλιμακωτού έχουν οδηγό).
+    Επομένως 
+    \begin{gather*}
+      R(A) = \left<(1,2,2.1,2,1), (2,4,5,4,5,5), (1,2,3,4,4,6) \right> \Rightarrow \\
+      B_{R(A)} = \{ (1,2,2.1,2,1), (2,4,5,4,5,5), (1,2,3,4,4,6) \} \Rightarrow 
+      \dim(R(A)) = 3
+    \end{gather*} 
+    Θυμάμαι, ότι μια ακόμη βάση για το χώρο Γραμμών του $A$, δίνεται από τις 
+    γραμμικώς ανεξάρτητες γραμμές του αντίστοιχου κλιμακωτού (ή ανηγμένου κλιμακωτού).
+    Οπότε 
+    \[
+      B'_{R(A)} = \{ (1,2,0,0,3,1), (0,0,1,0,-1,-1), (0,0,0,1,1,2) \}  
+    \] 
+    Επιβεβαιώνουμε ότι $ \dim(C(A)) = \dim(R(A)) = \rank(A) = 3 $
+  \item Ο \textcolor{Col1}{Μηδενόχωρος} του $A$, είναι ο χώρος λύσεων του ομογενούς 
+    συστήματος $ A \cdot X = \mathbf{0} $. Οπότε από τον ανηγμένο κλιμακωτό πίνακα του 
+    $A$, παίρνουμε:
+    \[
+      \left.
+        \begin{aligned}
+          x_{1}+2 x_{2}+ 3 x_{5}+ x_{6}&= 0 \\
+          x_{3}- x_{5}- x_{6}&= 0 \\
+          x_{4}+ x_{5}+2 x_{6}&= 0 \\
+          x_{2}, x_{5}, x_{6} \in \mathbb{R} 
+        \end{aligned} 
+      \right\}\!\! \Rightarrow 
+      \left.
+        \begin{aligned}
+          x_{1} &= -2 x_{2} - 3 x_{5}- x_{6} \\
+          x_{3} &= x_{5}+ x_{6} \\
+          x_{4} &= - x_{5}- 2 x_{6} \\
+          x_{2} &, x_{5}, x_{6} \in \mathbb{R} 
+        \end{aligned} 
+      \right\}\!\!\Rightarrow 
+      \begin{pmatrix*}[r] 
+        x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5} \\ x_{6}  
+      \end{pmatrix*} = x_{2} 
+      \begin{pmatrix*}[r] -2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \end{pmatrix*} 
+      + x_{5} 
+      \begin{pmatrix*}[r] -3 \\ 0 \\ 1 \\ -1 \\ 1 \\ 0  \end{pmatrix*} 
+      + x_{6} 
+      \begin{pmatrix*}[r] -1 \\ 0 \\ 1 \\ -2 \\ 0 \\ 1  \end{pmatrix*} \!\!
+    \] 
+    Επομένως ο Μηδενόχωρος του πίνακα $A$ είναι:
+    \[
+      N(A) = \left< 
+      \begin{pmatrix*}[r] -2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0  \end{pmatrix*}, 
+      \begin{pmatrix*}[r] -3 \\ 0 \\ 1 \\ -1 \\ 1 \\ 0  \end{pmatrix*}, 
+      \begin{pmatrix*}[r] -1 \\ 0 \\ 1 \\ -2 \\ 0 \\ 1 \end{pmatrix*} \right> 
+      \Rightarrow B_{N(A)} = \left\{  
+        \begin{pmatrix*}[r] -2 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0  \end{pmatrix*}, 
+        \begin{pmatrix*}[r] -3 \\ 0 \\ 1 \\ -1 \\ 1 \\ 0  \end{pmatrix*}, 
+      \begin{pmatrix*}[r] -1 \\ 0 \\ 1 \\ -2 \\ 0 \\ 1 \end{pmatrix*} \right \}
+      \Rightarrow \dim(N(A)) = 3
+    \]
+    Επιβεβαιώνουμε ότι $ \dim(N(A)) = n - \rank(A) = 6-3 = 3 $
+  \item Ο \textcolor{Col1}{Αριστερός Μηδενόχωρος} του $A$, είναι ο χώρος λύσεων του 
+    ομογενούς συστήματος $ A^{T} \cdot Y = \mathbf{0} $. Δηλαδή ο Αριστερός Μηδενόχωρος 
+    του $A$ είναι ουσιαστικά ο Μηδενόχωρος του $ A^{T} $. Οπότε χρειαζόμαστε τον 
+    ανηγμένο κλιμακωτό πίνακα του $A^{T}$.
+    \[
+      \begin{pmatrix*}[r]
+        1 & 2 & 1 & 3 \\
+        2 & 4 & 2 & 6 \\
+        2 & 5 & 3 & 7 \\
+        1 & 4 & 4 & 7 \\
+        2 & 5 & 4 & 9 \\
+        1 & 5 & 6 & 10
+      \end{pmatrix*} \sim \cdots \sim 
+      \begin{pmatrix*}[c]
+        \Circle{1} & 0 & 0 & \phantom{-}3 \\
+        0 & \Circle{1} & 0 & -1 \\
+        0 & 0 & \Circle{1} & \phantom{-}2 \\
+        0 & 0 & 0 & \phantom{-}0 \\
+        0 & 0 & 0 & \phantom{-}0 \\
+        0 & 0 & 0 & \phantom{-}0 \\
+      \end{pmatrix*}
+    \]
+    Άρα όπως κάναμε και για τον Μηδενόχωρο του $A$, έχουμε:
+    \[
+      N(A^{T}) = \left< 
+      \begin{pmatrix*}[r] -3 \\ 1 \\ -2 \\ 1 \\ 0 \\ 0  \end{pmatrix*} \right>   
+      \Rightarrow B_{N(A^{T})} = \left\{ 
+        \begin{pmatrix*}[r] -3 \\ 1 \\ -2 \\ 1 \\ 0 \\ 0  
+      \end{pmatrix*} \right\} \Rightarrow \dim(N(A^{T})) = 1
+    \] 
+    Επιβεβαιώνουμε ότι $ \dim(N(A^{T})) = m - \rank(A) = 4-3 = 1 $
+\end{myitemize}
+
+\end{document}
+
