@@ -1,65 +1,84 @@
-\documentclass[a4paper,12pt]{article}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
 
 
-\usepackage[english,greek]{babel}
-\usepackage[utf8]{inputenc}
+\pagestyle{askhseis}
+\everymath{\displaystyle}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
-\usepackage{graphicx}
 
 \begin{document}
-\thispagestyle{empty}
+
 \begin{center}
-\fbox{\Large\bfseries{Αόριστα Ολοκληρώματα}}
+  \minibox{\large\bfseries \textcolor{Col1}{Αόριστα Ολοκληρώματα}}
 \end{center}
 
-\vspace{2\baselineskip}
+\vspace{\baselineskip}
 
-{\Large \bfseries Ασκήσεις}
 \begin{enumerate}
 \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (με ριζικά).
-\begin{enumerate}
-\item $\int\frac{\sqrt{x+4}}{x}dx$\hfill Απ: $2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|+c$
-\item $\int\frac{1}{(x-1)^2}\sqrt{\frac{1-x}{1+x}}dx$\hfill Απ: $\frac{1}{\sqrt{\frac{1-x}{1+x}}}+c$.
-\item $\int\frac{1}{\sqrt{x^2+3x+2}}dx$\hfill Απ: $\ln\left|\frac{t+1}{t-1}\right|+c$, όπου $t=\frac{\sqrt{x^2+3x+2}}{x+1}$
-\item $\int\sqrt[3]{\frac{x-1}{x}}\frac{1}{x(x-1)}dx$\hfill Απ: $3^3\sqrt[3]{\frac{x-1}{x}} +c$
-\item $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}dx$\hfill Απ: $(t+1)^2 +2\ln|t-1|+c$, όπου $t=\sqrt[4]{2x-1}$
-\item $\int\frac{1}{x\sqrt{x^2+x+1}}dx$\hfill Απ: $\ln\left|\frac{t+1}{t-1}+c\right|$, όπου $t=x-\sqrt{x^2+x+1}$
+  \begin{enumerate}[i)]
+\item $\int\frac{\sqrt{x+4}}{x} \; \; dx$
+  \hfill Απ: $2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|$
+\item $\int\frac{1}{(x-1)^2}\sqrt{\frac{1-x}{1+x}}\; dx$
+  \hfill Απ: $\frac{1}{\sqrt{\frac{1-x}{1+x}}}$
+\item $\int\frac{1}{\sqrt{x^2+3x+2}}\; dx$
+  \hfill Απ: $\ln\left|\frac{t+1}{t-1}\right|+c$, \; $t=\frac{\sqrt{x^2+3x+2}}{x+1}$
+\item $\int\sqrt[3]{\frac{x-1}{x}}\frac{1}{x(x-1)}\; dx$
+  \hfill Απ: $3\sqrt[3]{\frac{x-1}{x}} $
+\item $\int\frac{1}{\sqrt{2x-1}-\sqrt[4]{2x-1}}\; dx$
+  \hfill Απ: $(t+1)^2 +2\ln|t-1|$, \; $t=\sqrt[4]{2x-1}$
+\item $\int\frac{1}{x\sqrt{x^2+x+1}}\; dx$
+  \hfill Απ: $\ln\left|\frac{t+1}{t-1}+c\right|$, \; $t=x-\sqrt{x^2+x+1}$
 \end{enumerate}
 
 \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (διωνυμικά).
-\begin{enumerate}
-\item $\int x^{-\frac{1}{2}}(x^{\frac{1}{4}}+1)^{-10}dx$\hfill Απ: $-\frac{1}{2}\frac{1}{(t+1)^8}+\frac{4}{9}\frac{1}{(x+1)^9}+c$, όπου $t=\sqrt[4]{x}$
-\item $\frac{x}{\sqrt{4-x^2}^3}dx$\hfill Απ: $\frac{8-x^2}{\sqrt{4-x^2}}+c$
-\item $\int x^{-3}(2-x^3)^{-\frac{1}{3}}$\hfill Απ: $-\frac{\sqrt[3]{(2-x^3)^2}}{4x^2}+c$
-\item $\int\frac{\sqrt[3]{1+\sqrt[4]{x}}}{\sqrt{x}}dx$\hfill Απ: $\frac{12}{7}t^7-3t^4+c$, όπου $t=\sqrt[3]{1+x^{\frac{1}{4}}}$
-\item $\int \frac{\sqrt{1+\sqrt[3]{x}}}{\sqrt[3]{x^2}}dx$\hfill Απ: $2t^3+c$, όπου $t=(1+x^{\frac{1}{3}})^{\frac{1}{2}}$
-\item $\sqrt{x}(1+\sqrt[3]{x})^4dx$\hfill Απ: $6(\frac{t^9}{9}+\frac{4t^{11}}{11}+\frac{6t^{13}}{13}+\frac{4t^{15}}{15}+\frac{t^{17}}{17})+c$, όπου $t=\sqrt[6]{x}$
+  \begin{enumerate}[i)]
+\item $\int x^{-\frac{1}{2}}(x^{\frac{1}{4}}+1)^{-10}\; dx$
+  \hfill Απ: $-\frac{1}{2}\frac{1}{(t+1)^8}+\frac{4}{9}\frac{1}{(x+1)^9}$, \; 
+  $t=\sqrt[4]{x}$
+\item $\int\frac{x^{3}}{\sqrt{(4-x^2)^3}}\; dx$\hfill Απ: $\frac{8-x^2}{\sqrt{4-x^2}}$
+\item $\int x^{-3}(2-x^3)^{-\frac{1}{3}} \; dx$
+  \hfill Απ: $-\frac{\sqrt[3]{(2-x^3)^2}}{4x^2} $
+\item $\int\frac{\sqrt[3]{1+\sqrt[4]{x}}}{\sqrt{x}}\; dx$
+  \hfill Απ: $\frac{12}{7}t^7-3t^4$, \; $t=\sqrt[3]{1+x^{\frac{1}{4}}}$
+\item $\int \frac{\sqrt{1+\sqrt[3]{x}}}{\sqrt[3]{x^2}}\; dx$
+  \hfill Απ: $2t^3$, \; $t=(1+x^{\frac{1}{3}})^{\frac{1}{2}}$
+\item $\int\sqrt{x}(1+\sqrt[3]{x})^4\; dx$
+  \hfill Απ: $6\left(\frac{t^9}{9}+\frac{4t^{11}}{11}+\frac{6t^{13}}{13}+
+    \frac{4t^{15}}{15}+ \frac{t^{17}}{17}\right)$, \; $t=\sqrt[6]{x}$
 \end{enumerate}
 
 \item Να υπολογιστούν τα παρακάτω αόριστα ολοκληρώματα (τριγωνομετρικά)
-\begin{enumerate}
-\item $\int\sin^3x\cos^2xdx$\hfill Απ: $-\frac{\cos^3x}{3}+\frac{\cos^5x}{5}+c$
-\item $\int\sin^4x\cos^2xdx$\hfill Απ: $\frac{1}{16}x-\frac{1}{64}\sin 4x-\frac{1}{48}\sin^32x+c$
-\item $\int\frac{\cos^2x}{\sin^6x}dx$\hfill Απ: $-\frac{1}{5\tan^5x}-\frac{1}{\tan^3x}+c$
-\item $\int\frac{1}{\sin x}dx$\hfill Απ: $\ln|\tan\frac{x}{2}|+c$
-\item $\int\frac{1}{\cos x}dx$\hfill Απ: $\ln|\frac{\tan\frac{x}{2}+1}{\tan\frac{x}{2}-1}|+c$
-\item $\frac{\cos x}{1+\cos x}dx$\hfill Απ: $x-\tan\frac{x}{2}+c$
+  \begin{enumerate}[i)]
+\item $\int\sin^3x\cos^2x\; dx$\hfill Απ: $-\frac{\cos^3x}{3}+\frac{\cos^5x}{5}$
+\item $\int\sin^4x\cos^2x\; dx$
+  \hfill Απ: $\frac{1}{16}x-\frac{1}{64}\sin 4x-\frac{1}{48}\sin^32x$
+\item $\int\frac{\cos^2x}{\sin^6x}\; dx$
+  \hfill Απ: $-\frac{1}{5\tan^5x}-\frac{1}{\tan^3x}$
+\item $\int\frac{1}{\sin x}\; dx$\hfill Απ: $\ln\left|\tan\frac{x}{2}\right|$
+\item $\int\frac{1}{\cos x}\; dx$
+  \hfill Απ: $\ln\left|\frac{\tan\frac{x}{2}+1}{\tan\frac{x}{2}-1}\right|$
+\item $ \int\frac{\cos x}{1+\cos x}\; dx$\hfill Απ: $x-\tan\frac{x}{2}$
 \end{enumerate}
 \end{enumerate}
 
-{\Large\bfseries Παρατηρήσεις:}
-\begin{enumerate}
-\item Για την $2$η άσκηση, όσα ολοκληρώματα περιέχουν ριζικά πρέπει να γραφούν στην κανονική μορφή των διωνύμων. Μετά συνεχίζουμε κατά τα γνωστά.
+\begin{center}
+  \minibox{\large\bfseries \textcolor{Col1}{Παρατηρήσεις-Υποδείξεις}}
+\end{center}
 
-\item Για την $3$η άσκηση, με τα τριγωνομετρικά ολοκληρώματα, στην $1$ και στην $2$ θέτουμε όπου $t=\tan\frac{x}{2}\Rightarrow x=2\arctan t \Rightarrow dx=2\frac{1}{t^2+1}dt$, όπότε ελπίζω να σου έδειξα ότι τότε τα $\sin x$ και $\cos x$ γράφονται ως συναρτήσεις του $t$ ως εξής: $\sin x=\frac{2t}{1+t^2}$ και $\cos x =\frac{1-t^2}{1+t^2}$
-\item Η $3$ είναι άρτια ως προς $\sin x$ και $\cos x$ και άρα θέτω $t=\tan x\Rightarrow dx=\frac{1}{t^2+1}dt$. Σε αυτήν χρησιμοποιώ τις ταυτότητες $\cos^2x=\frac{1}{1+\tan^2x}=\frac{1}{1+t^2}$ και $\sin^2x=1-cos^2x=1-\frac{1}{1+t^2}=\frac{t^2}{1+t^2}$
-\item Η $4$ είναι περιττή ως προς $\sin x$
-\item Για την $5$ είναι καλύτερα να χρησιμοποιήσεις τους τύπους αποτετραγωνισμού $\sin^2x=\frac{1-\cos 2x}{2}$ και $\cos^2x=\frac{1+\cos 2x}{2}$ και να αντικαταστήσεις με την διαφορά τετραγώνων που εμφανίζεται. 
-\item Για την $5$ επειδή είναι και αυτή η γενική περίπτωση όπου η συνάρτηση είναι πηλίκο τριγωνομετρικών, θέτουμε $t=\tan\frac{x}{2}$. 
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Για τα τριγωνομετρικά ολοκληρώματα, θυμάμαι τη γενική περίπτωση αντικατάστασης: 
+    \begin{center}
+      Θέτουμε $ \boldsymbol{t = \tan{\frac{x}{2}}} \Rightarrow \frac{x}{2} = \arctan{t} 
+      \Rightarrow x = 2 \arctan {t} $ οπότε $ \boldsymbol{dx = \frac{2}{1 + t^{2}} dt} $ 
+      και ισχύουν οι τύποι:
+    \end{center}
+    \[
+      \boxed{\sin x=\frac{2t}{1+t^2}} \quad \text{και} \quad \boxed{\cos x
+      =\frac{1-t^2}{1+t^2}}
+    \] 
 \end{enumerate}
 
 \end{document}
