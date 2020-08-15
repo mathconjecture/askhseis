@@ -1,12 +1,12 @@
-\input{$HOME/Desktop/preamble/preamble.tex}
-\input{$HOME/Desktop/preamble/definitions.tex}
+\input{preamble.tex}
+\input{definitions_ask.tex}
 
-\thispagestyle{empty}
+\pagestyle{askhseis}
 
 \begin{document}
 
 \begin{center}
-  \fbox{\Large \bfseries Προβλήματα \textlatin{Sturm-Liouville}}
+  \minibox{\large \bfseries \textcolor{Col1}{Προβλήματα Sturm-Liouville}}
 \end{center}
 
 \vspace{\baselineskip}
@@ -14,31 +14,44 @@
 
 \begin{enumerate}
   \item Να λυθούν τα παρακάτω προβλήματα συνοριακών τιμων:
-  \begin{enumerate}[i)]
-    \item $y''(x)+2y'(x)-3y(x)=0$, $\quad y(0)=0$, $y'(1)=0$ \hfill Απ: $y(x)=0$
-    \item $y''(x)+2y'(x)-3y(x)=9x$, $\quad y(0)=0$, $y'(1)=2$ \hfill Απ: $\scriptstyle{y(x)=\frac{(3e-5)e^{-3x}+(5+9e^{-3})}{e+3e^{-x}}e^{x}-3x-2}$
-    \item $y''(x)+4y(x)=0$, $\quad y(0)=0$, $y(\frac{\pi}{4})=7$ \hfill Απ: $y(x)=7\sin 2x$
-    \item $y''(x)+4y(x)=0$, $\quad y(0)=4$, $y(\pi)=4$ \hfill Απ: $4\cos 2x+c\sin 2x$
-    \item $y''(x)-4y'(x)+4y(x)=0$, $\quad y(0)=0$, $y(1)+y'(1)=0$ \hfill Απ: $y(x)=0$
-  \end{enumerate}
+    \begin{enumerate}[i)]
+      \item $y''(x)+2y'(x)-3y(x)=0$, $\quad y(0)=0$, $y'(1)=0$ \hfill Απ: $y(x)=0$
+      \item $y''(x)+2y'(x)-3y(x)=9x$, $\quad y(0)=0$, $y'(1)=2$ 
+        \hfill Απ: $\scriptstyle{y(x)=\frac{(3e-5)e^{-3x}+(5+9e^{-3})}
+        {e+3e^{-x}}e^{x}-3x-2}$
+      \item $y''(x)+4y(x)=0$, $\quad y(0)=0$, $y(\pi/4)=7$ 
+        \hfill Απ: $y(x)=7\sin 2x$
+      \item $y''(x)+4y(x)=0$, $\quad y(0)=4$, $y(\pi)=4$ \hfill Απ: $4\cos 2x+c\sin 2x$
+      \item $y''(x)-4y'(x)+4y(x)=0$, $\quad y(0)=0$, $y(1)+y'(1)=0$ \hfill Απ: $y(x)=0$
+    \end{enumerate}
 
   \item Να λυθούν τα παρακάτω προβλήματα συνοριακών τιμών με παράμετρο:
-  \begin{enumerate}[i)]
-    \item $y''(x)+(1+\lambda)y'(x)+\lambda y(x)=0$, $y'(0)=0$, $\quad y(1)=0$ \hfill Απ: όχι λύσεις
-    \item $y''(x)-\lambda y'(x)+9y(x)=0$, $\quad y(0)=0$, $y(1)=0$
-     \hfill Απ: $\scriptstyle{\lambda_{n}=36-2n\pi}$, $\scriptstyle{y_{n}(x)=A_{n}e^{\frac{\lambda x}{2}}\sin n\pi x}$
-    \item $x^{2}y''(x)+xy'(x)-\lambda y(x)=0$, $x>0$, $\quad y(1)=0$, $y(\pi)=0$
-     \hfill Απ: $\scriptstyle{\lambda_{n}=-\frac{n^{2}\pi^{2}}{\ln^{2}\pi}}$, $\scriptstyle{y_{n}(x)=B_{n}\sin \frac{n\pi \ln x}{\ln \pi}}$
-    \item $y''(x)-4\lambda y'(x)+4\lambda^{2}y(x)=0$, $\quad y(0)=0$, $y(1)+y'(1)=0$
-     \hfill Απ: $\lambda=-1$, $y(x)=xe^{-2x}$
-    \item $y''(x)+\lambda y'(x)=0$, $\quad y(0)+y'(0)=0$, $y'(1)=1$ \hfill Απ: όχι λύσεις
-    \item $y''(x)+2y'(x)+(1-\lambda)y(x)=0$, $\quad y(0)=0$, $y(1)=1$
-    \hfill Απ: $\scriptstyle{\lambda_{n}=-n^{2}\pi^{2}}$, $\scriptstyle{y_{n}(x)=e^{-x}\sin n\pi x}$
-    \item $x^{2}y''(x)+x y'(x)+\lambda y(x)=0$, $x>0$, $\quad y(1)=0$, $y(e)=0$
-     \hfill Απ: $\scriptstyle{\lambda_{n}=n^{2}\pi^{2}}$, $\scriptstyle{y_{n}(x)=\sin n\pi\ln x}$
-  \end{enumerate}
-  \item Αν $f(x)=\sum_{n=1}^{+\infty}c_{n}g_{n}(x)$ , όπου $\left\{ g_{n}(x)\right\}_{n=1}^{+\infty}$ σύστημα ορθογώνιων συναρτήσεων στο διάστημα $[a,b]$ ως προς τη συνάρτηση βάρους $w(x)$, τότε να αποδείξετε ότι:
-  \[\sum_{n=1}^{+\infty}{c_{n}}^{2}=\int\limits_{a}^{b}w(x)[f(x)]^{2}\,dx\]
+    \begin{enumerate}[i)]
+      \item $y''(x)+(1+\lambda)y'(x)+\lambda y(x)=0$, $y'(0)=0$, $\quad y(1)=0$ 
+        \hfill Απ: όχι λύσεις
+      \item $y''(x)-\lambda y'(x)+9y(x)=0$, $\quad y(0)=0$, $y(1)=0$
+        \hfill Απ: $\scriptstyle{\lambda_{n}=36-2n\pi}$, 
+        $\scriptstyle{y_{n}(x)=A_{n}e^{\frac{\lambda x}{2}}\sin n\pi x}$
+      \item $x^{2}y''(x)+xy'(x)-\lambda y(x)=0$, $x>0$, $\quad y(1)=0$, $y(\pi)=0$
+        \hfill Απ: $\scriptstyle{\lambda_{n}=-\frac{n^{2}\pi^{2}}{\ln^{2}\pi}}$, 
+        $\scriptstyle{y_{n}(x)=B_{n}\sin \frac{n\pi \ln x}{\ln \pi}}$
+      \item $y''(x)-4\lambda y'(x)+4\lambda^{2}y(x)=0$, $\quad y(0)=0$, $y(1)+y'(1)=0$
+        \hfill Απ: $\lambda=-1$, $y(x)=xe^{-2x}$
+      \item $y''(x)+\lambda y'(x)=0$, $\quad y(0)+y'(0)=0$, $y'(1)=1$ 
+        \hfill Απ: όχι λύσεις
+      \item $y''(x)+2y'(x)+(1-\lambda)y(x)=0$, $\quad y(0)=0$, $y(1)=1$
+        \hfill Απ: $\scriptstyle{\lambda_{n}=-n^{2}\pi^{2}}$, 
+        $\scriptstyle{y_{n}(x)=e^{-x}\sin n\pi x}$
+      \item $x^{2}y''(x)+x y'(x)+\lambda y(x)=0$, $x>0$, $\quad y(1)=0$, $y(e)=0$
+        \hfill Απ: $\scriptstyle{\lambda_{n}=n^{2}\pi^{2}}$, 
+        $\scriptstyle{y_{n}(x)=\sin n\pi\ln x}$
+    \end{enumerate}
+  \item Αν $f(x)=\sum_{n=1}^{+\infty}c_{n}g_{n}(x)$ , όπου 
+    $\left\{ g_{n}(x)\right\}_{n=1}^{+\infty}$ σύστημα ορθογώνιων συναρτήσεων στο 
+    διάστημα $[a,b]$ ως προς τη συνάρτηση βάρους $w(x)$, τότε να αποδείξετε ότι:
+    \[
+      \sum_{n=1}^{+\infty}{c_{n}}^{2}=\int\limits_{a}^{b}w(x)[f(x)]^{2}\,dx
+    \]
 \end{enumerate}
 
 \end{document}
