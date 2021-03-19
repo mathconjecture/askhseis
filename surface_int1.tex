@@ -1,0 +1,107 @@
+\input{preamble.tex}
+\input{definitions.tex}
+\input{tikz.tex}
+\input{myboxes.tex}
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\bfseries\large \textcolor{Col1}{Ασκήσεις Επιφανειακό Ολοκλήρωμα (Ιου
+  είδους)}} 
+\end{center} 
+
+\vspace{\baselineskip} 
+
+\begin{enumerate}
+  \item Να υπολογιστεί το επιφανειακό ολοκλήρωμα $ \iint_{S} \sqrt{x^{2}+y^{2}} \,{dS} $,
+    όπου $ S $ είναι η επιφάνεια με διανυσματική παραμετρική εξίσωση $ \mathbf{r}(u,v) =
+    u \cos{v}\mathbf{i}+ u \sin{v}\mathbf{j}+ v\mathbf{k} $, όπου $ (u,v) \in
+    [0,1]\times[0.2 \pi] $. 
+    \begin{solution}
+      Η επιφάνεια $S$ δίνεται σε διανυσματική παραμετρική μορφή, άρα 
+      \[
+        \iint_{S} f(x,y,z) \,{dS} 
+        = \iint_{D} f(\mathbf{r}(u,v)) \norm{\mathbf{r}_{u}\times \mathbf{r}_{v}} \, dudv
+      \]
+      Έχουμε
+      \[
+        f(\mathbf{r}(u,v)) = \sqrt{(u \cos{v} )^{2}+(u \sin{v} )^{2}} = \sqrt{u^{2}} = u 
+      \] 
+      \[
+        \mathbf{r}_{u}(u,v) = \cos{v}\mathbf{i}+ \sin{v}\mathbf{j}+0\mathbf{k}
+      \] 
+      \[
+        \mathbf{r}_{v}(u,v) = -u \sin{v}\mathbf{i}+u \cos{v}\mathbf{j}+\mathbf{k}  
+      \] 
+      \[
+        \mathbf{r}_{u}\times \mathbf{r}_{v} = 
+        \begin{vmatrix*}
+          \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+          \cos{v} & \sin{v} & 0 \\
+          -u \sin{v} & u \cos{v} & 1
+        \end{vmatrix*} = \sin{v} \mathbf{i} - \cos{v} \mathbf{j} + u \mathbf{k}
+      \]
+      \[
+        \norm{\mathbf{r}_{u}\times \mathbf{r}_{v}} = \sqrt{\sin^{2}{v} +
+        \cos^{2}{v}+u^{2}} = \sqrt{1 + u^{2}} 
+      \] 
+      Επομένως
+      \begin{align*}
+        \iint_{S} \sqrt{x^{2}+y^{2}} \,{dS} 
+        &= \iint_{D} f(\mathbf{r}(u,v)) \norm{\mathbf{r}_{u}\times \mathbf{r}_{v}} 
+        \,{du} {dv} \\
+        &= \iint_{D} u \sqrt{1+u^{2}} \,{du}{dv} = \int _{0}^{2 \pi} \int _{0}^{1} u
+        \sqrt{1+u^{2}} \,{du} {dv} = \cdots = \frac{2 \pi}{3} (2^{3/2}-1)
+      \end{align*}
+    \end{solution}
+
+  \item Να υπολογιστεί το επιφανειακό ολοκλήρωμα $ \iint_{S} z^{2} \,{dS} $,
+    όπου $ S $ είναι το τμήμα της επιφάνειας του κώνου με εξίσωση 
+    $ z= \sqrt{x^{2}+y^{2}} $, με $ 1 \leq x^{2}+y^{2} \leq 4 $.
+    \begin{solution}
+      Η επιφάνεια $S$ δίνεται ως συνάρτηση 2 μεταβλητών της μορφής $ z=z(x,y) $, άρα
+      \[
+        \iint_{S} f(x,y,z) \,{dS} 
+        = \iint_{D} f(x,y,z(x,y)) \sqrt{1+ (z_{x})^{2}+(z_{y})^{2}}\, dudv
+      \]
+      όπου $D$ είναι η προβολή της επιφάνειας  $S$ στο επίπεδο $xy$.
+      Έχουμε
+      \[
+        f(x,y,z(x,y)) = (\sqrt{x^{2}+y^{2}})^{2} = x^{2}+y^{2}
+      \] 
+      \[
+        z_{x} = \frac{1}{2 \sqrt{x^{2}+y^{2}}} \cdot 2x = \frac{x}{\sqrt{x^{2}+y^{2}}}  
+      \] 
+      \[
+        z_{y} = \frac{1}{2 \sqrt{x^{2}+y^{2}}} \cdot 2y = \frac{y}{\sqrt{x^{2}+y^{2}}}  
+      \]
+      Η προβολή της επιφάνειας $S$ στο επίπεδο $ xy $ είναι ο δακτύλιος $ 1 \leq
+      x^{2}+y^{2} \leq 4 $, δηλαδή
+      \[
+        D = \{ (x,y) \in \mathbb{R}^{2} \; : \; 1 \leq x^{2}+y^{2} \leq 4 \} 
+      \] 
+      Επομένως
+      \[
+        \iint_{S} z^{2} \,{dS} = \iint_{D} (x^{2}+y^{2}) \sqrt{1 +
+          \left(\frac{x}{\sqrt{x^{2}+y^{2}}}\right)^{2} + 
+        \left(\frac{y}{\sqrt{x^{2}+y^{2}}} \right)^{2}} \,{dx}{dy} = 
+        \iint_{D} (x^{2}+y^{2}) \sqrt{2} \,{dx} {dy} 
+      \] 
+      Μετασχηματίζουμε σε πολικές:
+      \[
+        \begin{rcases}
+          x= r \cos{\theta}  \\
+          y= r \sin{\theta}  
+        \end{rcases} \quad \text{και} \quad J=r
+      \]
+      Άρα 
+      \[
+        \sqrt{2} \iint_{D} (x^{2}+y^{2}) \,{dx} {dy} = \int _{0}^{2 \pi} \int _{1}^{2} 
+        r^{2} \cdot r \,{dr} {d\theta} = \sqrt{2} \int _{0}^{2 \pi } \int _{1}^{2} r^{3}
+        \,{dr} {d\theta} = \cdots = \frac{15 \pi \sqrt{2}}{2}
+      \] 
+    \end{solution}
+\end{enumerate}
+
+\end{document}
