@@ -1,44 +1,55 @@
 \input{preamble.tex}
 \input{definitions.tex}
+\input{tikz.tex}
 
 \usepackage{anyfontsize}
 \pagestyle{vangelis}
+\setcounter{chapter}{1}
+
+\linespread{1.1}
 
 \begin{document}
 
 \begin{center}
-  \minibox[frame]{\Large \bfseries Ασκήσεις στους Διανυσματικούς Χώρους}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στους Διανυσματικούς Χώρους}}
 \end{center}
 
 \vspace{\baselineskip}
 
 \begin{enumerate}
   \item Να εξετάσετε αν τα παρακάτω υποσύνολα είναι υπόχωροι. 
-    \begin{enumerate}[(i)]
-      \item $ W = \{(x,y)\in \mathbb{R}^{2} \; \mid \; x,y \geq 0 \} $ 
-        \hfill Απ: όχι 
-      \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x = 3y \} $ \hfill Απ: ναι
-      \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x+y=1 \} $ 
-        \hfill Απ: όχι 
-      \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; y = x^{2} \} $ 
-        \hfill Απ: όχι 
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x\geq 0 \} $ \hfill Απ:  όχι
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 0 \} $ 
-        \hfill Απ: ναι
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 1 \} $ 
-        \hfill Απ: όχι
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x^{2} + y^{2} + z^{2} 
-        \leq 1  \} $ \hfill Απ: όχι
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = y = z \} $ \hfill Απ: ναι
-        % \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x \leq y \leq q \} $ 
-        % \hfill Απ: όχι
-      \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = 2y = 3z \} $ 
-        \hfill Απ: ναι 
-      \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=1 \} $ 
-        \hfill Απ: όχι 
-      \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=0 \} $ 
-        \hfill Απ: όχι 
-    \end{enumerate}
+
+    \twocolumnsidee{
+      \begin{enumerate}[(i)]
+        \item $ W = \{(x,y)\in \mathbb{R}^{2} \; \mid \; x,y \geq 0 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x = 3y \} $ \hfill Απ: ναι
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; x+y=1 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y) \in \mathbb{R}^{2} \; \mid \; y = x^{2} \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x\geq 0 \} $ \hfill Απ:  όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 0 \} $ 
+          \hfill Απ: ναι
+      \end{enumerate}
+      }{
+      \begin{enumerate}[(i),start=7]
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x + y + z = 1 \} $ 
+          \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x^{2} + y^{2} + z^{2} 
+          \leq 1  \} $ \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = y = z \} $ 
+          \hfill Απ: ναι
+          % \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \mid x \leq y \leq q \} $ 
+          % \hfill Απ: όχι
+        \item $ W = \{ (x,y,z) \in \mathbb{R}^{3} \; \mid \; x = 2y = 3z \} $ 
+          \hfill Απ: ναι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=1 \} $ 
+          \hfill Απ: όχι 
+        \item $ W = \{ A \in M_{2}(\mathbb{R}) \; \mid \; \det{A}=0 \} $ 
+          \hfill Απ: όχι 
+      \end{enumerate}
+    }
 
   \item Να δείξετε ότι τα παρακάτω υποσύνολα είναι υπόχωροι
     \begin{enumerate}[(i)]
@@ -74,13 +85,11 @@
   \item\label{ask:eksart} Να εκφράσετε το διάνυσμα $ \mathbf{b} = (1,-2,5) $ ως γραμμικό 
     συνδυασμό των διανυσμάτων $ \mathbf{u} = (1,1,1)$, $ \mathbf{v} = (1,2,3)$, 
     $ \mathbf{w} = (2,-1,1) $.
-
     \hfill Απ: $ \mathbf{b} = -6 \mathbf{u} + 3 \mathbf{v} +2 \mathbf{w} $ 	
 
   \item\label{ask:eksart2} Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (2,5,-3) $ 
     γράφεται ως γραμμικός συνδυασμός των διανυσμάτων $ \mathbf{u} = (1,-3,2)$, 
     $ \mathbf{v} = (2,4,1)$, $ \mathbf{w} = (1,-5,7) $.
-
     \hfill Απ: ναι 
 
   \item Να εξετάσετε αν το διάνυσμα $ \mathbf{b} = (-3,0,12,15) $ μπορεί να γραφεί 
@@ -102,24 +111,20 @@
     $ \mathbf{u}_{2} = (1,2,1,4) $, $ \mathbf{u}_{3} = (1,1,2,3)$, 
     $ \mathbf{u}_{4} = (1,1,2,3) $, $ \mathbf{u}_{5} = (1,-3,6,-1) $ 
     είναι γραμμικώς εξαρτημένα και να βρεθεί μια σχέση που τα συνδέει. 
-
     \hfill Απ: $ \mathbf{u}_{1} - 2 \mathbf{u}_{2} + \mathbf{u}_{3} = 0 $ 
 
   \item\label{ask:baseeks} Να εξετάσετε αν τα διανύσματα $ \mathbf{u} = (1,1,1)$, 
     $ \mathbf{v} = (1,2,3)$, $ \mathbf{w} = (1,5,3) $ είναι βάση του $\mathbb{R}^{3}$. 
-
     \hfill Απ: ναι 
 
   \item\label{ask:parag} Να εξετάσετε αν τα διανύσματα $ \mathbf{u_{1}} = (1,1,3), 
     \mathbf{u_{2}} = (1,0,2), \mathbf{u_{3}}= (1,-2,0)$ παράγουν τον $ \mathbb{R}^{3} $.
-
     \hfill Απ: όχι 
 
   \item Να δείξετε ότι τo σύνολο $ B = \{ (-1,1,0), (1,1,0), 
     (0,0,1) \} $ είναι βάση του 
     $ \mathbb{R}^{3} $, και να βρεθούν οι συντεταγμένες του διανύσματος 
     $ \mathbf{v} = (2,3,5) $ ως προς αυτή τη βάση.
-
     \hfill Απ: $ [\mathbf{v}]_{B} = (-2,0,5) $ 
 
   \item\label{ask:isoi} Έστω τα διανύσματα $ \mathbf{u}_{1} = (1,2,-1,3)$, 
@@ -143,12 +148,11 @@
 
       \item $ \mathbf{u}_{1} = (1,0,1,0,1) $, $ \mathbf{u}_{2} = (1,1,2,1,0) $, 
         $ \mathbf{u} _{3} = (1,2,3,1,1,) $, $ \mathbf{u}_{4} = (1,2,1,1,1) $
-
         \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, 
         \mathbf{u}_{4} \} $ 
+
       \item $ \mathbf{u}_{1} = (1,0,1,1,1) $, $ \mathbf{u}_{2} = (2,1,2,0,1) $, 
         $ \mathbf{u} _{3} = (1,1,2,3,4) $, $ \mathbf{u}_{4} = (4,2,5,4,6) $
-
         \hfill Απ: $ B = \{ \mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3} \} $ 
     \end{enumerate}
 
@@ -263,7 +267,7 @@
 
   \item Να βρείτε την πλήρη λύση των παρακάτω συστημάτων με τη μέθοδο της απαλοιφής 
     Gauss.
-    \begin{enumerate}[(i)]
+    \begin{enumerate}[(i),itemsep=\baselineskip]
       \item $ 
         \begin{pmatrix*}[r]
           1 & 2 & 1 & 0 \\
@@ -346,14 +350,13 @@
     \end{enumerate}	
 
   \item Να βρείτε μια βάση και τη διάσταση του Μηδενόχωρου για τους παρακάτω πίνακες  
-    \begin{enumerate}[(i)]
+    \begin{enumerate}[(i),itemsep=\baselineskip]
       \item $
         \begin{pmatrix*}[r]
           1 & 1 & 5 & 1 & 4 \\
           2 & -1 & 1 & 2 & 2 \\
           3 & 0 & 6 & 0 & -3 
         \end{pmatrix*}$
-
         \hfill Απ: $ B = \{ (-2,-3,1,0,0), (1,-2,0,-3,1) \} $ 
 
       \item $ 
@@ -362,7 +365,6 @@
           0 & 0 & 1 & 2 \\
           1 & 1 & 1 & 0
         \end{pmatrix*} $ 
-
         \hfill Απ: $ B = \{ (-1,1,0,0), (2,0,-2,1) \} $ 
     \end{enumerate}
 
@@ -379,13 +381,14 @@
       $ B = \{ (1,-2,5,-3), (0,7,-9,2), (0,0,1,0), (0,0,0,1) \} $
     \end{tabular} 
 
-  \item Να βρείτε τον αντίστροφο του πίνακα $ A = 
-    \begin{pmatrix*}[r]
+  \item Να βρείτε τον αντίστροφο των παρακάτω πινάκων με τη μέθοδο της απαλοιφής 
+    Gauss.   
+    \begin{enumerate}[(i),itemsep=\baselineskip]
+  \item $ A = \begin{pmatrix*}[r]
       1 & 0 & 2 \\
       2 & -1 & 3 \\
       4 & 1 & 8
-    \end{pmatrix*}$ με τη μέθοδο της απαλοιφής Gauss.
-
+    \end{pmatrix*} $
     \hfill Απ: $ A^{-1} = 
     \begin{pmatrix*}[r]
       -11 & 2 & 2 \\
@@ -393,19 +396,18 @@
       6 & -1 & -1
     \end{pmatrix*} $ 
 
-  \item Να βρείτε τον αντίστροφο του πίνακα $ A = 
-    \begin{pmatrix*}[r]
+  \item $ B = \begin{pmatrix*}[r]
       1 & 0 & 0 \\
       -2 & 1 & 0 \\
       -1 & -1 & 1
-    \end{pmatrix*}$ με τη μέθοδο της απαλοιφής Gauss.
-
-    \hfill Απ: $ A^{-1} = 
+    \end{pmatrix*} $
+    \hfill Απ: $ B^{-1} = 
     \begin{pmatrix*}[r]
       1 & 0 & 0 \\
       2 & 1 & 0 \\
       1 & 1 & 1
     \end{pmatrix*}$
+\end{enumerate}
 \end{enumerate}
 
 
