@@ -1,0 +1,67 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=2cm}
+\everymath{\displaystyle}
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Ασκήσεις στις Σειρές}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να εξεταστούν ως προς τη σύγκλιση οι παρακάτω σειρές: 
+    \begin{enumerate}[i)]
+      \item $ \sum_{n=1}^{\infty} \frac{1}{n(n+1)} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{1}{n^{2}+b^{2}}, \quad b \in \mathbb{R} $ 
+        \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{n^{2}+1}{n} $ \hfill Απ: αποκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{n^{2}+n+1}{n^{3}} $ \hfill Απ: αποκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{\sin{(n^{3}+1)}}{2^{n}} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n+1)}} $ \hfill Απ: αποκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n^{3}+1} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{\sqrt{n}}{n+5 \sqrt{n}} $ \hfill Απ: αποκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{\sin^{4}{n}}{1+ \sqrt{n^{5}}} $ 
+        \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \frac{10n+2020}{n^{2}+1} $ \hfill Απ: αποκλίνει 
+    \end{enumerate}
+
+  \item Να εξεταστούν ως προς τη σύγκλιση οι παρακάτω σειρές: 
+    \begin{enumerate}[i)]
+      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{\ln{n}}{n} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{\sqrt{n}} $ \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} \left(\frac{1}{4^{n}} + \frac{(-1)^{-1}}{n}\right) $ 
+        \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{n^{2}}{n^{4}+2} $ 
+        \hfill Απ: συγκλίνει 
+      \item $ \sum_{n=1}^{\infty} (-1)^{n-1} \frac{\cos{n} + \sin{3n}}{5^{n}} $ 
+        \hfill Απ: συγκλίνει
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Χρήσιμες Ανισότητες}
+
+  \twocolumnsides{
+\begin{myitemize}
+  \item $|\sin x|\leq 1, \quad \forall x\in \mathbb{R}$
+  \item $|\cos x|\leq 1, \quad \forall x\in \mathbb{R}$
+  \item $|\sin x|\leq |x|, \quad \forall x\in \mathbb{R}$
+\end{myitemize}
+  }{
+\begin{myitemize}
+  \item $ \abs{x+y} \leq \abs{x} + \abs{y}, \quad \forall x,y \in \mathbb{R} $
+  \item $n!\leq n^n, \quad \forall n\in \mathbb{N}$
+  \item $n!\geq 2^{n-1}, \quad \forall n\in \mathbb{N}$
+\end{myitemize}
+}
+
+
+
+\end{document}
+
