@@ -3,7 +3,8 @@
 \input{tikz.tex}
 \input{myboxes.tex}
 
-\geometry{left=1.5cm,right=1.5cm}
+\geometry{left=1.5cm,right=1.5cm,top=1.0cm}
+\pagestyle{askhseis}
 
 \begin{document}
 
@@ -11,25 +12,29 @@
   \minibox{\bfseries\large \textcolor{Col1}{Ασκήσεις στις Καμπύλες}} 
 \end{center} 
 
-\vspace{\baselineskip} 
 
 
 \section*{Μήκος Τόξου}
 
 \begin{enumerate}
-  \item Για τις παρακάτω καμπύλες, να βρείτε το μοναδιαίο εφαπτόμενο διάνυσμα 
-    καθώς και το μήκος τους.
+  \item Για τις παρακάτω καμπύλες, να βρείτε το μοναδιαίο εφαπτόμενο διάνυσμα, 
+    καθώς και το μήκος, για το ζητούμενο τμήμα της καμπύλης.
     \begin{enumerate}[i)]
+      %thomas 13.3 ex. 1 p. 727
       \item $ \mathbf{r}(t)=2 \cos{t}\, \mathbf{i} + 2 \sin{t}\, \mathbf{j} +
         \sqrt{5} t \, \mathbf{k}$, \; με $ 0 \leq t \leq \pi $. \hfill Απ: $ 3 \pi $  
+      %thomas 13.3 ex. 2 p. 727
       \item $ \mathbf{r}(t)=6 \sin{2t}\, \mathbf{i} + 6 \cos{2t}\, \mathbf{j} + 5t \, 
         \mathbf{k} $, \; με $ 0 \leq t \leq \pi $. \hfill Απ: $ 13 \pi $  
+      %thomas 13.3 ex. 4 p. 727
       \item $ \mathbf{r}(t)=(2+t)\, \mathbf{i} - (t+1) \, \mathbf{j} + t \, \mathbf{k} $,
        \; με $ 0 \leq t \leq 3 $. \hfill Απ: $ 3 \sqrt{3} $ 
+      %thomas 13.3 ex. 5 p. 727
       \item $ \mathbf{r}(t)= \cos^{3}{t}\, \mathbf{j} + \sin^{3}{t}\, \mathbf{k} $, 
         \; με $ 0 \leq t \leq \pi /2 $. \hfill Απ: $ 3/2 $ 
     \end{enumerate}
 
+      %thomas 13.3 ex. 10 p. 727
   \item Να βρείτε το σημείο πάνω στην καμπύλη $ \mathbf{r}(t)=5 \sin{t}\, \mathbf{i} + 5
     \cos{t}\, \mathbf{j} + 12t \, \mathbf{k} $, που απέχει απόσταση $ 26 \pi $, κατά 
     μήκος της καμπύλης, από το σημείο $ (0,5,0) $. \hfill Απ: $ (0,5,24 \pi) $  
@@ -38,8 +43,102 @@
     \mathbf{i} + \sqrt{2} t \, \mathbf{j} + (1-t^{2}) \, \mathbf{k} $ από το σημείο 
     $ (0,0,1) $ έως το σημείο $ (\sqrt{2} , \sqrt{2} , 0) $. 
     \hfill Απ:  $ \sqrt{2} + \ln{(1+ \sqrt{2})} $
+\end{enumerate}
 
+\section*{Τρίεδρο Frenet}
 
+\begin{enumerate}
+  \item Να βρείτε τα διανύσματα $ T $ και $N$, καθώς και την καμπυλότητα των παρακάτω 
+    επίπεδων καμπυλών.
+    %Thomas 13.4 ex. 1 p. 733
+    \begin{enumerate}[i)]
+      \item $ \mathbf{r}(t)=(2t+3)\, \mathbf{i} + (5-t^{2})\, \mathbf{j} $ 
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T} =  \frac{1}{\sqrt{1+t^{2}}}\,\mathbf{i} -
+          \frac{1}{\sqrt{1+t^{2}}}\,\mathbf{j} $
+          \\
+          $ \mathbf{N}=  \frac{-t}{\sqrt{1+t^{2}}}\,\mathbf{i} + 
+          \frac{-1}{\sqrt{1+t^{2}}} \,\mathbf{j} $ \\
+        $ k= \frac{1}{2(1+t^{2})^{3/2}} $ 
+        \end{tabular} 
+      \item $ \mathbf{r}(t)=(\cos{t} + t \sin{t})\, \mathbf{i} + (\sin{t} - t
+        \cos{t})\, \mathbf{j} , \quad t>0 $
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T}=  \cos{t}\,\mathbf{i} + \sin{t}\,\mathbf{j} $ \\
+          $ \mathbf{N}=  - \sin{t}\,\mathbf{i} + \cos{t}\,\mathbf{j} $ \\
+          $ k = \frac{1}{t} $
+        \end{tabular} 
+    \end{enumerate}
+
+  \item Να βρείτε τα διανύσματα $ T $, $N$ και $B$ καθώς και την καμπυλότητα και στρέψη  
+    των παρακάτω καμπυλών στο χώρο.
+    \begin{enumerate}[i)]
+      \item $ \mathbf{r}(t)=(3 \sin{t})\, \mathbf{i} + (3 \cos{t})\, \mathbf{j} + 4t 
+        \, \mathbf{k} $ 
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T}=  3/5 \cos{t}\,\mathbf{i} - 3/5 \sin{t} \,\mathbf{j} + 4/5 
+          \mathbf{k} $ \\
+          $ \mathbf{N}=  - \sin{t}\,\mathbf{i} - \cos{t}\,\mathbf{j} $ \\
+          $ \mathbf{Β}=  4/5 \cos{t}\,\mathbf{i} - 4/5\sin{t}\,\mathbf{j}-3/5 
+          \mathbf{k} $ \\
+          $ k = 3/25 $, $ \sigma = -4/25 $
+        \end{tabular} 
+      \item $ \mathbf{r}(t)=(\cos{t} + t \sin{t})\, \mathbf{i} + (\sin{t} -t \cos{t})
+        \, \mathbf{j} + 3 \, \mathbf{k}, \quad t>0 $
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T}=  \cos{t}\,\mathbf{i} - \sin{t}\,\mathbf{j} $ \\
+          $ \mathbf{N}=  - \sin{t}\,\mathbf{i} + \cos{t}\,\mathbf{j} $ \\
+          $ \mathbf{B}= \mathbf{k} $ \\
+          $ k = \frac{1}{t} $, $ \sigma = 0 $  
+        \end{tabular} 
+      \item $ \mathbf{r}(t)=(\mathrm{e}^{t} \cos{t})\, \mathbf{i} + (\mathrm{e}^{t}
+        \sin{t})\, \mathbf{j} + 2 \, \mathbf{k} $ 
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T}=  (\frac{\cos{t} - \sin{t}}{\sqrt{2}} )^{2}\,\mathbf{i} +
+          (\frac{\cos{t} - \sin{t}}{\sqrt{2}} )^{2}\,\mathbf{j}$ \\
+          $ \mathbf{N}=  (\frac{- \cos{t} - \sin{t}}{\sqrt{2}})\,\mathbf{i} +
+          (\frac{- \sin{t} - \cos{t}}{\sqrt{2}})\,\mathbf{j}$ \\
+          $ \mathbf{B}= \mathbf{k} $ \\
+          $ k = \frac{1}{\mathrm{e}^{t} \sqrt{2}} $, $ \sigma = 0 $ 
+        \end{tabular} 
+      \item $ \mathbf{r}(t)=(\cos^{3}{t})\, \mathbf{i} + (\sin^{3}{t})\, \mathbf{j} + \,
+        \mathbf{k} , \quad 0<t< \pi /2$ 
+        \hfill Απ: \begin{tabular}{l}
+          $ \mathbf{T}=  - \cos{t}\,\mathbf{i} + \sin{t}\,\mathbf{j}$ \\
+          $ \mathbf{N}=  \sin{t}\,\mathbf{i} + \cos{t}\,\mathbf{j} $ \\
+          $ \mathbf{B}= -\mathbf{k} $ \\
+          $ k = \frac{1}{3 \cos{t} \sin{t}} $, $ \sigma = 0 $ 
+        \end{tabular} 
+    \end{enumerate}
+    
+    \enlargethispage{2\baselineskip}
+
+  \item Να βρείτε την εξίσωση του κύκλου καμπυλότητας, της καμπύλης $
+    \mathbf{r}(t)= t\, \mathbf{i} + \sin{t}\, \mathbf{j} $ στο σημείο $ (\pi /2,1) $
+
+    \section*{Επιτρόχιος και Κεντρομόλος Επιτάχυνση}
+    
+   \item Αν οι παρακάτω καμπύλες αποτελούν την τροχιά ενός σωματιδίου που κινείται 
+     στο χώρο, να γράψετε την επιτάχυνση $ \mathbf{a} $ στη μορφή $ \mathbf{a}= a_{T}
+     \mathbf{T} + a_{N} \mathbf{N} $, στο δοσμένο σημείο, χωρίς να υπολογίσετε τα 
+     $ \mathbf{T} $ και $ \mathbf{N} $.
+     \begin{enumerate}[i)]
+       \item $ \mathbf{r}(t)=(a \cos{t})\, \mathbf{i} + (a \sin{t})\, \mathbf{j} + bt \, 
+         \mathbf{k} $ 
+     \hfill Απ: $ \mathbf{a}= 0 \mathbf{T} + \abs{a} \mathbf{N} $ 
+
+   \item $ \mathbf{r}(t)=(1+3t)\, \mathbf{i} + (t-2)\, \mathbf{j} - 3t\, \mathbf{k} $
+     \hfill Απ: $ \mathbf{a}=0 \mathbf{T}+0 \mathbf{N} $  
+
+   \item $ \mathbf{r}(t)=(t+1)\, \mathbf{i} + 2t\, \mathbf{j} + t^{2} \, \mathbf{k},
+     \quad t=1 $ 
+     \hfill Απ: $ \mathbf{a}(1)= \frac{4}{3} \mathbf{T}+ \frac{2 \sqrt{5}}{3} 
+     \mathbf{N} $ 
+
+   \item $ \mathbf{r}(t)=(t \cos{t})\, \mathbf{i} + (t \sin{t})\, \mathbf{j} + t^{2} \,
+     \mathbf{k}, \quad t=0 $ 
+     \hfill Απ: $ \mathbf{a}(0)=0 \mathbf{T}+2 \sqrt{2} \mathbf{N} $ 
+     \end{enumerate}
 \end{enumerate}
 
 
