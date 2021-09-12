@@ -1,0 +1,134 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+
+\pagestyle{askhseis}
+\everymath{\displaystyle}
+
+\begin{document}
+
+\begin{center}
+\minibox{\large\bfseries \textcolor{Col1}{Επικαμπύλιο Ολοκλήρωμα ΙΙου είδους}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να υπολογιστεί το επικαμπύλιο ολοκλήρωμα των διανυσματικών πεδίων, κατά μήκος των
+    καμπυλών 
+    \begin{enumerate}[i)]
+      \item $ c_{1} \colon $ ευθύγραμμο τμήμα από $ A(0,0,0) $ έως $ B(1,1,1) $.
+      \item $ c_{2} \colon $ παραβολική τροχιά $ \mathbf{r}(t)=t\, \mathbf{i} +
+        t^{2}\, \mathbf{j} + t^{4} \, \mathbf{k} $ από $ A(0,0,0) $ έως $ B(1,1,1) $.
+      \item $ c_{3} \colon $ η ένωση των ευθυγράμμων τμημάτων από 
+        $ A(0,0,0) $ έως $ B(1,1,0) $ και από $ B(1,1,0) $ έως $ C(1,1,1) $.
+    \end{enumerate}
+    \begin{enumerate}[a)]
+      \item $ \mathbf{F}(x,y,z) = 3y \mathbf{i} + x \mathbf{j} + 4z \mathbf{k}
+        $ \hfill Απ: 
+        \begin{enumerate*}[i),itemjoin=\hspace{5pt}] 
+          \item 9/2  
+          \item 13/3
+          \item 9/2
+        \end{enumerate*}
+      \item $ \mathbf{F}(x,y,z) = (y+z) \mathbf{i} + (z+x) \mathbf{j} + (x+y) \mathbf{k}
+        $ \hfill Απ: 
+        \begin{enumerate*}[i),itemjoin=\hspace{5pt}] 
+          \item 3
+          \item 3
+          \item 3
+        \end{enumerate*}
+    \end{enumerate}
+
+\end{enumerate}
+
+\section*{Έργο}
+
+\begin{enumerate}
+  \item Να βρείτε το \textbf{έργο} που παράγεται από το διανυσματικό πεδίο 
+    $ \mathbf{F} $ κατά μήκος της καμπύλης $c$ προς τη θετική φορά.
+    \begin{enumerate}[i)]
+      \item $ \mathbf{F}(x,y,z) = xy \mathbf{i} + y \mathbf{j} + -yz \mathbf{k}
+        $ όπου $ c \colon \mathbf{r}(t)=t\, \mathbf{i} + t^{2}\, \mathbf{j} + t \,
+        \mathbf{k}$, με $ 0 \leq t \leq 1 $. 
+        \hfill Απ: $ 1/2 $ 
+      \item $ \mathbf{F}(x,y,z) = 2y \mathbf{i} + 3x \mathbf{j} + (x+y) \mathbf{k}
+        $ όπου $ c \colon \mathbf{r}(t)= \cos{t}\, \mathbf{i} + \sin{t}\, 
+        \mathbf{j} + t/6 \, \mathbf{k} $, με $ 0 \leq t \leq 2 \pi $ 
+        \hfill Απ: $ \pi $ 
+      \item $ \mathbf{F}(x,y,z) = z \mathbf{i} + x \mathbf{j} + y \mathbf{k}
+        $, όπου $ c \colon \mathbf{r}(t)= \sin{t}\, \mathbf{i} + \cos{t}\, 
+        \mathbf{j} + t \, \mathbf{k}$, με $ 0 \leq t \leq 2 \pi $ 
+        \hfill Απ: $ - \pi $  
+      \item $ \mathbf{F}(x,y,z) = 6z \mathbf{i} + y^{2} \mathbf{j} + 12 x \mathbf{k}
+        $, όπου $ c \colon \mathbf{r}(t)= \sin{t}\, \mathbf{i} + \cos{t}\, 
+        \mathbf{j} + t/6 \, \mathbf{k}$, με $ 0 \leq t \leq 2 \pi $ 
+        \hfill Απ: 0  
+    \end{enumerate}
+
+  \item Να βρείτε το \textbf{έργο} που παράγεται από την κλίση της συνάρτησης 
+    $ f(x,y) = (x+y)^{2} $ κατά μήκος του κύκλου $ x^{2}+y^{2}=4 $, προς τη θετική φορά. 
+    \hfill Απ: 0  
+\end{enumerate}
+
+
+\section*{Ροή κατά μήκος, Κυκλοφορία, Ροή δια μέσου}
+
+\begin{enumerate}
+  \item Να βρείτε την \textbf{κυκλοφορία} και τη \textbf{ροή} των πεδίων 
+    $ \mathbf{F_{1}}(x,y) = x \mathbf{i} + y \mathbf{j} $ και $ \mathbf{F_{2}}(x,y) = 
+    -y\mathbf{i} + x \mathbf{j} $, κατά μήκος και δια μέσου των παρακάτω καμπυλών:
+    \begin{enumerate}[i)]
+      \item κύκλος $ \mathbf{r}(t)= \cos{t}\, \mathbf{i} + \sin{t}\, \mathbf{j}$, με 
+        $ 0 \leq t \leq 2 \pi $ 
+        \hfill Απ: 
+        \begin{enumerate*}[i)]
+          \item $ circ_{1} = 2 \pi, \quad circ_{2}=0, \quad flux_{1} = 0, \quad 
+            flux_{2}= 2 \pi $
+        \end{enumerate*}
+      \item έλλειψη $ \mathbf{r}(t)= \cos{t}\, \mathbf{i} + 4\sin{t}\, \mathbf{j}$, με 
+        $ 0 \leq t \leq 2 \pi $ 
+        \hfill Απ:  
+        \begin{enumerate*}[i)]
+          \item $ circ_{1} = 0, \quad circ_{2}=8 \pi, \quad flux_{1} = 8 \pi, \quad 
+            flux_{2}= 0 $
+        \end{enumerate*}
+    \end{enumerate}
+
+  \item Να βρείτε τη \textbf{ροή} των πεδίων $ \mathbf{F_{1}}(x,y) = 2x \,\mathbf{i} - 3y
+    \, \mathbf{j} $ και $ \mathbf{F_{2}}(x,y) = 
+    2x \, \mathbf{i} + (x-y)\, \mathbf{j} $, δια μέσου του κύκλου $ \mathbf{r}(t)=(a
+    \cos{t})\,
+    \mathbf{i} + (a \sin{t})\, \mathbf{j} $, με $ 0 \leq t \leq 2 \pi $.
+    \hfill Απ: $ flux_{1}=- \pi a^{2} $, $ flux_{2}= \pi a^{2} $ 
+
+  \item Να βρείτε τη ροή του διανυσματικού πεδίου $ \mathbf{F}(x,y) = (x+y) \mathbf{i}
+    - (x^{2}+y^{2}) \mathbf{j} $ από το σημείο $ (1,0) $ προς το $ (-1,0) $ κάτα μήκος 
+    των παρακάτων καμπυλών:
+    \begin{enumerate}[i)]
+      \item το πάνω ημικύκλιο του κύκλου $ x^{2}+y^{2}=1 $.
+      \item το ευθύγραμμο τμήμα από το $ (1,0) $ εως το $ (-1,0) $.
+      \item την ένωση των ευθυγράμμων τμημάτων από το $ (1,0) $ εως το $ (0,-1) $ και 
+        από το $ (0,-1) $ έως το $ (-1,0) $.
+    \end{enumerate}
+    \hfill Απ: 
+    \begin{enumerate*}[i)]
+      \item $ - \pi /2 $
+      \item $ 0 $
+      \item $ 1 $
+    \end{enumerate*}
+
+  \item Να βρείτε τη ροή του διανυσματικού πεδίου $ \mathbf{F}(x,y) = (x+y) \mathbf{i}
+    - (x^{2}+y^{2}) \mathbf{j} $ δια μέσου του τριγώνου με κορυφές τα σημεία $ (1,0) $, 
+    $ (0,1) $ και $ (-1,0) $. \hfill Απ: $1/3$ 
+
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}

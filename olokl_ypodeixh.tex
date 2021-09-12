@@ -1,0 +1,48 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\section*{Υπόδειξη}
+
+\begin{align*} 
+  \int \mathrm{e}^{-x} \sin^{2}{x} \,{dx} &= \int \mathrm{e}^{-x} \frac{1- \cos{2x}
+  }{2}  \,{dx} = \frac{1}{2} \int \mathrm{e}^{-x} \,{dx} - \frac{1}{2} \int 
+  \mathrm{e}^{-x} \cos{2x} \,{dx} 
+\end{align*}
+Για το 1ο ολοκλήρωμα έχουμε:
+  \[ \int \mathrm{e}^{-x} \,{dx} = - \mathrm{e}^{-x} \]
+Για το 2ο ολοκλήρωμα έχουμε:
+\begin{align*} 
+  \underbrace{\int \mathrm{e}^{-x} \cos{2x} \, dx}_{I} &= \int (- \mathrm{e}^{-x} )' 
+  \cos{2x} \,{dx} \\
+  &=  - \mathrm{e}^{-x} \cos{2x} - \int - \mathrm{e}^{-x} (\cos{2x} )' \,{dx} \\
+  &= - \mathrm{e}^{-x} \cos{2x} + \int \mathrm{e}^{-x} (-2 \sin{2x}) \,{dx}  \\
+  &= - \mathrm{e}^{-x} \cos{2x} -2 \int \mathrm{e}^{-x} \sin{2x} \,{dx}  \\
+  &= - \mathrm{e}^{-x} \cos{2x} -2 \int (-\mathrm{e}^{-x})' \sin{2x} \,{dx}  \\
+  &= - \mathrm{e}^{-x} \cos{2x} -2 \left( - \mathrm{e}^{-x} \sin{2x} - \int - 
+  \mathrm{e}^{-x} (\sin{2x} )' \,{dx}\right) \\
+  &= - \mathrm{e}^{-x} \cos{2x} -2 \left( - \mathrm{e}^{-x} \sin{2x} + \int  
+  \mathrm{e}^{-x} (2\cos{2x} )' \,{dx}\right) \\
+  &= - \mathrm{e}^{-x} \cos{2x} -2 \left( - \mathrm{e}^{-x} \sin{2x} + 2 \int  
+  \mathrm{e}^{-x} \cos{2x} \,{dx}\right) \\
+  &= - \mathrm{e}^{-x} \cos{2x} + 2 \mathrm{e}^{-x} \sin{2x} -4 
+  \underbrace{ \int \mathrm{e}^{-x} \cos{2x} \,{dx}}_{I} \Rightarrow \\
+  I + 4I &= - \mathrm{e}^{-x} \cos{2x} + 2 \mathrm{e}^{-x} \sin{2x} \Rightarrow \\
+  5I &= - \mathrm{e}^{-x} \cos{2x} + 2 \mathrm{e}^{-x} \sin{2x} \Rightarrow \\
+  I &= \frac{- \mathrm{e}^{-x} \cos{2x} + 2 \mathrm{e}^{-x} \sin{2x}}{5} 
+\end{align*}
+
+Άρα με αντικατάσταση, έχουμε:
+\begin{align*}
+  \int \mathrm{e}^{-x} \sin^{2}{x} \,{dx} 
+  &= -\frac{1}{2} \mathrm{e}^{-x} - \frac{1}{2} 
+  \left(\frac{- \mathrm{e}^{-x} \cos{2x} + 2 \mathrm{e}^{-x} \sin{2x}}{5}\right) \\
+  &= -\frac{1}{2} \mathrm{e}^{-x} - \frac{1}{2} \mathrm{e}^{-x} 
+  \left(\frac{- \cos{2x} + 2 \sin{2x}}{5}\right) \\
+  &= \frac{\mathrm{e}^{-x}}{2} \left( \frac{\cos{2x} - 2 \sin{2x}}{5} - 1\right)
+\end{align*}
+
+\end{document}
