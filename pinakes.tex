@@ -1,0 +1,259 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=2cm}
+% \DeclareMathOperator{\r}{r}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+\chapter*{Πίνακες}
+
+\section*{Άλγεβρα Πινάκων}
+
+\begin{enumerate}
+
+\item Έστω $ A = 
+  \begin{pmatrix*}[r]
+    1 & 2 \\
+    4 & -3
+  \end{pmatrix*} $ και έστω $ f(x) = 2x^{3}-4x+5 $ και $ g(x) = x^{2}+2x+11 $. Να 
+  υπολογίσετε τους πίνακες 
+  \begin{enumerate}[i)]
+    \item $ A^{2} $
+    \item $ A^{3} $
+    \item $ f(A) $
+    \item $ g(A) $
+  \end{enumerate}
+
+  \hfill Απ: $ A^{2} = 
+  \begin{pmatrix*}[r]
+    9 & -4 \\
+    -8 & 17
+  \end{pmatrix*}, \; A^{3} = 
+  \begin{pmatrix*}[r]
+    -7 & 30 \\
+    60 & -67
+  \end{pmatrix*}, \; f(A) = 
+  \begin{pmatrix*}[r]
+    -13 & 52 \\
+    104 & -117
+  \end{pmatrix*}, g(A) = 
+  \begin{pmatrix*}[r]
+    0 & 0 \\
+    0 & 0 
+  \end{pmatrix*} $ 
+
+  \item Δίνονται οι πίνακες $ A = 
+    \begin{pmatrix}
+      1 & 2 & 1 \\
+      1 & 1 & 0 \\
+      2 & 0 & -1
+    \end{pmatrix} $, $ B= 
+    \begin{pmatrix}
+      2 & 1 & 3 \\
+      4 & 3 & 0 \\
+      3 & 2 & 1
+    \end{pmatrix} $ και $ \mathbf{x} =  
+    \begin{pmatrix*}[r] x \\ y \\ z \end{pmatrix*} $. Να υπολογιστούν τα γινόμενα:
+    \begin{enumerate}[i)]
+      \item $ A\cdot B $
+      \item $ B\cdot A $
+      \item $A \cdot \mathbf{x} $
+      \item $ \mathbf{x}^{T} \cdot A$
+    \end{enumerate} 
+    \hfill Απ: $ \scriptstyle{AB= 
+    \begin{pmatrix}
+      13 & 9 & 4 \\
+      6 & 4 & 3 \\
+      1 & 0 & 5
+    \end{pmatrix}, \;  BA = 
+    \begin{pmatrix*}[r]
+      9 & 5 & -1 \\
+      7 & 11 & 4 \\
+      7 & 8 & 2
+    \end{pmatrix*}, \; A \mathbf{x} = 
+    \begin{pmatrix*} x+2y+z \\ x+y \\ 2x-z \end{pmatrix*}, \;  \mathbf{x}^{T}A = 
+    \begin{pmatrix*}
+      x+y+2z & 2x+y & x-z
+  \end{pmatrix*}} $  
+
+\item Να βρεθούν τα $ x,y, z $ και $ w $ αν $ 3 
+  \begin{pmatrix*}[r]
+    x & y \\
+    z &w
+  \end{pmatrix*} = 
+  \begin{pmatrix*}[r]
+    x & 6 \\
+    -1 & 2w
+  \end{pmatrix*} + 
+  \begin{pmatrix*}
+    4 & x+y \\
+    z+w & 3
+  \end{pmatrix*} $ 
+
+  \hfill Απ: $ x=2, \; y=2, \; z=1, \; w=3 $ 
+
+\item Να βρείτε όλους τους, πραγματικούς, διαγώνιους $ 2 \times 2 $ πίνακες για τους 
+  οποίους ισχύει ότι $ A^{2}=3A $.
+
+  \hfill Απ: $\scriptstyle{ 
+  \begin{pmatrix*}[r]
+    0 & 0 \\
+    0 &0
+  \end{pmatrix*}, \; 
+  \begin{pmatrix*}[r]
+    0 & 0 \\
+    0 & 3
+  \end{pmatrix*}, \; 
+  \begin{pmatrix*}[r]
+    3 & 0 \\
+    0 & 0
+  \end{pmatrix*}, \; 
+  \begin{pmatrix*}[r]
+    3 & 0 \\
+    0 & 3
+\end{pmatrix*}} $
+  
+
+\item Αν $ A = 
+  \begin{pmatrix*}[r]
+    -2 & 5 \\
+    -1 & 2
+  \end{pmatrix*} $, να υπολογιστεί ο πινακας $ A^{2021} - 3A^{2021} +2I $. 
+
+  \hfill Απ: $ A = 
+  \begin{pmatrix*}[r]
+    7 & -5 \\
+    1 & 3
+  \end{pmatrix*} $ 
+\end{enumerate}
+
+\section*{Συμμετρικοί - Αντισυμμετρικοί - Ορθογώνιοι Πίνακες}
+
+\begin{enumerate}
+  \item Να υπολογιστεί η τιμή του $x$ ώστε ο πίνακας $ B = 
+    \begin{pmatrix*}[r]
+      4 & x+2 \\
+      2x-3 & x+1 
+    \end{pmatrix*} $, να είναι συμμετρικός. 
+
+    \hfill Απ: $x=5$  
+  \item Να δείξετε ότι για κάθε πίνακα $ A \in \textbf{M}_{m \times n}(\mathbb{R}) $, 
+    οι πίνακες $ AA^{T} $ και $ A^{T}A $ είναι συμμετρικοί.
+
+  \item Έστω $ A_{3\times 3} $ ορθογώνιος πίνακας. Να δείξετε ότι:
+    \begin{enumerate}[i)]
+      \item $ A^{T}(A-I) = -(A-I)^{T} $
+      \item $ |A|=\pm 1 $
+      \item $ |A|=1 \Rightarrow |A-I|=0 $
+    \end{enumerate}
+
+    %spand. ex.28 p.168
+  \item Έστω $ A,B \in \textbf{M}_{n}(\mathbb{R}) $ ορθογώνιοι πίνακες. Να δείξετε ότι: 
+    \begin{enumerate}[i)]
+      \item $ AB, A^{T}B, AB^{T} $ και $ A^{T}B^{T} $ είναι επίσης ορθογώνιοι.
+      \item $ A^{-1} $ είναι επίσης ορθογώνιος.
+    \end{enumerate}
+
+    %spand. ex.27 p.167
+  \item Αν $A_{n\times n}$ συμμετρικός, $B_{n\times n}$ αντισυμμετρικός και 
+    $C =(A+B)^{-1}(A-B) $, τότε να δείξετε ότι 
+    \begin{enumerate}[i)]
+      \item $C^{T}(A+B)C=A+B $
+      \item $ C^{T}(A-B)C=A-B $
+    \end{enumerate}
+
+  \item Αν $A_{n\times n}$ ορθογώνιος και $ A+I $ αντιστρέψιμος, τότε να δείξετε ότι 
+    $ (A+I)^{-1} + [(A+I)^{-1}]^{T} = I $ .
+\end{enumerate}
+
+
+\section*{Αντίστροφος Πίνακας}
+
+
+
+\begin{enumerate}
+  
+  \item Έστω $ A = 
+    \begin{pmatrix*}[r]
+      4 & 1 \\
+      -3 & -1
+    \end{pmatrix*} $ και $ B = 
+    \begin{pmatrix*}[r]
+      1 & 1 \\
+      -3 & -4
+    \end{pmatrix*}$. 
+    \begin{enumerate}[i)]
+      \item Να αποδείξετε ότι ο $A$ αντιστρέφεται και ότι $ A^{-1} = B $.
+      \item Να αποδείξετε ότι ο $ B $ αντιστρέφεται. Ποιος είναι ο $ B^{-1} $;
+      \item Να αποδείξετε ότι ο $ A^{2} $ αντιστρέφεται. Ποιος είναι ο $ (A^{2})^{-1} $;
+      \item Να λύσετε την εξίσωση $ AX= 
+        \begin{pmatrix*}[r]
+          1 & -1 & 0 \\
+          0 & 1 & 2
+        \end{pmatrix*} $.
+    \end{enumerate}
+
+    \hfill Απ: $ X= 
+    \begin{pmatrix*}[r]
+      1 & 0 & 2 \\
+      0 & 1 & 2
+    \end{pmatrix*} $ 
+
+  \item Αν $B$ είναι ο αντίστροφος του $ A^{2} $, να δείξετε ότι $ A^{-1}=AB $.
+
+  \item Αν $ A,B,A-B $ και $ B^{-1}+A^{-1} $ αντιστρέψιμοι 
+    $ n \times n $ πίνακες, τότε να δείξετε ότι:
+    \begin{enumerate}[i)]
+      \item $ (A-B)^{-1} = A^{-1}+A^{-1}(B^{-1}-A^{-1})^{-1}A^{-1} $
+      \item $ (I+A)^{-1} = I-(A^{-1}+I)^{-1} $
+      \item $\tr(I+A)^{-1} + \tr(A^{-1}+I)^{-1} = n $
+    \end{enumerate}
+    
+    %tzouv ex4.41 p.130
+    %spand. ex.26 p.167
+  \item Έστω $ A, B \in \textbf{M}_{n}(\mathbb{R}) $ αντιστρέψιμοι. Να δείξετε ότι:
+    \begin{enumerate}[i)]
+      \item $ (B^{-1}AB)^{n} = B^{-1}A^{n}B, \; \forall n \in \mathbb{N} $
+      \item $ (B^{-1}AB)^{-1} = B^{-1}A^{-1}B $
+    \end{enumerate}
+
+    %tzouv ex4.43 p.131
+  \item Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $ τέτοιος ώστε $ A^{2}+A=3I $. 
+    \begin{enumerate}[i)]
+      \item Να δείξετε ότι ο πίνακας $ A+2I $ αντιστρέφεται και να βρείτε τον αντίστροφό
+        του.
+      \item Να λύσετε την εξίσωση $ AX+2A=X+3I $, όπου 
+        $ X \in \textbf{M}_{n}(\mathbb{R}) $.
+    \end{enumerate}
+
+    %tzouv ex4.49 p.135
+  \item Έστω $ A \in \textbf{M}_{n}(\mathbb{R}) $ τέτοιος ώστε $ A^{4}+3A^{2}+I=Ο $. 
+    \begin{enumerate}[i)]
+      \item Να δείξετε ότι ο πίνακας $ A^{2}+2I $ αντιστρέφεται και να βρείτε τον 
+        αντίστροφό του.
+    \end{enumerate}
+
+
+\end{enumerate}
+
+\section*{Ισοδυναμία Πινάκων}
+
+\begin{enumerate}
+  %spand. ex.24 p.166
+  \item Αν $ A,B \in \textbf{M}_{m \times n}(\mathbb{R}) $, τότε να δείξετε ότι:
+    \begin{enumerate}[i)]
+      \item Αν οι πίνακες $ A,B $ είναι ισοδύναμοι, τότε $ \tr(A)=\tr(B) $.
+      \item Αν ισχύει ότι $ AB=-BA $ και $ B^{2}=I $, τότε $ \tr(A)=0 $.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+\end{document}
+
