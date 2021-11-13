@@ -1,0 +1,100 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+% \DeclareMathOperator{\r}{r}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+\begin{center}
+\minibox{\large\bfseries\textcolor{Col1}{Ορίζουσες}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \item Να λυθεί στο $\mathbb{R}$ η εξίσωση $ D=0 $, όταν:
+    \begin{enumerate}[i)]
+      \item 
+        $
+        D = 
+        \begin{vmatrix*}[r]
+          x+1 & x+2 & x+3 & x+4 \\
+          2x-3 & 2x-3 & 0 & 2x-3 \\
+          2 & 1 & 1 & 3 \\
+          x & x & 1 & 1
+        \end{vmatrix*} 
+        $
+        \hfill Απ: $ x=3/2 $, $x=0$, $ x=-3 $   
+      \item 
+        $
+        D=
+        \begin{vmatrix*}[r]
+          x & x & x & x + \lambda \\
+          x & x & x+ \lambda & x \\
+          x & x+ \lambda & x & x \\
+          x+ \lambda & x & x & x 
+        \end{vmatrix*}
+        $
+        \hfill Απ:
+        \begin{tabular}{l}
+          αν $\lambda =0$ τότε αληθεύει $ \forall x \in \mathbb{R} $ \\
+          αν $\lambda \neq 0$ τότε αληθεύει για $ x=- \lambda /4 $ 
+        \end{tabular} 
+    \end{enumerate}
+
+  \item Να υπολογιστεί η τιμή της ορίζουσας
+    \[
+      D = 
+      \begin{vmatrix*}[r]
+        \sin{a} & \cos{a} & \sin{(a+x)} \\
+        \sin{b} & \cos{b} & \sin{(b+x)} \\
+        \sin{c} & \cos{c} & \sin{(c+x)} \\
+      \end{vmatrix*} 
+    \]
+    \hfill \textcolor{Col2}{Υπόδειξη:} 
+    $ \sin{(a+b) = \sin{a} \cos{b} + \cos{a} \sin{b}} $ \quad Απ: $ 0 $  
+
+  \item Να αποδείξετε ότι
+    \[
+      \begin{vmatrix*}[r]
+        b_{1}+ c_{1} & c_{1}+ a_{1} & a_{1}+ b_{1} \\
+        b_{2}+ c_{2} & c_{2}+ a_{2} & a_{2}+ b_{2} \\
+        b_{3}+ c_{3} & c_{3}+ a_{3} & a_{3}+ b_{3} 
+      \end{vmatrix*} = 2 
+      \begin{vmatrix*}[r]
+        a_{1}& b_{1}& c_{1} \\
+        a_{2}& b_{2}& c_{2} \\
+        a_{3}& b_{3}& c_{3} 
+      \end{vmatrix*}
+    \]
+
+  \item Να υπολογίσετε την $ 5\times 5$ ορίζουσα $ D = 
+    \begin{pmatrix*}[r]
+    \mathbb{O} & \mathbb{I}_{3} \\
+  \mathbb{I}_{2} & \mathbb{O} \\
+\end{pmatrix*} $ όπου το επάνω αριστερά $ \mathbb{O} $ είναι ο μηδενικός $ 3\times 2 $ 
+πίνακας και το κάτω δεξιά $ \mathbb{O} $ είναι ο μηδενικός $ 2\times 3 $ πίνακα.
+\hfill Απ: $ 1 $ 
+
+\item Αν ο πίνακας $ A \in \textbf{M}_{n}(\mathbb{C}) $ είναι αντισυμμετρικός 
+  και $n$ περιττός, να αποδείξετε ότι $ |A|=0 $.
+
+\item Να βρεθούν οι τιμές του $ x $ για τις οποιές ισχύει
+  \[
+    \begin{vmatrix*}[r]
+      x & x & x & x & x \\
+      a & x & x & x & x \\
+      a & a & x & x & x \\
+      a & a & a & x & x \\
+      a & a & a & a & x
+    \end{vmatrix*} = 0
+   \]
+   \hfill Απ: $ x=0 $, $ x=a $  
+\end{enumerate}
+
+
+
+\end{document}
