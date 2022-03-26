@@ -1,0 +1,244 @@
+\input{preamble.tex}
+\input{definitions_ask.tex}
+
+\geometry{top=2.5cm}
+\pagestyle{askhseis}
+
+\renewcommand{\vec}{\mathbf}
+
+\newcommand{\twocolumnsidesll}[2]{\begin{minipage}[c]{0.65\linewidth}
+        #1
+        \end{minipage}\hfill\begin{minipage}[c]{0.30\linewidth}
+        #2
+    \end{minipage}
+}
+
+
+
+
+\begin{document}
+
+\begin{center}
+  \minibox{\large \bfseries \textcolor{Col1}{Λύσεις Ασκήσεων στα Διανύσματα}}
+\end{center}
+
+\vspace{\baselineskip}
+
+\begin{enumerate}[start=9]
+  \item Να δείξετε ότι 
+    \begin{enumerate}[(i)]
+      \item $ \norm{\mathbf{u}+ \mathbf{v}}^{2} - \norm{\mathbf{u}- \mathbf{v}}^{2} 
+        = 4 \mathbf{u}\cdot \mathbf{v} $
+      \item $ \norm{\mathbf{u}+ \mathbf{v}}^{2} + \norm{\mathbf{u}- \mathbf{v}}^{2} 
+        = 2 \norm{\mathbf{u}} ^{2} + 2 \norm{\mathbf{v}} ^{2} $
+    \end{enumerate}
+    \begin{solution}
+    \item {}
+      \begin{enumerate}[i)]
+        \item 
+          \begin{align*}
+            \norm{\mathbf{u}+ \mathbf{v}}^{2} - \norm{\mathbf{u}- \mathbf{v}}^{2} 
+            &= (\mathbf{u}+ \mathbf{v})\cdot (\mathbf{u}+ \mathbf{v}) - (\mathbf{u}-
+            \mathbf{v}) \cdot (\mathbf{u}- \mathbf{v}) \\ 
+            &=
+            \norm{\mathbf{u}}^{2} + \mathbf{u} \cdot \mathbf{v} + \mathbf{v}
+            \cdot \mathbf{u} +
+            \norm{\mathbf{v}}^{2} - (\norm{\mathbf{u}}^{2} - \mathbf{u} \cdot  
+            \mathbf{v} - \mathbf{v} \cdot \mathbf{u} +  \norm{\mathbf{v}}^{2}) 
+            & \textcolor{Col1}{(\mathbf{u}^{2} = \norm{\mathbf{u}}^{2})} \\
+            &=
+            \norm{\mathbf{u}}^{2} + 2 \mathbf{u} \cdot \mathbf{v} +
+            \norm{\mathbf{v}}^{2} - \norm{\mathbf{u}}^{2} + 2 \mathbf{u}
+            \cdot \mathbf{v} - \norm{\mathbf{v}}^{2} 
+            & \textcolor{Col1}{(\mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot
+            \mathbf{u})} \\ 
+            &= 4 \mathbf{u} \cdot \mathbf{v} 
+          \end{align*} 
+        \item 
+          \begin{align*}
+            \norm{\mathbf{u}+ \mathbf{v}}^{2} + \norm{\mathbf{u}- \mathbf{v}}^{2} 
+            &= (\mathbf{u}+ \mathbf{v})\cdot (\mathbf{u}+ \mathbf{v}) + (\mathbf{u}-
+            \mathbf{v}) \cdot (\mathbf{u}- \mathbf{v}) \\ 
+            &=
+            \norm{\mathbf{u}}^{2} + \mathbf{u} \cdot \mathbf{v} + \mathbf{v}
+            \cdot \mathbf{u} +
+            \norm{\mathbf{v}}^{2} + \norm{\mathbf{u}}^{2} - \mathbf{u} \cdot  
+            \mathbf{v} - \mathbf{v} \cdot \mathbf{u} +  \norm{\mathbf{v}}^{2} \\
+            &=
+            \norm{\mathbf{u}}^{2} + 2 \mathbf{u} \cdot \mathbf{v} +
+            \norm{\mathbf{v}}^{2} + \norm{\mathbf{u}}^{2} - 2 \mathbf{u}
+            \cdot \mathbf{v} + \norm{\mathbf{v}}^{2} \\ 
+            &= 2 \norm{\mathbf{u}}^{2} + 2 \norm{\mathbf{v}}^{2}
+          \end{align*}
+      \end{enumerate}
+    \end{solution}
+
+  \item Να δείξετε ότι οι παρακάτω ισότητες αληθεύουν αν και μόνον αν 
+    τα διανύσματα $ \mathbf{a}, \mathbf{b} $ είναι γραμμικώς εξαρτημένα.
+    \begin{enumerate}[(i)]
+      \item $(\vec{a}\cdot \vec{b})^{2} = \vec{a}^{2}\cdot \vec{b}^{2}$
+      \item $|\vec{a}\cdot \vec{b}| = ||\vec{a}|| \cdot ||\vec{b}||$
+    \end{enumerate}
+    \begin{solution}
+    \item {}
+      \begin{enumerate}[i)]
+        \item Αν $ \mathbf{a}= \mathbf{0} $ ή $ \mathbf{b}= \mathbf{0} $ (οπότε 
+          τα $ \mathbf{a} $ και $ \mathbf{b} $ είναι γραμμικώς εξαρτημένα), τότε 
+          προφανώς ισχύουν αυτές οι ισότητες. 
+          Αν $ \mathbf{a} \neq \mathbf{0} $ και $ \mathbf{b} \neq 0 $ τότε έχουμε:
+          \begin{align*}
+            (\mathbf{a}\cdot \mathbf{b})^{2} 
+            &= \mathbf{a}^{2} \cdot \mathbf{b} ^{2} \Leftrightarrow \\ 
+            (\norm{\mathbf{a}} \norm{\mathbf{b}} \cos{\theta})^{2} 
+            &= \norm{\mathbf{a}} ^{2} \norm{\mathbf{b}} ^{2}
+            \Leftrightarrow \\ 
+            \norm{\mathbf{a}} ^{2} \norm{\mathbf{b}} ^{2} \cos^{2}{\theta} 
+            &= \norm{\mathbf{a}} ^{2} \norm{\mathbf{b}} ^{2} 
+            \overset{\mathbf{a}, \mathbf{b} \neq \mathbf{0}}{\Leftrightarrow} \\
+            \cos^{2}{\theta} &= 1 \Leftrightarrow \\ 
+            \cos{\theta} &= \pm 1 \Leftrightarrow \\
+            \theta = 0 \; &\text{ή} \; \theta = \pi \Leftrightarrow \\
+            \mathbf{a}, \mathbf{b} &\; \text{παράλληλα} \\
+            \mathbf{a}, \mathbf{b} &\; \text{γραμμικώς εξαρτημένα} 
+          \end{align*}
+        \item
+          \begin{align*}
+            \abs{\mathbf{a} \cdot \mathbf{b}} 
+            &= \norm{\mathbf{a}} \norm{\mathbf{b}} \Leftrightarrow \\
+            \abs{\norm{\mathbf{a}} \norm{\mathbf{b}} \cos{\theta}} 
+            &= \norm{\mathbf{a}} \norm{\mathbf{b}} 
+            \overset{\mathbf{a}, \mathbf{b} \neq \mathbf{0}}{\Leftrightarrow} \\
+            \abs{\cos{\theta}} &= 1 \Leftrightarrow \\
+            \cos{\theta} &= \pm 1 \\
+            \theta = 0 \; &\text{ή} \; \theta = \pi \Leftrightarrow \\
+            \mathbf{a}, \mathbf{b} &\; \text{παράλληλα} \\
+            \mathbf{a}, \mathbf{b} &\; \text{γραμμικώς εξαρτημένα} 
+          \end{align*}
+      \end{enumerate}
+    \end{solution}
+
+  \item Να δείξετε ότι $ (\vec{a}\times \vec{b})^{2} + (\vec{a}\cdot \vec{b})^{2} =
+    \vec{a}^{2}\cdot \vec{b}^{2} $  
+    \begin{solution}
+      \begin{align*}
+        (\vec{a}\times \vec{b})^{2} + (\vec{a}\cdot \vec{b})^{2} 
+        &= \norm{\mathbf{a} \times \mathbf{b}}^{2} + (\mathbf{a}\cdot \mathbf{b})^{2} \\
+        &= (\norm{\mathbf{a}} \norm{\mathbf{b}} \sin{\theta})^{2} + (\norm{\mathbf{a}}
+        \norm{\mathbf{b}} \cos{\theta})^{2} \\
+        &= \norm{\mathbf{a}}^{2} \norm{\mathbf{b}
+        }^{2} (\sin^{2}{\theta } + \cos^{2}{\theta}) \\
+        &= \mathbf{a}^{2} \mathbf{b}^{2}
+    \end{align*}
+  \end{solution}
+
+\item Να δείξετε ότι
+  \begin{enumerate}[i)]
+    \item $ ( \vec{a} - \vec{b} ) \times ( \vec{a} + \vec{b} ) = 2 (\vec{a} \times 
+      \vec{b}) $
+    \item Πώς ερμηνεύεται γεωμετρικά το παραπάνω αποτέλεσμα αν τα διανύσματα 
+      $ \vec{a} $ και $ \vec{b} $ είναι γραμμικώς ανεξάρτητα;
+  \end{enumerate}
+  \begin{solution}
+    \begin{align*}
+      (\mathbf{a}- \mathbf{b}) \times (\mathbf{a}+ \mathbf{b}) = (\mathbf{a} \times
+      \mathbf{a}) + (\mathbf{a} \times \mathbf{b}) - (\mathbf{b} \times  \mathbf{a}) - 
+      (\mathbf{b} \times \mathbf{b}) = \mathbf{0} + (\mathbf{a} \times \mathbf{b}) +
+      (\mathbf{a} \times \mathbf{b}) - \mathbf{0} = 2 (\mathbf{a} \times \mathbf{b})
+    \end{align*}
+  \end{solution}
+
+  \subsection*{Γεωμετρική Ερμηνεία}
+  
+\twocolumnsidesll{
+  Αν $ \mathbf{a} $ και $ \mathbf{b} $ όπως στο σχήμα, τότε το παραλληλόγραμμο έχει 
+  εμβαδό $ E= \norm{\mathbf{a} \times \mathbf{b}} $. Επομένως η παραπάνω ισότητα, δείχνει
+  ότι το παραλληλόγραμμο που ορίζουν τα διανύσματα $ \mathbf{a} - \mathbf{b} $ και 
+  $ \mathbf{a}+ \mathbf{b} $ έχει διπλάσιο εμβαδό από αυτό που ορίζουν τα 
+  $ \mathbf{a} $ και $ \mathbf{b} $.
+}{
+\begin{tikzpicture}[>=latex]
+		\node  (0) at (0, 0) {};
+		\node  (1) at (3, 0) {};
+		\node  (2) at (1, 1.6) {};
+		\node  (3) at (4, 1.6) {};
+		\draw[very thick,->,Col1] (0.center) to node[midway,below] 
+      {$ \mathbf{a}$} (1.center);
+		\draw (1.center) to (3.center);
+		\draw (3.center) to (2.center);
+		\draw[very thick,<-,Col1] (2.center) to node[midway,left] 
+      {$ \mathbf{b} $} (0.center);
+		\draw[very thick,->] (0.center) to node[pos=0.4,above left,sloped] 
+      {$ \mathbf{a}+ \mathbf{b} $} (3.center);
+		\draw[very thick,->] (2.center) to node[pos=0.35,above,sloped] 
+      {$ \mathbf{a}- \mathbf{b} $} (1.center);
+\end{tikzpicture}
+}
+
+\end{enumerate}
+
+\begin{enumerate}[start=15]
+  \item Να δείξετε ότι τα σημεία $ A(1,2,3) $, $ B(4,2,4) $, $ C(2,4,0) $ και 
+    $ D(-1,1,5) $ είναι κορυφές \textbf{τετραέδρου} και στη συνέχεια να υπολογίσετε τον 
+    όγκο του. 
+    \begin{solution}
+    \item {}
+      \twocolumnsidesll{
+        Σχηματίζουμε τα διανύσματα:
+        \begin{myitemize}
+          \item $ \mathbf{AB} = (4-1,2-2,4-3) = (3,0,1) $
+          \item $ \mathbf{AC} = (2-1,4-2,0-3) = (1,2,-3) $
+          \item $ \mathbf{AD} = (-1-1,1-2,5-3) = (-2,-1,2) $
+        \end{myitemize}
+      }{
+        \begin{tikzpicture}[>=stealth,scale=0.8]
+          \node (a) at (0, 0) {};
+          \node at (a) [left] {$A$} ;
+          \node (b) at (3, 0) {};
+          \node (c) at (0.5, 2) {};
+          \node (d) at (3.5, 2) {};
+          \node (e) at (1.5, 0.75) {};
+          \node at (e) [left=5pt] {$C$} ;
+          \node at (c) [left=5pt] {$D$} ;
+          \node at (b) [right=5pt] {$B$} ;
+          \node (f) at (4.5, 0.75) {};
+          \node (g) at (2, 2.75) {};
+          \node (h) at (5, 2.75) {};
+          \draw[dashed] (c.center) to (d.center);
+          \draw[dashed] (d.center) to (b.center);
+          \draw[dashed] (e.center) to (f.center);
+          \draw[dashed] (e.center) to (g.center);
+          \draw[dashed] (g.center) to (h.center);
+          \draw[dashed] (h.center) to (f.center);
+          \draw[dashed] (d.center) to (h.center);
+          \draw[dashed] (b.center) to (f.center);
+          \draw[dashed] (c.center) to (g.center);
+          \draw[very thick,->,Col1] (a.center) to (b.center);
+          \draw[very thick,->,Col1] (a.center) to (c.center);
+          \draw[very thick,->,Col1] (a.center) to (e.center);
+          \draw[fill=blue!15] (c.center) -- (b.center) -- (e.center) -- cycle ;
+        \end{tikzpicture}
+      }
+      Υπολογίζουμε το μικτό γινόμενο:
+      \[
+        [\mathbf{AB}, \mathbf{AC}, \mathbf{AD}] = 
+        \begin{vmatrix*}[r]
+          3 & 0 & 1 \\
+          1 & 2 & -3 \\
+          -2 & -1 & 2
+        \end{vmatrix*} = 6 \neq 0
+      \] 
+      Επομένως, τα διανύσματα $ \mathbf{AB}, \mathbf{AC}, \mathbf{AD} $, δεν 
+      είναι συνεπίπεδα, άρα τα σημεία $ A,B,C,D $ δεν ανήκουν στο ίδιο επίπδο και 
+      γι᾽ αυτό σχηματίζουν τετραέδρο (με τη γαλάζια «βάση» στο σχήμα).  
+      Για τον όγκο του τετραέδρου, ισχύει ο τύπος
+      \[
+        V_{\text{τετρ/δου}} = \frac{1}{6} V_{\text{παρ/δου}} = \frac{1}{6}
+        \abs{[\mathbf{AB}, \mathbf{AC}, \mathbf{AD}]} = \frac{1}{6} \cdot \abs{6} = 1
+      \] 
+    \end{solution}
+
+\end{enumerate}
+
+
+\end{document}
+
