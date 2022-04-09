@@ -1,41 +1,169 @@
 \input{preamble.tex}
 \input{definitions.tex}
+\input{tikz.tex}
 
 \pagestyle{vangelis}
-\everymath{\displaystyle}
+% \everymath{\displaystyle}
+
+\geometry{ left=1cm,right=1cm }
 
 
 \begin{document}
 
-\begin{enumerate}
-  \item Να υπολογιστούν τα παρακάτω όρια:
-    \begin{enumerate}[i)]
-      \item $ \lim\limits_{(x,y)\to (\pi, \pi)} \frac{1}{xy} \sin{(x+y)} $ 
-        \begin{proof}
-          \[
-            \lim\limits_{(x,y)\to (\pi, \pi)} \frac{1}{xy} \sin{(x+y)} = 
-            \frac{1}{\pi ^{2}} \sin{2 \pi} = 0 
-          \]    
-        \end{proof}
+\begin{center}
+\minibox{\bfseries \textcolor{Col1}{Όρια (Λύσεις)}}
+\end{center}
 
-      \item $ \lim\limits_{(x,y)\to (0, 0)} \sqrt{x^{2}+y^{2}} 
-        \cos{\frac{1}{\sqrt{xy}}} $
-        \begin{proof}
+\vspace{\baselineskip}
+
+\begin{enumerate}
+
+  \item Να υπολογιστούν τα παρακάτω όρια.
+
+    \begin{myitemize}
+      \item $ \lim\limits_{\substack{x\to 0 \\y \to 0}} 
+        \frac{(1+y^{2}) \sin{x} }{x} $
+        \begin{solution} 
+          $\lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{(1+y^{2}) \sin{x}}{x} = 
+          \lim\limits_{y \to 0} (1+y^{2}) \cdot
+          \lim\limits_{x \to 0} \frac{\sin{x}}{x} = (1+0^{2}) \cdot 1 =
+          1$ 
+        \end{solution}
+
+      \item $ \lim\limits_{\substack{x\to 0 \\y \to 0}}
+        \frac{\sin{(x^{3}+y^{3})}}{x^{2}+y^{2}} $
+        \begin{solution}
         \item {}
-          \begin{minipage}{0.50\textwidth}
-            \begin{itemize}
-              \item $ \abs{\sqrt{x^{2}+y^{2}} \cos{\frac{1}{\sqrt{xy}}}} = 
-                \abs{\sqrt{x^{2}+y^{2}}} \cdot 
-                \abs{\cos{\frac{1}{\sqrt{xy}}}} \leq 
-                \abs{\sqrt{x^{2}+y^{2}}} $ \hfill \tikzmark{a}
-              \item $ \lim\limits_{(x,y)\to (0, 0)} \sqrt{x^{2}+y^{2}} = 0 $ 
-                \hfill \tikzmark{b}
-            \end{itemize}
-          \end{minipage}   
-          \mybrace{a}{b}[$ \lim\limits_{(x,y)\to (0, 0)} 
-          \sqrt{x^{2}+y^{2}} \cos{\frac{1}{\sqrt{xy}}} = 0 $]
-        \end{proof}
-    \end{enumerate}
+          \textbf{Ά Τρόπος:} Με Πολικές
+
+          \textbf{B Τρόπος:} 
+
+          $ \abs{\frac{\sin{(x^{3}+y^{3})}}{x^{2}+y^{2}}} \leq
+          \frac{\abs{x^{3}+y^{3}}}{x^{2}+y^{2}} = \abs{\frac{x^{3}}{x^{2}+y^{2}} +
+          \frac{y^{3}}{x^{2}+y^{2}}} \leq \abs{\frac{x^{3}}{x^{2}+y^{2}}} +
+          \abs{\frac{y^{3}}{x^{2}+y^{2}}} = \abs{x} \frac{x^{2}}{x^{2}+y^{2}} +
+          \abs{y} \frac{y^{2}}{x^{2}+y^{2}} \leq \abs{x} \cdot 1 + \abs{y} \cdot 1 = 
+          \abs{x} + \abs{y} $
+
+          Όμως $ \lim_{(x,y) \to (0,0)} (\abs{x} + \abs{y}) = 0 $, 
+          άρα από γνωστό θεώρημα έχουμε ότι και $ \lim_{(x,y) \to (0,0)}
+          \frac{\sin{(x^{3}+y^{3})}}{x^{2}+y^{2}} = 0 $.
+        \end{solution}
+    \end{myitemize}
+
+  \item Να δείξετε ότι τα παρακάτω όρια δεν υπάρχουν.
+
+    \begin{myitemize}
+      \item $ \lim_{(x,y) \to (0,0)} \Bigl(\frac{\abs{y}}{x^{2}} \cdot 2^{
+          -\frac{\abs{y}}{x^{2}}}\Bigr) $
+          \begin{solution}
+            Προσεγγίζουμε το σημείο $ (0,0) $ μέσω των καμπυλών $ y= \lambda x^{2} $.
+            \[
+               \lim\limits_{\substack{x\to 0 \\y \to 0}} 
+               \Biggl(\frac{\abs{y}}{x^{2}} \cdot 2^{-\frac{\abs{y}}{x^{2}}}\Biggr)
+               \overset{y= \lambda x^{2}}{=} \lim_{x \to 0} 
+               \Biggl(\frac{\abs{\lambda x^{2}}}{x^{2}} \cdot 2^{-\frac{\abs{\lambda
+               x^{2}}}{x^{2}}}\Biggr) = \lim_{x \to 0} \Bigl(\abs{\lambda}\cdot 2^{-
+               \abs{\lambda}}\Bigr) = \Bigl(\abs{\lambda}\cdot 2^{-
+               \abs{\lambda}}\Bigr)
+               \] 
+               Επομένως δεν υπάρχει το όριο, γιατί εξαρτάται από το $ \lambda $.
+            \end{solution}
+        \end{myitemize}
+
+  \item Να εξετάσετε αν οι παρακάτω συναρτήσεις μπορούν να οριστούν κατάλληλα ώστε να 
+    είναι συνεχείς.
+
+    \begin{myitemize}
+      \item $ f(x,y) =  \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] $
+        \begin{solution}
+          Παρατηρούμε, ότι στο σημείο $ (0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
+          $(  0\cdot (- \infty) ) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$
+          συνεχής στο σημείο $(0,0)$, πρέπει 
+          $ \lim_{(x,y)\to (0,0)} f(x,y) = f(0,0) $. 
+          Επομένως θα υπολογίσουμε το όριο της $f$ στο $ (0,0) $.
+          Προκειμένου να μπορούμε να εφαρμόσουμε τον κανόνα L' H\"opital, για να διώξουμε
+          την απροσδιοριστία, αλλά και επειδή, η ποσότητα, $ x^{2}+y^{2} $
+          εμφανίζεται δύο φορές, εφαρμόζουμε \textbf{πολικές} συντεταγμένες.
+          \begin{align*}
+            \lim\limits_{\substack{x\to 0 \\y \to 0}} 
+            \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] = \lim_{r \to 0} 
+            ( r \cdot \ln{r})
+            \overset{0(- \infty)}{=} \lim_{r \to 0} \frac{\ln{r}}{\frac{1}{r}}
+            \overset{\left(\frac{0}{0}\right)}{\underset{\mathrm{LH}}{=}} \lim_{r \to
+            \infty} = \frac{\frac{1}{r}}{(- \frac{1}{r^{2}})} = - \lim_{r \to 0} r = 0
+          \end{align*}
+          Επομένως, αρκεί να ορίσουμε $ f(0,0) = 0 $, ώστε να είναι η $f$ συνεχής.
+        \end{solution}
+      \item $ f(x,y,z) =  
+        \dfrac{1 - \cos{\sqrt{(x^{2}+y^{2}+z^{2}})}}{x^{2}+y^{2}+z^{2}} $
+        \begin{solution}
+          Παρατηρούμε, ότι στο σημείο $ (0,0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
+          $ (0/0) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$ συνεχής στο σημείο 
+          $ (0,0,0) $, πρέπει 
+          $\lim_{(x,y,z) \to (0,0,0)} f(x,y,z) = f(0,0,0)$. 
+          Οπότε, έχουμε
+          \begin{align*}
+            \lim\limits 
+            \frac{1 - \cos{\sqrt{x^{2}+y^{2}+z^{2}}}}{x^{2}+y^{2}+z^{2}} 
+            &= \lim\limits \frac{2
+            \sin^{2}{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}{x^{2}+y^{2}+z^{2}}
+            = \lim\limits \frac{{
+              \sin^{2}{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}}{\frac{x^{2}+y^{2}+z^{2}}{2}
+            \cdot \frac{1}{2}} \cdot \frac{1}{2} = \frac{1}{2} \cdot
+            \lim\limits \frac{{
+            \sin^{2}{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}}{\Bigl(\frac{\sqrt{x^{2}+y^{2}+z^{2}}}{2}\Bigr)^{2}}
+            \\
+            &= \frac{1}{2} \cdot 
+            \lim\limits \Biggl(\frac{{
+            \sin{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}}{\frac{\sqrt{x^{2}+y^{2}+z^{2}}}{2}}\Biggr)^{2}
+            = \frac{1}{2} \cdot 1^{2} = \frac{1}{2}
+          \end{align*} 
+          Επομένως, αρκεί να ορίσουμε $ f(0,0,0) = \frac{1}{2} $, ώστε να είναι η $f$
+          συνεχής.
+        \end{solution}
+    \end{myitemize}
+
+  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = 
+     \begin{cases}
+       \frac{1 - \cos{\sqrt{xy}}}{y}, & y \neq 0 \\
+       \frac{x}{2}, & y = 0
+        \end{cases}$
+        είναι συνεχής σε κάθε σημείο του άξονα $x$.
+        \begin{solution}
+        \item {}
+          \begin{myitemize}
+            \item Για $ y= 0 $, εξετάζουμε τη συνέχεια της $f$ με τον ορισμό.
+              Έστω $ (x_{0},0) $ ένα τυχαίο σημείο του άξονα $x$. 
+              Έχουμε, $ f(x_{0}, 0) =
+              \frac{x_{0}}{2} $
+              \begin{align*}
+                \lim\limits_{\substack{x\to x_{0} \\y \to
+                    0}} f(x,y) = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
+                \frac{1 - \cos{\sqrt{xy}}}{y} 
+                &= \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
+                \frac{2 \sin^{2}{\left(\frac{\sqrt{xy}}{2}\right)}}{y} 
+                = \lim\limits_{\substack{x\to x_{0} \\y \to 0}}
+                \biggl(\frac{\sin^{2}{\frac{\sqrt{xy}}{2}}}{\frac{y}{2} \frac{x}{2}} 
+                \cdot \frac{x}{2}\biggr) 
+                = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} \frac{\sin^{2}{\frac{\sqrt{xy}}{2}}}{\Bigl(\frac{\sqrt{xy}}{2}\Bigr)^{2}} 
+                \cdot \lim_{x \to x_{0}} \frac{x}{2} \\ 
+                &= \lim\limits_{\substack{x\to x_{0} \\y \to 0}} \biggl(
+                \frac{\sin{\frac{\sqrt{xy}}{2}}}{\frac{\sqrt{xy}}{2}}\biggr)^{2}
+                \cdot \lim_{x \to x_{0}} \frac{x}{2} = 1^{2} \cdot \frac{x_{0}}{2}
+               = \frac{x_{0}}{2}
+              \end{align*} 
+              Επομένως η $ f $ είναι συνεχής στο τυχαίο σημείο 
+            $ (x_{0},0) $ του άξονα $x$, και άρα είναι συνεχής σε κάθε σημείο του 
+            άξονα $x$.
+          \end{myitemize}
+          \end{solution}
 \end{enumerate}
+
+
+
+
+
+
 
 \end{document}

@@ -1,0 +1,39 @@
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\begin{document}
+
+\textbf{Άσκηση 2, ii)}
+
+Κάνουμε ανάλυση σε απλά κλάσματα της ρητής συναρτησης
+\[
+  \frac{x^{2}+x-1}{(x-2)(x^{2}+1)} = \frac{A}{x-2} + \frac{Bx+\Gamma}{1+x^{2}} = 
+  \frac{A(1+x^{2})+(Bx+\Gamma)(x-2)}{(x-2)(1+x^{2})} \Rightarrow 
+\]
+Το πρώτο και το τελευταίο κλάσμα είναι ίσα... και επειδή οι παρανομαστές είναι ίσοι, θα 
+πρέπει και οι αριθμητές να είναι ίσοι, επομένως
+\begin{align*}
+  x^{2}+x-1 &= {A(1+x^{2})+(Bx+\Gamma)(x-2)} \Rightarrow  \\
+  x^{2}+x-1 &= A+Ax^{2}+Bx^{2}-2Bx+\Gamma x -2\Gamma \Rightarrow  \\
+  x^{2}+x-1 &= (A+B)x^{2}+(\Gamma -2B)x + A-2\Gamma \Rightarrow 
+\end{align*}
+Πρέπει οι αντίστοιχοι συντελεστές των δυνάμεων του $x$ να είναι ίσοι:
+\begin{align*}
+  A+B=1 \\
+  \Gamma-2B=1 \\
+  A-2\Gamma = -1
+\end{align*}
+λύνοντας το συστηματάκι, βρίσκουμε τα $ A,B, \Gamma $ και συνεχίζουμε οπως στο λυμένο 
+παράδειγμα για να βρούμε τα ολοκληρώματα των απλών κλασμάτων
+
+\vspace{\baselineskip}
+
+\textbf{Άσκηση 2, iii)}
+
+\[
+   \frac{x+1}{x^{3}+x^{2}-6x} = \frac{x+1}{x(x^{2}+x-6)} = \frac{x+1}{x(x-2)(x+3)} =
+   \frac{A}{x} + \frac{B}{x-2} + \frac{\Gamma}{x+3} = \cdots 
+   \] 
+
+\end{document}
