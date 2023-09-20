@@ -1,6 +1,6 @@
 \documentclass[a4paper,table]{report}
-\input{preamble.tex}
-\input{definitions.tex}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
 \input{tikz.tex}
 
 \pagestyle{vangelis}
@@ -12,7 +12,7 @@
 \begin{document}
 
 \begin{center}
-\minibox{\bfseries \textcolor{Col1}{Όρια (Λύσεις)}}
+  \minibox{\bfseries \textcolor{Col1}{Όρια - Συνέχεια (Λύσεις)}}
 \end{center}
 
 \vspace{\baselineskip}
@@ -22,6 +22,22 @@
   \item Να υπολογιστούν τα παρακάτω όρια.
 
     \begin{myitemize}
+
+      \item $ \lim\limits_{\substack{x\to 0 \\y \to 0}} xy 
+        \sin{\Bigl(\frac{1}{y}\Bigr)} $
+        \begin{solution}
+          \[
+            \abs{xy \sin{\Bigl(\frac{1}{y}\Bigr)}} = \abs{xy} 
+            \cdot \abs{\sin{\Bigl(\frac{1}{y}\Bigr)}} \leq \abs{xy} \cdot 1 = \abs{xy} 
+          \]
+          και επειδή $ \lim\limits_{\substack{x\to 0 \\y \to 0}} xy = 0 $, έπεται από 
+          γνωστό θεώρημα ότι και 
+          \[
+            \lim\limits_{\substack{x\to 0 \\y \to 0}} xy 
+            \sin{\Bigl(\frac{1}{y}\Bigr)} = 0
+          \] 
+        \end{solution}
+
       \item $ \lim\limits_{\substack{x\to 0 \\y \to 0}} 
         \frac{(1+y^{2}) \sin{x} }{x} $
         \begin{solution} 
@@ -56,57 +72,57 @@
 
     \begin{myitemize}
       \item $ \lim_{(x,y) \to (0,0)} \Bigl(\frac{\abs{y}}{x^{2}} \cdot 2^{
-          -\frac{\abs{y}}{x^{2}}}\Bigr) $
-          \begin{solution}
-            Προσεγγίζουμε το σημείο $ (0,0) $ μέσω των καμπυλών $ y= \lambda x^{2} $.
-            \[
-               \lim\limits_{\substack{x\to 0 \\y \to 0}} 
-               \Biggl(\frac{\abs{y}}{x^{2}} \cdot 2^{-\frac{\abs{y}}{x^{2}}}\Biggr)
-               \overset{y= \lambda x^{2}}{=} \lim_{x \to 0} 
-               \Biggl(\frac{\abs{\lambda x^{2}}}{x^{2}} \cdot 2^{-\frac{\abs{\lambda
-               x^{2}}}{x^{2}}}\Biggr) = \lim_{x \to 0} \Bigl(\abs{\lambda}\cdot 2^{-
-               \abs{\lambda}}\Bigr) = \Bigl(\abs{\lambda}\cdot 2^{-
-               \abs{\lambda}}\Bigr)
-               \] 
-               Επομένως δεν υπάρχει το όριο, γιατί εξαρτάται από το $ \lambda $.
-            \end{solution}
-        \end{myitemize}
-
-  \item Να εξετάσετε αν οι παρακάτω συναρτήσεις μπορούν να οριστούν κατάλληλα ώστε να 
-    είναι συνεχείς.
-
-    \begin{myitemize}
-      \item $ f(x,y) =  \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] $
+        -\frac{\abs{y}}{x^{2}}}\Bigr) $
         \begin{solution}
-          Παρατηρούμε, ότι στο σημείο $ (0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
-          $(  0\cdot (- \infty) ) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$
-          συνεχής στο σημείο $(0,0)$, πρέπει 
-          $ \lim_{(x,y)\to (0,0)} f(x,y) = f(0,0) $. 
-          Επομένως θα υπολογίσουμε το όριο της $f$ στο $ (0,0) $.
-          Προκειμένου να μπορούμε να εφαρμόσουμε τον κανόνα L' H\"opital, για να διώξουμε
-          την απροσδιοριστία, αλλά και επειδή, η ποσότητα, $ x^{2}+y^{2} $
-          εμφανίζεται δύο φορές, εφαρμόζουμε \textbf{πολικές} συντεταγμένες.
-          \begin{align*}
+          Προσεγγίζουμε το σημείο $ (0,0) $ μέσω των καμπυλών $ y= \lambda x^{2} $.
+          \[
             \lim\limits_{\substack{x\to 0 \\y \to 0}} 
-            \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] = \lim_{r \to 0} 
-            ( r \cdot \ln{r})
-            \overset{0(- \infty)}{=} \lim_{r \to 0} \frac{\ln{r}}{\frac{1}{r}}
-            \overset{\left(\frac{0}{0}\right)}{\underset{\mathrm{LH}}{=}} \lim_{r \to
-            \infty} = \frac{\frac{1}{r}}{(- \frac{1}{r^{2}})} = - \lim_{r \to 0} r = 0
-          \end{align*}
-          Επομένως, αρκεί να ορίσουμε $ f(0,0) = 0 $, ώστε να είναι η $f$ συνεχής.
-        \end{solution}
-      \item $ f(x,y,z) =  
-        \dfrac{1 - \cos{\sqrt{(x^{2}+y^{2}+z^{2}})}}{x^{2}+y^{2}+z^{2}} $
-        \begin{solution}
-          Παρατηρούμε, ότι στο σημείο $ (0,0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
-          $ (0/0) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$ συνεχής στο σημείο 
-          $ (0,0,0) $, πρέπει 
-          $\lim_{(x,y,z) \to (0,0,0)} f(x,y,z) = f(0,0,0)$. 
-          Οπότε, έχουμε
-          \begin{align*}
-            \lim\limits 
-            \frac{1 - \cos{\sqrt{x^{2}+y^{2}+z^{2}}}}{x^{2}+y^{2}+z^{2}} 
+            \Biggl(\frac{\abs{y}}{x^{2}} \cdot 2^{-\frac{\abs{y}}{x^{2}}}\Biggr)
+            \overset{y= \lambda x^{2}}{=} \lim_{x \to 0} 
+            \Biggl(\frac{\abs{\lambda x^{2}}}{x^{2}} \cdot 2^{-\frac{\abs{\lambda
+              x^{2}}}{x^{2}}}\Biggr) = \lim_{x \to 0} \Bigl(\abs{\lambda}\cdot 2^{-
+            \abs{\lambda}}\Bigr) = \Bigl(\abs{\lambda}\cdot 2^{-
+        \abs{\lambda}}\Bigr)
+      \] 
+      Επομένως δεν υπάρχει το όριο, γιατί εξαρτάται από το $ \lambda $.
+    \end{solution}
+\end{myitemize}
+
+\item Να εξετάσετε αν οι παρακάτω συναρτήσεις μπορούν να οριστούν κατάλληλα ώστε να 
+  είναι συνεχείς.
+
+  \begin{myitemize}
+    \item $ f(x,y) =  \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] $
+      \begin{solution}
+        Παρατηρούμε, ότι στο σημείο $ (0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
+        $(  0\cdot (- \infty) ) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$
+        συνεχής στο σημείο $(0,0)$, πρέπει 
+        $ \lim_{(x,y)\to (0,0)} f(x,y) = f(0,0) $. 
+        Επομένως θα υπολογίσουμε το όριο της $f$ στο $ (0,0) $.
+        Προκειμένου να μπορούμε να εφαρμόσουμε τον κανόνα L' H\"opital, για να διώξουμε
+        την απροσδιοριστία, αλλά και επειδή, η ποσότητα, $ x^{2}+y^{2} $
+        εμφανίζεται δύο φορές, εφαρμόζουμε \textbf{πολικές} συντεταγμένες.
+        \begin{align*}
+          \lim\limits_{\substack{x\to 0 \\y \to 0}} 
+          \Bigl[\sqrt{x^{2}+y^{2}} \ln{(\sqrt{x^{2}+y^{2}})}\Bigr] = \lim_{r \to 0} 
+          ( r \cdot \ln{r})
+          \overset{0(- \infty)}{=} \lim_{r \to 0} \frac{\ln{r}}{\frac{1}{r}}
+          \overset{\left(\frac{0}{0}\right)}{\underset{\mathrm{LH}}{=}} \lim_{r \to
+          \infty} = \frac{\frac{1}{r}}{(- \frac{1}{r^{2}})} = - \lim_{r \to 0} r = 0
+        \end{align*}
+        Επομένως, αρκεί να ορίσουμε $ f(0,0) = 0 $, ώστε να είναι η $f$ συνεχής.
+      \end{solution}
+    \item $ f(x,y,z) =  
+      \dfrac{1 - \cos{\sqrt{(x^{2}+y^{2}+z^{2}})}}{x^{2}+y^{2}+z^{2}} $
+      \begin{solution}
+        Παρατηρούμε, ότι στο σημείο $ (0,0,0) $ η τιμή της $f$ είναι απροσδιόριστη 
+        $ (0/0) $. Γνωρίζουμε, επίσης, ότι για να είναι η $f$ συνεχής στο σημείο 
+        $ (0,0,0) $, πρέπει 
+        $\lim_{(x,y,z) \to (0,0,0)} f(x,y,z) = f(0,0,0)$. 
+        Οπότε, έχουμε
+        \begin{align*}
+          \lim\limits 
+          \frac{1 - \cos{\sqrt{x^{2}+y^{2}+z^{2}}}}{x^{2}+y^{2}+z^{2}} 
             &= \lim\limits \frac{2
             \sin^{2}{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}{x^{2}+y^{2}+z^{2}}
             = \lim\limits \frac{{
@@ -119,47 +135,154 @@
             \lim\limits \Biggl(\frac{{
             \sin{\Bigl(\frac{\sqrt{(x^{2}+y^{2}+z^{2})}}{2}\Bigr)}}}{\frac{\sqrt{x^{2}+y^{2}+z^{2}}}{2}}\Biggr)^{2}
             = \frac{1}{2} \cdot 1^{2} = \frac{1}{2}
-          \end{align*} 
-          Επομένως, αρκεί να ορίσουμε $ f(0,0,0) = \frac{1}{2} $, ώστε να είναι η $f$
-          συνεχής.
-        \end{solution}
-    \end{myitemize}
+        \end{align*} 
+        Επομένως, αρκεί να ορίσουμε $ f(0,0,0) = \frac{1}{2} $, ώστε να είναι η $f$
+        συνεχής.
+      \end{solution}
+  \end{myitemize}
 
-  \item Να δείξετε ότι η συνάρτηση $ f(x,y) = 
-     \begin{cases}
-       \frac{1 - \cos{\sqrt{xy}}}{y}, & y \neq 0 \\
-       \frac{x}{2}, & y = 0
-        \end{cases}$
-        είναι συνεχής σε κάθε σημείο του άξονα $x$.
-        \begin{solution}
-        \item {}
-          \begin{myitemize}
-            \item Για $ y= 0 $, εξετάζουμε τη συνέχεια της $f$ με τον ορισμό.
-              Έστω $ (x_{0},0) $ ένα τυχαίο σημείο του άξονα $x$. 
-              Έχουμε, $ f(x_{0}, 0) =
-              \frac{x_{0}}{2} $
-              \begin{align*}
-                \lim\limits_{\substack{x\to x_{0} \\y \to
-                    0}} f(x,y) = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
-                \frac{1 - \cos{\sqrt{xy}}}{y} 
+\item Να δείξετε ότι η συνάρτηση $ f(x,y) = 
+  \begin{cases}
+    \frac{1 - \cos{\sqrt{xy}}}{y}, & y \neq 0 \\
+    \frac{x}{2}, & y = 0
+  \end{cases}$
+  είναι συνεχής σε κάθε σημείο του άξονα $x$.
+  \begin{solution}
+  \item {}
+    \begin{myitemize}
+      \item Για $ y= 0 $, εξετάζουμε τη συνέχεια της $f$ με τον ορισμό.
+        Έστω $ (x_{0},0) $ ένα τυχαίο σημείο του άξονα $x$. 
+        Έχουμε, $ f(x_{0}, 0) =
+        \frac{x_{0}}{2} $
+        \begin{align*}
+          \lim\limits_{\substack{x\to x_{0} \\y \to
+          0}} f(x,y) = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
+          \frac{1 - \cos{\sqrt{xy}}}{y} 
                 &= \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
                 \frac{2 \sin^{2}{\left(\frac{\sqrt{xy}}{2}\right)}}{y} 
                 = \lim\limits_{\substack{x\to x_{0} \\y \to 0}}
                 \biggl(\frac{\sin^{2}{\frac{\sqrt{xy}}{2}}}{\frac{y}{2} \frac{x}{2}} 
                 \cdot \frac{x}{2}\biggr) 
-                = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} \frac{\sin^{2}{\frac{\sqrt{xy}}{2}}}{\Bigl(\frac{\sqrt{xy}}{2}\Bigr)^{2}} 
+                = \lim\limits_{\substack{x\to x_{0} \\y \to 0}} 
+                \frac{\sin^{2}{\frac{\sqrt{xy}}{2}}}{\Bigl(\frac{\sqrt{xy}}{2}\Bigr)^{2}} 
                 \cdot \lim_{x \to x_{0}} \frac{x}{2} \\ 
                 &= \lim\limits_{\substack{x\to x_{0} \\y \to 0}} \biggl(
                 \frac{\sin{\frac{\sqrt{xy}}{2}}}{\frac{\sqrt{xy}}{2}}\biggr)^{2}
                 \cdot \lim_{x \to x_{0}} \frac{x}{2} = 1^{2} \cdot \frac{x_{0}}{2}
-               = \frac{x_{0}}{2}
-              \end{align*} 
-              Επομένως η $ f $ είναι συνεχής στο τυχαίο σημείο 
-            $ (x_{0},0) $ του άξονα $x$, και άρα είναι συνεχής σε κάθε σημείο του 
-            άξονα $x$.
+                = \frac{x_{0}}{2}
+        \end{align*} 
+        Επομένως η $ f $ είναι συνεχής στο τυχαίο σημείο 
+        $ (x_{0},0) $ του άξονα $x$, και άρα είναι συνεχής σε κάθε σημείο του 
+        άξονα $x$.
+    \end{myitemize}
+  \end{solution}
+
+
+\item Να εξεταστούν πλήρως ως προς τη συνέχεια οι συναρτήσεις:
+
+  \begin{enumerate}[(i)]
+    \item $ f(x,y) = 
+      \begin{cases}
+        \frac{ xy }{ x^{2} + y^{2} } ,& (x,y)\neq (0,0) \\
+        0 ,& (x,y)= (0,0)
+      \end{cases} $
+      \begin{solution}
+      \item {}
+        \begin{myitemize}
+          \item Αν $ (x_{0}, y_{0}) \neq (0,0) $ τότε $ f(x,y) = 
+            \frac{ xy }{ x^{2} + y^{2} } $, η οποία είναι συνεχής ως ρητή.
+          \item Αν $ (x_{0}, y_{0}) = (0,0) $ τότε θα εξετάσουμε τη συνέχεια με τον
+            ορισμό. 
+            Γι᾽ αυτό θα βρούμε το όριο της $ f(x,y) $ όταν $ (x,y) \to (0,0) $. Έχουμε
+            \begin{align*}
+              \lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{xy}{x^{2}+y^{2}}
+              \overset{y= \lambda x}{=} \lim_{x \to 0} \frac{x \lambda x}{x^{2}+ \lambda
+              ^{2}x^{2}} = \lim_{x \to 0} 
+              \frac{\lambda \cancel{x^{2}}}{\cancel{x^{2}}(1+ \lambda ^{2})} =
+              \lim_{x \to 0} \frac{\lambda}{1 + \lambda ^{2}} = \frac{\lambda}{1 +
+              \lambda^{2} }
+            \end{align*}
+        \end{myitemize}
+        Άρα δεν υπάρχει το όριο της $f$ στο σημείο $ (0,0) $, γιατί εξαρτάται από το 
+        $\lambda$, και άρα εξαρτάται από τη διαδρομή προσέγγισης. Επομένως η $f$ δεν 
+        είναι συνεχής στο $ (0,0) $.
+        
+        Άρα η $f$ είναι συνεχής $ \forall (x,y) \in \mathbb{R}^{2} - \{ (0,0) \} $.
+      \end{solution}
+
+      \item $ f(x,y) = 
+        \begin{cases} 
+          \frac{y^{2}}{x^{2}+y^{2}}, & (x,y) 
+          \neq (0,0) \\ 0, & (x,y) = (0,0)
+        \end{cases} $
+        \begin{solution}
+        \item {}
+          \begin{myitemize}
+            \item Αν $ (x_{0}, y_{0}) \neq (0,0) $ τότε $ f(x,y) = 
+              \frac{ y^{2} }{ x^{2} + y^{2} } $, η οποία είναι συνεχής ως ρητή.
+            \item Αν $ (x_{0}, y_{0}) = (0,0) $ τότε θα εξετάσουμε τη συνέχεια με τον
+              ορισμό. 
+            Γι᾽ αυτό θα βρούμε το όριο της $ f(x,y) $ όταν $ (x,y) \to (0,0) $. Έχουμε
+              \begin{align*}
+                \lim\limits_{\substack{x\to 0 \\y \to 0}} \frac{y^{2}}{x^{2}+y^{2}}
+                \overset{y= \lambda x}{=} \lim_{x \to 0} 
+                \frac{\lambda^{2}x^{2}}{x^{2}+ \lambda
+                ^{2}x^{2}} = \lim_{x \to 0} \frac{\lambda^{2}
+              \cancel{x^{2}}}{\cancel{x^{2}}(1+ \lambda ^{2})} =
+                \lim_{x \to 0} \frac{\lambda^{2}}{1 + \lambda ^{2}} =
+                \frac{\lambda^{2}}{1 +
+                \lambda ^{2}}
+              \end{align*}
+        Άρα δεν υπάρχει το όριο της $f$ στο σημείο $ (0,0) $, γιατί εξαρτάται από το 
+        $\lambda$, και άρα εξαρτάται από τη διαδρομή προσέγγισης. Επομένως η $f$ δεν 
+        είναι συνεχής στο $ (0,0) $.
+        Άρα η $f$ είναι συνεχής $ \forall (x,y) \in \mathbb{R}^{2} - \{ (0,0) \} $.
           \end{myitemize}
-          \end{solution}
-\end{enumerate}
+        \end{solution}
+
+      \item $ f(x,y)= 
+        \begin{cases}
+          xy^{2}\cos \frac{1}{x^{2}+y^{2}} &, (x,y)\neq (0,0)\\
+          0 &, (x,y)=(0,0)
+        \end{cases} $
+        \begin{solution}
+        \item {}
+          \begin{myitemize}
+            \item Αν $ (x_{0}, y_{0}) \neq (0,0) $ τότε $ f(x,y) = 
+              xy^{2}\cos \frac{1}{x^{2}+y^{2}} $, 
+              η οποία είναι συνεχής ως πράξεις συνεχών.
+            \item Αν $ (x_{0}, y_{0}) = (0,0) $ τότε θα εξετάσουμε τη συνέχεια με τον
+              ορισμό. 
+              Γι᾽ αυτό θα βρούμε το όριο της $ f(x,y) $ όταν $ (x,y) \to (0,0) $. Έχουμε
+              \begin{align*}
+                \abs{xy^{2}\cos \frac{1}{x^{2}+y^{2}}}  = \abs{xy^{2}} \cdot 
+                \abs{\cos{\frac{1}{x^{2}+y^{2}}} } \leq \abs{xy^{2}} \cdot 1 = 
+                \abs{xy^{2}}
+              \end{align*}
+              όπου $ \lim\limits_{\substack{x\to 0 \\y \to 0}} xy^{2} = 
+              0 \cdot 0^{2} = 0 $, 
+              και άρα από γνωστό θεώρημα, έχουμε 
+              \[
+                \lim\limits_{\substack{x\to 0 \\y \to 0}} xy^{2} 
+                \cos{\frac{1}{x^{2}+y^{2}}} = 0 
+              \] 
+              Επίσης, έχουμε $ f(0,0) = 0 $. Άρα 
+              \[
+                \lim\limits_{\substack{x\to 0 \\y \to 0}} f(x,y) = 
+                \lim\limits_{\substack{x\to 0 \\y \to 0}} xy^{2} 
+                \cos{\frac{1}{x^{2}+y^{2}}} = 0 = f(0,0)
+              \] 
+              Δηλαδή η $f$ είναι συνεχής στο σημείο $ (0,0) $.
+              Επομένως η $f$ είναι συνεχής $ \forall (x,y) \in \mathbb{R}^{2} $.
+          \end{myitemize}
+        \end{solution}
+
+
+
+
+  \end{enumerate}
+
+  \end{enumerate}
 
 
 
@@ -167,4 +290,4 @@
 
 
 
-\end{document}
+  \end{document}

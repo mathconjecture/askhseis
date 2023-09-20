@@ -2,7 +2,7 @@
 \input{preamble.tex}
 \input{definitions_ask.tex}
 
-
+\everymath{\displaystyle}
 \renewcommand{\vec}{\mathbf}
 \pagestyle{askhseis}
 \begin{document}
@@ -13,25 +13,99 @@
 
 \vspace{\baselineskip}
 
-\begin{enumerate}
-  \item Να υπολογιστεί η γωνία $ \theta $, $ 0\leq \theta \leq \pi $ μεταξύ των διανυσμάτων $
-    \vec{a} = (3,0,3) $ και $ \vec{b} = (0,6,6) $.
 
+
+\begin{enumerate}
+  \item Αν $ \mathbf{u} = (-1,3) $ και $ \mathbf{v} = (2,5) $, τότε να υπολογίσετε 
+    τα παρακάτω \textbf{εσωτερικά γινόμενα}.
+    \begin{enumerate}[i)]
+      \item $ \mathbf{u} \cdot \mathbf{v} $ \hfill Απ: 13 
+      \item $ (2 \mathbf{u}) \cdot (-3 \mathbf{v}) $ \hfill Απ: -78 
+      \item $ (\mathbf{u} - \mathbf{v}) \cdot (3 \mathbf{u}+ \mathbf{v}) $ 
+        \hfill Απ: -25 
+    \end{enumerate}
+
+  \item Έστω δυο διανύσματα $ \mathbf{u} $ και $ \mathbf{v} $ που έχουv μέτρα 
+    $ \norm{\mathbf{u}} = \sqrt{3} $ και $ \norm{\mathbf{v}} = 1 $ 
+    και σχηματίζουν γωνία $ \theta = \frac{\pi}{6} $. 
+    Να υπολογιστεί το \textbf{εσωτερικό} τους \textbf{γινόμενο}. 
+    \hfill Απ: $ {3}/{2} $ 
+
+  \item Να υπολογίσετε την \textbf{γωνία} που σχηματίζουν τα παρακάτω διανύσματα.
+    \begin{enumerate}[i)]
+      \item $ \mathbf{u} = \left(1,2\right) $, $ \mathbf{v} = \left(3,1\right) $ 
+        \hfill Απ: $
+        \SI{45}{\degree} $ 
+      \item $ \mathbf{u} = \left(\sqrt{3}, 1\right) $, $ \mathbf{v} = \left(- \sqrt{3} , 
+        1\right) $ \hfill Απ: $ \SI{120}{\degree}$ 
+    \end{enumerate}
+
+  \item Να υπολογιστεί η \textbf{γωνία} $ \theta $ ($ 0\leq \theta \leq \pi $) μεταξύ 
+    των διανυσμάτων $
+    \vec{a} = (3,0,3) $ και $ \vec{b} = (0,6,6) $.
     \hfill Απ: $ \frac{\pi}{3} $
 
   \item Να δειχθεί με τη βοήθεια του εσωτερικού γινομένου ότι
     \begin{enumerate}[i)]
-      \item τα διανύσματα $ \vec{a}_1 = (5,-2,1) $ και $ \vec{b}_1 = (-15,6,-3) $ είναι παράλληλα.
-      \item τα διανύσματα $ \vec{a}_2 = (4,-3,2) $ και $ \vec{b}_2 = (-1,-2,1) $ είναι κάθετα.
+      \item τα διανύσματα $ \vec{a}_1 = (5,-2,1) $ και $ \vec{b}_1 = (-15,6,-3) $ είναι 
+        \textbf{παράλληλα}.
+      \item τα διανύσματα $ \vec{a}_2 = (4,-3,2) $ και $ \vec{b}_2 = (-1,-2,1) $ είναι 
+        \textbf{κάθετα}.
     \end{enumerate}
 
-  \item Να υπολογιστεί το εξωτερικό γινόμενο των διανυσμάτων $ \vec{a} = (2,-1,1) $ και $ \vec{b} = (-1,2,-3) $.
+  \item Να υπολογιστεί το \textbf{εξωτερικό γινόμενο} των διανυσμάτων 
+    $ \vec{a} = (2,-1,1) $ και $ \vec{b} = (-1,2,-3) $.
 
     \hfill Απ: $ (1,5,3) $
 
-  \item Να υπολογιστεί το εμβαδό του παραλληλογράμμου που σχηματίζεται από τα διανύσματα $ \vec{a} = (3,-2,-2) $ και $ \vec{b} = (-1,0,-1) $.
-
+  \item Να υπολογιστεί το \textbf{εμβαδό} του παραλληλογράμμου που σχηματίζεται από τα 
+    διανύσματα $ \vec{a} = (3,-2,-2) $ και $ \vec{b} = (-1,0,-1) $.
     \hfill Απ: $3 $ 
+
+  \item Να βρεθεί η \textbf{προβολή} του διανύσματος 
+    $ \mathbf{v} = 6 \mathbf{i}+3 \mathbf{j} + 2 \mathbf{k} $ πάνω στο διάνυσμα 
+    $ \mathbf{u} = \mathbf{i}-2 \mathbf{j} - \mathbf{k} $.
+
+    \hfill Απ: $ \rm{pr}_{\mathbf{u}}{\mathbf{v}} = -\frac{1}{3} (\mathbf{i}-2
+    \mathbf{j}- \mathbf{k}) $ 
+
+  \item Να βρεθεί το \textbf{εμβαδό} του τριγώνου, με κορυφές τα σημεία $ A(1,-1,0) $, 
+    $ B(2,1,-1) $ και $ C(-1,1,2) $. 
+    \hfill Απ: $ 3 \sqrt{2} $ 
+
+  \item Να υπολογισετε την τιμή της μεταβλητής $ \lambda $ ώστε τα παρακάτω διανύσματα 
+    να είναι \textbf{ορθογώνια}.
+    \begin{enumerate}[i)]
+      \item $ \mathbf{u} = (1, \lambda, -1) $, $ \mathbf{v} = (2,-1,2) $ \hfill 
+        Απ: $ \lambda = 0 $
+      \item $ \mathbf{u} = (- \lambda, 2 \lambda, 3) $, $ \mathbf{v} = (1,-4,-1) $ 
+        \hfill Απ: $ \lambda = 3 $ 
+      \item $ \mathbf{u} = (1, \lambda, 2,-1) $, $ \mathbf{v} = (-1,1,0,3) $ \hfill Απ: $
+        \lambda = 4 $ 
+    \end{enumerate}
 \end{enumerate}
+
+\vspace{\baselineskip}
+
+\begin{center}
+  \textcolor{Col1}{\large\textbf{Τυπολόγιο}}
+\end{center}
+
+\begin{myitemize}
+  \item \textcolor{Col1}{Εσωτερικό} Γινόμενο στον $ \mathbb{R}^{2}: $ $ (a_{1}, a_{2})\cdot (b_{1}, b_{2} )
+    = a_{1} b_{1}+ a_{2} b_{2}$
+  \item \textcolor{Col1}{Εξωτερικό} Γινόμενο στον $ \mathbb{R}^{3}: $ $ (a_{1}, a_{2}, a_{3})\cdot (b_{1},
+    b_{2}, b_{3} ) = a_{1} b_{1}+ a_{2} b_{2} + a_{3} b_{3}$
+  \item \textcolor{Col1}{Γωνία} διανυσμάτων: $ \cos{\theta} = \frac{\mathbf{u} \cdot
+    \mathbf{v}}{\norm{\mathbf{u}} \cdot \norm{\mathbf{v}}} $ 
+  \item \textcolor{Col1}{Προβολή} του διανύσματος $ \mathbf{v} $ πάνω στο $ \mathbf{u}: $ 
+    $ \text{πρ}_{\mathbf{u}} \mathbf{v} = \Bigl(\frac{\mathbf{u}\cdot 
+    \mathbf{v}}{\norm{\mathbf{u}} ^{2}}\Bigr) \mathbf{u} $
+  \item \textcolor{Col1}{Εμβαδό} Τριγώνου με κορυφές $A, B, C: $ $ E_{ABC} = \norm{\vec{AB}\times \vec{AC}}$
+  \item $ \mathbf{u} \perp \mathbf{v} $ \textcolor{Col1}{(ορθογώνια)} $ \Leftrightarrow \mathbf{u} \cdot
+    \mathbf{v} = 0$ 
+  \item $ \mathbf{u} \parallel \mathbf{v} $ \textcolor{Col1}{(παράλληλα)} $ \Leftrightarrow \mathbf{u} \times \mathbf{v} = \mathbf{0} $ 
+\end{myitemize}
+
 
 \end{document}
