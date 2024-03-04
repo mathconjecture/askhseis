@@ -1,0 +1,86 @@
+\documentclass[a4paper,table]{report}
+\input{preamble_ask.tex}
+\input{definitions_ask.tex}
+
+
+\geometry{top=2cm}
+% \DeclareMathOperator{\r}{r}
+
+\pagestyle{askhseis}
+
+\begin{document}
+
+
+
+
+\section*{Μέθοδος Gauss}
+
+
+\begin{enumerate}
+  \setlength{\itemsep}{\baselineskip}
+  \item Να λυθεί τo παρακάτω συστήμα με τη μέθοδο \textbf{απαλοιφής} (\textbf{Gauss}).
+
+    \begin{enumerate}[i)]
+      \setlength{\itemsep}{\baselineskip}
+    \item $\sysdelim.\} \systeme{\phantom{-}x+4y-2z=1, y+z=3, 2x+11y-z= 11}$ 
+      \hfill Απ: \begin{tabular}{l}
+        $ x=6z-11 $ \\
+        $ y=3-z $ \\
+        $z \in \mathbb{R}$
+      \end{tabular}
+  \end{enumerate}
+\end{enumerate}
+
+
+\section*{Παραμετρικά Συστήματα}
+
+
+\begin{enumerate}
+
+
+  \item Να λυθούν για τις διάφορες τιμές των παραμέτρων τα παρακάτω συστήματα.
+
+
+    \begin{enumerate}[i)]
+    \setlength{\itemsep}{\baselineskip}
+    \item $\sysdelim.\} \systeme{{(1-\lambda)} x - 2y + 2z = 0, x + {(2 \lambda-2)} y + 2z = 0, x - 2y + {(2-2 \lambda)} z = 0 }$ 
+      \hfill Απ: \begin{tabular}{l}
+        $\lambda\neq 0, 3 \; $, μοναδική λύση \\
+        $\lambda=0 \; $, άπειρες λύσεις \\
+        $\lambda=3 \; $, άπειρες λύσεις
+      \end{tabular}
+
+    \item $\sysdelim.\} \systeme{ \lambda x+ \mu y+z=1,x+{\lambda \mu }y+z=b,x+ \mu y+
+      \lambda z=1}$ με $ \mu \neq 0 $ 
+      \hfill Απ: \begin{tabular}{l} 
+        $ \lambda \neq 1, -2 \; $, μοναδική λύση \\
+        $ \lambda =-2 \;, \mu \neq -2 $, αδύνατο \\
+        $ \lambda =-2 \;, \mu = -2 $, άπειρες λύσεις
+      \end{tabular}
+  \end{enumerate}
+\end{enumerate}
+
+
+\section*{Ιδιοτιμές - Ιδιοδιανύσματα - Διαγωνιοποίηση}
+
+
+\begin{enumerate}
+  \item Να βρεθεί ο \textbf{ορθογώνιος} πίνακας $Q$ που διαγωνιοποιεί τον πίνακα $A$. 
+
+    \begin{enumerate}[i)]
+      \item $ A = 
+        \begin{pmatrix*}[r]
+          4 & 0 & -1 \\
+          0 & 4 & -1 \\
+          -1 & -1 & 5
+        \end{pmatrix*} $ \hfill Απ: $ Q = 
+        \begin{pmatrix*}[r]
+          -1/ \sqrt{2} & 1 / \sqrt{3} & - 1 / \sqrt{6} \\ 
+          1/ \sqrt{2} & 1 / \sqrt{3} & - 1 / \sqrt{6} \\ 
+          0 & 1 / \sqrt{3} &  2 / \sqrt{6} 
+        \end{pmatrix*} $ 
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}
